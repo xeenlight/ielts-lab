@@ -1,0 +1,120 @@
+.hero {
+  height: 100vh; /* 🔥 всегда экран */
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* затемнение */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+/* контейнер */
+.container {
+  position: relative;
+  z-index: 2;
+
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TEXT */
+.left {
+  max-width: 600px;
+}
+
+.left h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.left h1 span {
+  color: #00b6b9;
+}
+
+.left p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.cta {
+  padding: 16px 32px;
+  border-radius: 40px;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #00b6b9, #00d4d7);
+  color: white;
+
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0, 182, 185, 0.4);
+}
+
+.cta:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 182, 185, 0.6);
+}
+
+/* MOBILE IMAGES */
+.mobileImages {
+  display: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    background: #0f0f0f; /* убираем фон */
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .left h1 {
+    font-size: 32px;
+  }
+
+  .left p {
+    font-size: 16px;
+  }
+
+  /* показываем картинки */
+  .mobileImages {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .mobileImages img {
+    width: 45%;
+    border-radius: 16px;
+  }
+}
