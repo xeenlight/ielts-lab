@@ -1,120 +1,184 @@
 .hero {
-  height: 100vh; /* 🔥 всегда экран */
+  height: 100vh;
+  min-height: 700px;
+
   position: relative;
-
-  display: flex;
-  align-items: center;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
+/* фон */
+.bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+object-fit: contain;
+background: black;
+
+  z-index: 0;
+}
+/* десктоп */
+.bg {
+  object-position: center 25%;
+}
+.bgmobile {
+  display: none; 
+}
+
+/* планшет */
+@media (max-width: 1024px) {
+  .bg {
+    object-position: center 35%;
+  }
+}
+
+/* мобилка */
+@media (max-width: 768px) {
+  .bg {
+    display: none;
+  }
+    .bgmobile {
+      display: block;
+      position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+    object-position: center top;
+object-fit: contain;
+background: black;
+
+  z-index: 0;
+  }
+}
 /* затемнение */
 .overlay {
   position: absolute;
   inset: 0;
+
   background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.4)
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.9)
   );
+
+  z-index: 1;
 }
 
-/* контейнер */
-.container {
+/* контент */
+.content {
   position: relative;
   z-index: 2;
 
-  width: 95%;
-  max-width: 1200px;
-  margin: auto;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  text-align: center;
+  padding-bottom: 60px;
 }
 
-/* TEXT */
-.left {
-  max-width: 600px;
-}
-
-.left h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.left h1 span {
+/* верхний текст */
+.sub {
   color: #00b6b9;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-.left p {
-  font-size: 18px;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 30px;
-}
-
-/* BUTTON */
-.cta {
-  padding: 16px 32px;
-  border-radius: 40px;
-  border: none;
-
-  font-size: 16px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  background: linear-gradient(135deg, #00b6b9, #00d4d7);
+/* заголовок */
+.title {
+  font-size: 64px;
+  font-weight: 800;
   color: white;
-
-  transition: 0.3s;
-  box-shadow: 0 10px 25px rgba(0, 182, 185, 0.4);
+  margin-bottom: 15px;
 }
 
-.cta:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(0, 182, 185, 0.6);
+/* описание */
+.desc {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
 }
 
-/* MOBILE IMAGES */
-.mobileImages {
-  display: none;
+.desc2 {
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* один блок */
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  color: white;
+}
+
+
+.img {
+  width: 40px;
+  height: 40px;
+
+  filter: brightness(0) saturate(100%)
+          invert(49%) sepia(83%) saturate(472%) 
+          hue-rotate(140deg) brightness(95%) contrast(95%);
+}
+/* текст */
+.feature h4 {
+  font-size: 16px;
+}
+
+.feature p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 48px;
+  }
 }
 
 /* =========================
    MOBILE
 ========================= */
 @media (max-width: 768px) {
-  .hero {
-    background: #0f0f0f; /* убираем фон */
+  .content {
+    padding: 0 20px 40px;
   }
 
-  .overlay {
-    display: none;
-  }
-
-  .container {
-    text-align: center;
-  }
-
-  .left h1 {
+  .title {
     font-size: 32px;
   }
 
-  .left p {
-    font-size: 16px;
+  .desc {
+    font-size: 18px;
   }
 
-  /* показываем картинки */
-  .mobileImages {
-    display: flex;
+  .features {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+            padding-bottom: 100px;
+  }
+
+  .feature {
     justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
-  }
-
-  .mobileImages img {
-    width: 45%;
-    border-radius: 16px;
   }
 }
