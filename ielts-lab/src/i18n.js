@@ -19,7 +19,25 @@ const resources = {
   feature2_desc: "Effective learning",
 
   feature3_title: "Real results",
-  feature3_desc: "Speak confidently"
+  feature3_desc: "Speak confidently",
+
+  results_sub: "STUDENT ACHIEVEMENTS",
+results_title: "REAL IELTS RESULTS",
+results_desc: "Our students consistently achieve high band scores and reach their goals.",
+results_desc2: "Join them and take your English to the next level",
+
+
+free_sub: "FREE MATERIALS",
+free_title: "START LEARNING FOR FREE",
+free_desc: "Download useful materials and improve your English today",
+
+free_btn: "Download",
+
+free_item1: "IELTS Vocabulary List",
+free_item2: "Grammar Guide",
+free_item3: "Speaking Tips",
+free_item4: "Writing Samples",
+free_item5: "Listening Practice"
     }
   },
   ru: {
@@ -39,7 +57,27 @@ translation: {
   feature2_desc: "Эффективное обучение",
 
   feature3_title: "Реальные результаты",
-  feature3_desc: "Говорите уверенно"
+  feature3_desc: "Говорите уверенно",
+
+
+  results_sub: "ДОСТИЖЕНИЯ УЧЕНИКОВ",
+results_title: "РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ IELTS",
+results_desc: "Наши студенты стабильно получают высокие баллы и достигают своих целей.",
+results_desc2: "Присоединяйся и выведи свой английский на новый уровень",
+
+
+
+free_sub: "БЕСПЛАТНЫЕ МАТЕРИАЛЫ",
+free_title: "НАЧНИ УЧИТЬСЯ БЕСПЛАТНО",
+free_desc: "Скачай полезные материалы и улучшай свой английский уже сегодня",
+
+free_btn: "Скачать",
+
+free_item1: "Словарь IELTS",
+free_item2: "Грамматический гид",
+free_item3: "Советы по Speaking",
+free_item4: "Примеры Writing",
+free_item5: "Практика Listening"
 }
   },
   uz: {
@@ -59,7 +97,24 @@ translation: {
   feature2_desc: "Samarali ta’lim",
 
   feature3_title: "Haqiqiy natijalar",
-  feature3_desc: "Ishonch bilan gapiring"
+  feature3_desc: "Ishonch bilan gapiring",
+
+  results_sub: "O‘QUVCHILAR NATIJALARI",
+results_title: "HAQIQIY IELTS NATIJALARI",
+results_desc: "Bizning o‘quvchilarimiz yuqori ballarga erishib, o‘z maqsadlariga yetishmoqda.",
+results_desc2: "Siz ham qo‘shiling va ingliz tilingizni yangi bosqichga olib chiqing",
+
+free_sub: "BEPUL MATERIALLAR",
+free_title: "BEPUL O‘RGANISHNI BOSHLANG",
+free_desc: "Foydali materiallarni yuklab oling va ingliz tilingizni rivojlantiring",
+
+free_btn: "Yuklab olish",
+
+free_item1: "IELTS lug‘ati",
+free_item2: "Grammatika qo‘llanma",
+free_item3: "Speaking bo‘yicha maslahatlar",
+free_item4: "Writing namunalar",
+free_item5: "Listening mashqlari"
 }
   }
 };
