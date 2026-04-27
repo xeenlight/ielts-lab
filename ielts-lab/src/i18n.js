@@ -144,15 +144,20 @@ form_success: "Ariza yuborildi!"
   }
 };
 
-i18n.use(initReactI18next).init({
-  resources,
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: localStorage.getItem('lang') || 'ru',
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
-  lng: localStorage.getItem('lang') || 'ru', // 🔥 берём сохранённый язык
-  fallbackLng: 'en',
-
-  interpolation: {
-    escapeValue: false
-  }
+// 🔥 сохраняем язык при каждом изменении
+i18n.on('languageChanged', (lng) => {
+  localStorage.setItem('lang', lng);
 });
 
 export default i18n;
