@@ -1,6 +1,7 @@
 import styles from './Main.module.css';
 import { useTranslation } from 'react-i18next';
-
+import { useState } from 'react';
+import ModalForm from '../ModalForm/ModalForm';
 import ielts_Lab_Team from '../../assets/ieltsLabTeam.png';
 import ielts_Lab_Team_Mob from '../../assets/ieltsLabTeamMob.png';
 import iconteam from '../../assets/iconteam_ieltsLab.png';
@@ -9,7 +10,7 @@ import iconbook from '../../assets/iconbook_ieltsLabTeam.png';
 
 export default function Main() {
   const { t } = useTranslation();
-
+const [open, setOpen] = useState(false);
   return (
     <section className={styles.hero}>
       
@@ -27,6 +28,13 @@ export default function Main() {
 
         <p className={styles.desc}>{t('hero_desc')}</p>
         <p className={styles.desc2}>{t('hero_desc2')}</p>
+        <button
+  className={styles.cta}
+  onClick={() => setOpen(true)}
+>
+  {t('open_form')}
+</button>
+<ModalForm isOpen={open} onClose={() => setOpen(false)} />
 
         {/* FEATURES */}
         <div className={styles.features}>

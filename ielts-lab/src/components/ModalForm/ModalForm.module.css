@@ -1,0 +1,48 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.modal {
+  background: #111;
+  padding: 30px;
+  border-radius: 20px;
+
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+.modal button {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+
+  background: linear-gradient(135deg, #00b6b9, #00d4d7);
+  color: white;
+  cursor: pointer;
+}

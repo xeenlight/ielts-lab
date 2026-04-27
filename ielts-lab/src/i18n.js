@@ -37,7 +37,15 @@ free_item1: "IELTS Vocabulary List",
 free_item2: "Grammar Guide",
 free_item3: "Speaking Tips",
 free_item4: "Writing Samples",
-free_item5: "Listening Practice"
+free_item5: "Listening Practice",
+
+
+open_form: "Enroll now",
+form_title: "Leave your request",
+form_name: "Your name",
+form_phone: "Phone number",
+form_btn: "Send",
+form_success: "Application sent!"
     }
   },
   ru: {
@@ -77,7 +85,15 @@ free_item1: "Словарь IELTS",
 free_item2: "Грамматический гид",
 free_item3: "Советы по Speaking",
 free_item4: "Примеры Writing",
-free_item5: "Практика Listening"
+free_item5: "Практика Listening",
+
+
+open_form: "Записаться на курс",
+form_title: "Оставьте заявку",
+form_name: "Ваше имя",
+form_phone: "Номер телефона",
+form_btn: "Отправить",
+form_success: "Заявка отправлена!"
 }
   },
   uz: {
@@ -114,7 +130,16 @@ free_item1: "IELTS lug‘ati",
 free_item2: "Grammatika qo‘llanma",
 free_item3: "Speaking bo‘yicha maslahatlar",
 free_item4: "Writing namunalar",
-free_item5: "Listening mashqlari"
+free_item5: "Listening mashqlari",
+
+
+
+open_form: "Kursga yozilish",
+form_title: "Ariza qoldiring",
+form_name: "Ismingiz",
+form_phone: "Telefon raqami",
+form_btn: "Yuborish",
+form_success: "Ariza yuborildi!"
 }
   }
 };
