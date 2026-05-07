@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow } from 'swiper/modules';
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -23,12 +23,11 @@ export default function Results() {
   const [activeImg, setActiveImg] = useState(null);
   const [zoom, setZoom] = useState(false);
   const { t } = useTranslation();
+
   const data = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
   return (
     <section className={styles.section}>
-      
-      {/* 🔥 ТЕКСТ КАК В HERO */}
       <p className={styles.sub}>{t('results_sub')}</p>
 
       <h2 className={styles.title}>
@@ -37,45 +36,48 @@ export default function Results() {
 
       <p className={styles.desc}>{t('results_desc')}</p>
 
-
-<Swiper
-  modules={[EffectCoverflow]}
-  effect="coverflow"
-  centeredSlides
-  grabCursor
-  loop
-
-  slidesPerView={3} // база (мобилка)
-
-  breakpoints={{
-    768: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 5,
-    },
-  }}
-
-  coverflowEffect={{
-    rotate: 0,
-    stretch: 0,
-    depth: 300,
-    modifier: 2,
-    slideShadows: false,
-  }}
-
-  className={styles.slider}
->
+      <Swiper
+        modules={[EffectCoverflow, Autoplay]}
+        effect="coverflow"
+        centeredSlides
+        grabCursor
+        loop
+        slidesPerView={3}
+        speed={900}
+        autoplay={{
+          delay: 1800,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        breakpoints={{
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
+        }}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 250,
+          modifier: 2.2,
+          slideShadows: false,
+        }}
+        className={styles.slider}
+      >
         {data.map((img, i) => (
           <SwiperSlide key={i} className={styles.slide}>
             <motion.img
               src={img}
+              alt={`Результат ${i + 1}`}
+              className={styles.resultImg}
               onClick={() => setActiveImg(img)}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             />
           </SwiperSlide>
         ))}
       </Swiper>
+
       <p className={styles.desc2}>{t('results_desc2')}</p>
+
       {/* MODAL */}
       <AnimatePresence>
         {activeImg && (
@@ -96,14 +98,14 @@ export default function Results() {
                 e.stopPropagation();
                 setZoom(!zoom);
               }}
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.4 }}
             />
           </motion.div>
         )}
       </AnimatePresence>
-
     </section>
   );
 }

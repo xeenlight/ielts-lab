@@ -1,7 +1,62 @@
+/* src/styles/global.css */
+
 :root {
+  /* ==================== ТЁМНАЯ ТЕМА (по умолчанию) ==================== */
   --color-primary: #00b6b9;
-  --color-secondary: #23272a;
-  --color-accent: #e5e7eb;
+  --color-primary-hover: #00d4d7;
+  --color-primary-light: rgba(0, 182, 185, 0.15);
+  --color-primary-border: rgba(0, 182, 185, 0.25);
+  --color-primary-glow: rgba(0, 182, 185, 0.35);
+
   --color-bg: #000000;
+  --color-bg-secondary: #111111;
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  --color-bg-input: #1a1a1a;
+  --color-bg-modal: #0f0f0f;
+  --color-bg-header: rgba(0, 0, 0, 0.29);
+
   --color-text: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-light: rgba(255, 255, 255, 0.1);
 }
+
+/* ==================== СВЕТЛАЯ ТЕМА ==================== */
+[data-theme="light"] {
+  --color-primary: #00a8ac;
+  --color-primary-hover: #00c4c8;
+  --color-primary-light: rgba(0, 168, 172, 0.15);
+  --color-primary-border: rgba(0, 168, 172, 0.3);
+
+  --color-bg: #f8f9fa;
+  --color-bg-secondary: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-input: #f1f3f5;
+  --color-bg-modal: #ffffff;
+  --color-bg-header: rgba(255, 255, 255, 0.85);
+
+  --color-text: #1a1a1a;
+  --color-text-secondary: #555555;
+  --color-text-muted: #777777;
+
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-light: rgba(0, 0, 0, 0.08);
+}
+
+/* ===================== СВЕТЛАЯ ТЕМА (пока закомментирована) ===================== */
+/*
+[data-theme="light"] {
+  --color-primary: #00a3a6;
+  --color-bg: #f8f9fa;
+  --color-bg-secondary: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-input: #f1f3f5;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #555;
+  --color-text-muted: #777;
+  --color-border: rgba(0, 0, 0, 0.1);
+}
+*/
+

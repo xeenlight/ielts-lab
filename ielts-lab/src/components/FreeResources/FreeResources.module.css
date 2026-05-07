@@ -14,12 +14,12 @@
 .title {
   font-size: 42px;
   font-weight: 800;
-  color: white;
+  color: var( --color-text);
   margin-bottom: 10px;
 }
 
 .desc {
-  color: rgba(255,255,255,0.7);
+  color: var( --color-text);
   margin-bottom: 50px;
 }
 
@@ -55,7 +55,7 @@
 /* текст */
 .card h3 {
   font-size: 16px;
-  color: white;
+  color: var( --color-text);
   margin-bottom: 10px;
 }
 
@@ -66,7 +66,7 @@
   border: none;
 
   background: linear-gradient(135deg, #00b6b9, #00d4d7);
-  color: white;
+  color: var( --color-text);
 
   cursor: pointer;
 }

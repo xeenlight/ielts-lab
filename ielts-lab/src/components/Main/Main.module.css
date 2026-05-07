@@ -48,7 +48,7 @@ background: black;
   height: 100%;
     object-position: center top;
 object-fit: contain;
-background: black;
+background: var(--color-bg);
 
   z-index: 0;
   }
@@ -95,20 +95,20 @@ background: black;
 .title {
   font-size: 64px;
   font-weight: 800;
-  color: white;
+  color: var( --color-text);
   margin-bottom: 15px;
 }
 
 /* описание */
 .desc {
   font-size: 22px;
-  color: white;
+  color: var( --color-text);
   margin-bottom: 10px;
 }
 
 .desc2 {
   font-size: 16px;
-  color: rgba(255,255,255,0.7);
+  color: var( --color-text);
   margin-bottom: 20px;
 }
 
@@ -125,7 +125,7 @@ background: black;
   align-items: center;
   gap: 15px;
 
-  color: white;
+  color: var( --color-text);
 }
 
 
@@ -171,7 +171,7 @@ background: black;
   cursor: pointer;
 
   background: linear-gradient(135deg, #00b6b9, #00d4d7);
-  color: white;
+  color: var( --color-text);
 }
 /* =========================
    MOBILE
