@@ -93,7 +93,26 @@ form_title: "Оставьте заявку",
 form_name: "Ваше имя",
 form_phone: "Номер телефона",
 form_btn: "Отправить",
-form_success: "Заявка отправлена!"
+form_success: "Заявка отправлена!",
+
+
+// В ru:
+course_title: "IELTS Lab — Полный Курс",
+course_subtitle: "Подготовка к IELTS за 8–12 недель с экспертами",
+course_benefits_title: "Что вы получите на курсе",
+testimonials_title: "Отзывы наших студентов",
+form_subtitle: "Оставьте заявку и мы свяжемся с вами в ближайшее время",
+
+testimonial1: "Благодаря курсу я сдал IELTS с первого раза на 8.0! Особенно помог Speaking и Writing.",
+testimonial1_name: "Алина Смирнова",
+
+testimonial2: "Отличная программа. Много практики и реальных заданий. Рекомендую!",
+testimonial2_name: "Мухаммад Али",
+
+testimonial3: "Самый эффективный курс из всех, что я проходила. Преподаватели — огонь!",
+testimonial3_name: "Нодира Рахимова",
+
+// Аналогично добавь в en и uz
 }
   },
   uz: {

@@ -32,7 +32,7 @@
 
 /* карточка */
 .card {
-  background: rgba(255,255,255,0.03);
+  background: var(--color-bg-card);
   border-radius: 20px;
   padding: 15px;
 
@@ -66,7 +66,7 @@
   border: none;
 
   background: linear-gradient(135deg, #00b6b9, #00d4d7);
-  color: var( --color-text);
+  color: #ffffff;
 
   cursor: pointer;
 }

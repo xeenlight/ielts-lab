@@ -1,7 +1,7 @@
 import styles from './Main.module.css';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
-import ModalForm from '../ModalForm/ModalForm';
+import { Link } from 'react-router-dom';   // ← Добавили
+
 import ielts_Lab_Team from '../../assets/ieltsLabTeam.png';
 import ielts_Lab_Team_Mob from '../../assets/ieltsLabTeamMob.png';
 import iconteam from '../../assets/iconteam_ieltsLab.png';
@@ -10,16 +10,14 @@ import iconbook from '../../assets/iconbook_ieltsLabTeam.png';
 
 export default function Main() {
   const { t } = useTranslation();
-const [open, setOpen] = useState(false);
+
   return (
     <section className={styles.hero}>
-      
       <img src={ielts_Lab_Team} alt="bg" className={styles.bg} />
       <img src={ielts_Lab_Team_Mob} alt="bg" className={styles.bgmobile} />
       <div className={styles.overlay}></div>
 
       <div className={styles.content}>
-        
         <p className={styles.sub}>{t('hero_sub')}</p>
 
         <h1 className={styles.title}>
@@ -28,17 +26,14 @@ const [open, setOpen] = useState(false);
 
         <p className={styles.desc}>{t('hero_desc')}</p>
         <p className={styles.desc2}>{t('hero_desc2')}</p>
-        <button
-  className={styles.cta}
-  onClick={() => setOpen(true)}
->
-  {t('open_form')}
-</button>
-<ModalForm isOpen={open} onClose={() => setOpen(false)} />
+
+        {/* Изменяем кнопку на Link */}
+        <Link to="/course" className={styles.cta}>
+          {t('open_form')}   {/* или лучше поменять ключ на 'learn_more' / 'join_course' */}
+        </Link>
 
         {/* FEATURES */}
         <div className={styles.features}>
-          
           <div className={styles.feature}>
             <div className={styles.icon}>
               <img className={styles.img} src={iconbook} alt="" />
@@ -68,9 +63,7 @@ const [open, setOpen] = useState(false);
               <p>{t('feature3_desc')}</p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );

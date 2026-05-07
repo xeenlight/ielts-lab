@@ -164,14 +164,14 @@ background: var(--color-bg);
   margin-bottom: 20px;
   border-radius: 40px;
   border: none;
-
+  text-decoration: none;
   font-size: 16px;
   font-weight: 600;
 
   cursor: pointer;
 
   background: linear-gradient(135deg, #00b6b9, #00d4d7);
-  color: var( --color-text);
+  color: #ffffff ;
 }
 /* =========================
    MOBILE
