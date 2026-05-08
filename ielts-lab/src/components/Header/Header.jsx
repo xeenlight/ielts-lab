@@ -1,24 +1,33 @@
 import styles from './Header.module.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import hederlogo from '../../assets/headerlogo.png';
 
 export default function Header() {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
+
   const [langOpen, setLangOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState('dark');
 
-  // Загрузка темы из localStorage
+  /* theme init */
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 
+  /* close burger on route change */
+  useEffect(() => {
+    setMenuOpen(false);
+    setLangOpen(false);
+  }, [location.pathname]);
+
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
+
     setTheme(newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
@@ -39,27 +48,41 @@ export default function Header() {
 
   return (
     <header className={styles.wrapper}>
-      <div className={styles.header}>
-        <img className={styles.logo} src={hederlogo} alt="IELTS Lab Logo" />
+      <div
+        className={`${styles.header} ${
+          menuOpen ? styles.headerOpen : ''
+        }`}
+      >
+        {/* LOGO */}
+        <img
+          className={styles.logo}
+          src={hederlogo}
+          alt="IELTS Lab Logo"
+        />
 
-        <div className={styles.left}>
-          <nav className={`${styles.nav} ${menuOpen ? styles.show : ''}`}>
-            <NavLink to="/">{t('home')}</NavLink>
-            <NavLink to="/about">{t('about')}</NavLink>
-          </nav>
-        </div>
+        {/* NAV */}
+        <nav
+          className={`${styles.nav} ${
+            menuOpen ? styles.show : ''
+          }`}
+        >
+          <NavLink to="/">{t('home')}</NavLink>
+          <NavLink to="/about">{t('about')}</NavLink>
+          <NavLink to="/course">{t('course')}</NavLink>
+        </nav>
 
+        {/* RIGHT */}
         <div className={styles.right}>
-          {/* 🌗 Кнопка смены темы */}
+          {/* THEME */}
           <button
             onClick={toggleTheme}
             className={styles.themeBtn}
-            title="Сменить тему"
+            title="Change theme"
           >
             {theme === 'dark' ? '☀️' : '🌙'}
           </button>
 
-          {/* 🌐 Language */}
+          {/* LANGUAGE */}
           <div className={styles.lang}>
             <button
               onClick={() => setLangOpen(!langOpen)}
@@ -70,21 +93,30 @@ export default function Header() {
 
             {langOpen && (
               <div className={styles.dropdown}>
-                <button onClick={() => changeLang('en')}>🇺🇸 English</button>
-                <button onClick={() => changeLang('uz')}>🇺🇿 O'zbek</button>
-                <button onClick={() => changeLang('ru')}>🇷🇺 Русский</button>
+                <button onClick={() => changeLang('en')}>
+                  🇺🇸 English
+                </button>
+
+                <button onClick={() => changeLang('uz')}>
+                  🇺🇿 O'zbek
+                </button>
+
+                <button onClick={() => changeLang('ru')}>
+                  🇷🇺 Русский
+                </button>
               </div>
             )}
           </div>
 
-          {/* 🍔 Burger */}
+          {/* BURGER */}
           <button
             className={styles.burger}
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span />
+            <span />
+            <span />
           </button>
         </div>
       </div>
