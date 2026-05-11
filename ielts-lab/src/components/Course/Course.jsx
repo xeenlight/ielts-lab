@@ -1,6 +1,7 @@
 import styles from './Course.module.css';
 import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
+import CourseFAQ from './CourseFAQ.jsx';
 
 const videoId = "M3FNjV4br7k";
 
@@ -178,6 +179,9 @@ export default function Course() {
           </div>
         </div>
       </section>
+            <CourseFAQ />
     </div>
+
   );
+
 }
