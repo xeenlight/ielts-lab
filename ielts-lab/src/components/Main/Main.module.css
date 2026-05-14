@@ -191,7 +191,7 @@ background: var(--color-bg);
     flex-direction: column;
     gap: 30px;
     align-items: center;
-            padding-bottom: 50px;
+            padding-bottom: 30px;
   }
 
   .feature {

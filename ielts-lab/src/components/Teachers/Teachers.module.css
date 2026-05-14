@@ -1,0 +1,386 @@
+.teachersSection {
+  padding: 100px 20px;
+  background: var(--color-bg);
+  text-align: center;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: var(--color-bg-card);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 182, 185, 0.2);
+  border-color: var(--color-primary);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 340px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Info */
+.info {
+  padding: 20px;
+  text-align: center;
+}
+
+.info h3 {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+.band {
+  display: inline-block;
+  background: #00b6b9;
+  color: white;
+  padding: 4px 14px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 0.95rem;
+}
+
+.stats div span {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalContent {
+  background: var(--color-bg-card);
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.modalBody {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.modalImage {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.modalImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalInfo {
+  flex: 1;
+  text-align: left;
+}
+
+.modalInfo h2 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.qualification {
+  color: #00b6b9;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.description {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teachersSection {
+  padding: 40px 20px;
+}
+  .modalBody {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+}
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 12, 20, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+}
+
+/* Main Modal */
+.modalContent {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+
+  background: var(--color-modal);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255,255,255,0.03) inset,
+    0 0 40px rgba(0, 182, 185, 0.12);
+
+  overflow: hidden;
+  color: white;
+}
+
+/* Close button */
+.closeBtn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  color: white;
+
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+
+  transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+  background: rgba(0, 182, 185, 0.25);
+  transform: rotate(90deg) scale(1.08);
+}
+
+/* Layout */
+.modalBody {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 0;
+  min-height: 580px;
+}
+
+/* Image side */
+.modalImage {
+  position: relative;
+  overflow: hidden;
+  background: #111827;
+}
+
+.modalImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.modalContent:hover .modalImage img {
+  transform: scale(1.04);
+}
+
+/* Gradient overlay on image */
+.modalImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.35),
+    transparent 45%
+  );
+}
+
+/* Info side */
+.modalInfo {
+  padding: 60px 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modalInfo h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+/* Qualification badge */
+.qualification {
+  display: inline-block;
+  width: fit-content;
+
+  padding: 8px 18px;
+  margin-bottom: 28px;
+
+  border-radius: 999px;
+  background: rgba(0, 182, 185, 0.14);
+  border: 1px solid rgba(0, 182, 185, 0.25);
+
+  color: #42e8eb;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+}
+
+/* Description */
+.description {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.78);
+  max-width: 520px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .modalContent {
+    max-width: 95%;
+    border-radius: 24px;
+  }
+
+  .modalBody {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .modalImage {
+    height: 320px;
+  }
+
+  .modalInfo {
+    padding: 30px 24px 36px;
+  }
+
+  .modalInfo h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 14px;
+  }
+
+  .modalImage {
+    height: 260px;
+  }
+
+  .closeBtn {
+    width: 40px;
+    height: 40px;
+    top: 14px;
+    right: 14px;
+  }
+
+  .description {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+}
+.ctaButton {
+  padding: 14px 28px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}

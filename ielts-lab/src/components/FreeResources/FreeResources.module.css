@@ -95,6 +95,9 @@
    MOBILE
 ========================= */
 @media (max-width: 768px) {
+  .section {
+  padding: 40px 20px;
+}
   .title {
     font-size: 28px;
   }
