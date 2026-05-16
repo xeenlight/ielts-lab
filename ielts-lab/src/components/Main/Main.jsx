@@ -13,7 +13,6 @@ export default function Main() {
         {/* LEFT */}
         <div className={styles.left}>
           <div className={styles.badge}>
-            {t('hero_sub')}
           </div>
 <img className={styles.teamImage} src={ielts_Lab_Team} alt="IELTS Lab Team1" />
           <h1 className={styles.title}>
