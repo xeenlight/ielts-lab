@@ -1,68 +1,79 @@
 import styles from './Main.module.css';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';   // ← Добавили
+import { Link } from 'react-router-dom';
 
-import ielts_Lab_Team from '../../assets/ieltsLabTeam.png';
-import ielts_Lab_Team_Mob from '../../assets/ieltsLabTeamMob.png';
-import iconteam from '../../assets/iconteam_ieltsLab.png';
-import iconprofit from '../../assets/iconprofit_ieltsLabTeam.png';
-import iconbook from '../../assets/iconbook_ieltsLabTeam.png';
+import ielts_Lab_Team from '../../assets/ieltsLabTeam1.png';
 
 export default function Main() {
   const { t } = useTranslation();
 
   return (
     <section className={styles.hero}>
-      <img src={ielts_Lab_Team} alt="bg" className={styles.bg} />
-      <img src={ielts_Lab_Team_Mob} alt="bg" className={styles.bgmobile} />
-      <div className={styles.overlay}></div>
+      <div className={styles.container}>
+        {/* LEFT */}
+        <div className={styles.left}>
+          <div className={styles.badge}>
+            {t('hero_sub')}
+          </div>
+<img className={styles.teamImage} src={ielts_Lab_Team} alt="IELTS Lab Team1" />
+          <h1 className={styles.title}>
+            ENGLISH <br />
+            <span>FOR THE FUTURE</span>
+          </h1>
 
-      <div className={styles.content}>
-        <p className={styles.sub}>{t('hero_sub')}</p>
+          <p className={styles.desc}>
+            {t('hero_desc')}
+          </p>
 
-        <h1 className={styles.title}>
-          {t('hero_title')}
-        </h1>
+          <div className={styles.actions}>
+            <Link to="/course" className={styles.primaryBtn}>
+              {t('open_form')}
+            </Link>
 
-        <p className={styles.desc}>{t('hero_desc')}</p>
-        <p className={styles.desc2}>{t('hero_desc2')}</p>
-
-        {/* Изменяем кнопку на Link */}
-        <Link to="/course" className={styles.cta}>
-          {t('open_form')}   {/* или лучше поменять ключ на 'learn_more' / 'join_course' */}
-        </Link>
-
-        {/* FEATURES */}
-        <div className={styles.features}>
-          <div className={styles.feature}>
-            <div className={styles.icon}>
-              <img className={styles.img} src={iconbook} alt="" />
-            </div>
-            <div>
-              <h4>{t('feature1_title')}</h4>
-              <p>{t('feature1_desc')}</p>
-            </div>
+            <button className={styles.secondaryBtn}>
+              ▶ Смотреть видео
+            </button>
           </div>
 
-          <div className={styles.feature}>
-            <div className={styles.icon}>
-              <img className={styles.img} src={iconteam} alt="" />
-            </div>
+          <div className={styles.stats}>
             <div>
-              <h4>{t('feature2_title')}</h4>
-              <p>{t('feature2_desc')}</p>
+              <h3>500+</h3>
+              <p>Студентов</p>
             </div>
-          </div>
 
-          <div className={styles.feature}>
-            <div className={styles.icon}>
-              <img className={styles.img} src={iconprofit} alt="" />
-            </div>
             <div>
-              <h4>{t('feature3_title')}</h4>
-              <p>{t('feature3_desc')}</p>
+              <h3>7.5</h3>
+              <p>Средний IELTS</p>
+            </div>
+
+            <div>
+              <h3>95%</h3>
+              <p>Довольных учеников</p>
             </div>
           </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className={styles.right}>
+          <div className={styles.glow}></div>
+        </div>
+      </div>
+
+      {/* FEATURES */}
+      <div className={styles.features}>
+        <div className={styles.card}>
+          <h4>Опытные преподаватели</h4>
+          <p>Международные сертификаты и опыт от 5 лет</p>
+        </div>
+
+        <div className={styles.card}>
+          <h4>Современная методика</h4>
+          <p>Практика, speaking club и реальные кейсы</p>
+        </div>
+
+        <div className={styles.card}>
+          <h4>IELTS подготовка</h4>
+          <p>Подготовка к IELTS, CEFR и TOEFL</p>
         </div>
       </div>
     </section>
