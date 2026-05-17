@@ -1,51 +1,50 @@
-import styles from './Main.module.css';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import styles from "./Main.module.css";
 
-import ielts_Lab_Team from '../../assets/ieltsLabTeam1.png';
-
-export default function Main() {
-  const { t } = useTranslation();
-
+function Main() {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
         {/* LEFT */}
-        <div className={styles.left}>
-          <div className={styles.badge}>
-          </div>
-<img className={styles.teamImage} src={ielts_Lab_Team} alt="IELTS Lab Team1" />
+        <div className={styles.content}>
+
+
           <h1 className={styles.title}>
-            ENGLISH <br />
+            ENGLISH
             <span>FOR THE FUTURE</span>
           </h1>
 
-          <p className={styles.desc}>
-            {t('hero_desc')}
+          <p className={styles.description}>
+            Практические курсы английского языка
+            <br />
+            для учебы, карьеры и уверенного будущего.
           </p>
 
-          <div className={styles.actions}>
-            <Link to="/course" className={styles.primaryBtn}>
-              {t('open_form')}
-            </Link>
+          <div className={styles.buttons}>
+            <button className={styles.primaryBtn}>
+              Бесплатный урок
+            </button>
 
             <button className={styles.secondaryBtn}>
-              ▶ Смотреть видео
+              Смотреть видео
             </button>
           </div>
 
           <div className={styles.stats}>
-            <div>
+            <div className={styles.statItem}>
               <h3>500+</h3>
               <p>Студентов</p>
             </div>
 
-            <div>
+            <div className={styles.line}></div>
+
+            <div className={styles.statItem}>
               <h3>7.5</h3>
               <p>Средний IELTS</p>
             </div>
 
-            <div>
+            <div className={styles.line}></div>
+
+            <div className={styles.statItem}>
               <h3>95%</h3>
               <p>Довольных учеников</p>
             </div>
@@ -53,28 +52,10 @@ export default function Main() {
         </div>
 
         {/* RIGHT */}
-        <div className={styles.right}>
-          <div className={styles.glow}></div>
-        </div>
-      </div>
-
-      {/* FEATURES */}
-      <div className={styles.features}>
-        <div className={styles.card}>
-          <h4>Опытные преподаватели</h4>
-          <p>Международные сертификаты и опыт от 5 лет</p>
-        </div>
-
-        <div className={styles.card}>
-          <h4>Современная методика</h4>
-          <p>Практика, speaking club и реальные кейсы</p>
-        </div>
-
-        <div className={styles.card}>
-          <h4>IELTS подготовка</h4>
-          <p>Подготовка к IELTS, CEFR и TOEFL</p>
-        </div>
+        <div className={styles.image}></div>
       </div>
     </section>
   );
 }
+
+export default Main;
