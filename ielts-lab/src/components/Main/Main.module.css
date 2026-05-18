@@ -39,12 +39,80 @@ right: 340px;
   margin-right: -60px;           /* компенсируем padding контейнера */
   width: calc(100% + 60px);      /* расширяем за пределы контейнера */
 }
+@media (min-width: 1200px) {
+  .image {
+    margin-right: calc(-50vw + 700px);   /* 700px = половина max-width 1400px */
+    width: calc(50vw + 700px);
+    /* Или ещё проще: */
+    /* margin-right: -9999px; */
+    /* width: calc(100% + 9999px); */
+  }
+}
 
+/* ================= LEFT ================= */
+
+.content {
+  flex: 1;
+  max-width: 420px;
+  z-index: 2;
+}
+@media (min-width: 1300px) {
+  .image {
+    margin-right: calc(-50vw + 700px);   /* 700px = половина max-width 1400px */
+    width: calc(50vw + 700px);
+    /* Или ещё проще: */
+    /* margin-right: -9999px; */
+    /* width: calc(100% + 9999px); */
+  }
+}
+
+/* ================= LEFT ================= */
+
+.content {
+  flex: 1;
+  max-width: 420px;
+  z-index: 2;
+}
+@media (min-width: 1000px) {
+  .image {
+    margin-right: calc(-50vw + 700px);   /* 700px = половина max-width 1400px */
+    width: calc(50vw + 700px);
+    /* Или ещё проще: */
+    /* margin-right: -9999px; */
+    /* width: calc(100% + 9999px); */
+  }
+}
+
+/* ================= LEFT ================= */
+
+.content {
+  flex: 1;
+  max-width: 440px;
+  z-index: 2;
+}
+@media (min-width: 1300px) {
+  .image {
+    margin-right: calc(-50vw + 700px);   /* 700px = половина max-width 1400px */
+    width: calc(50vw + 700px);
+    /* Или ещё проще: */
+    /* margin-right: -9999px; */
+    /* width: calc(100% + 9999px); */
+  }
+}
+
+/* ================= LEFT ================= */
+
+.content {
+  flex: 1;
+  max-width: 420px;
+  z-index: 2;
+}
 /* Если хочешь, чтобы картинка уходила полностью на весь экран (full-bleed) */
 @media (min-width: 901px) {
   .image {
     margin-right: calc(-50vw + 700px);   /* 700px = половина max-width 1400px */
     width: calc(50vw + 700px);
+    left: -420px; /* компенсируем padding контейнера */
     /* Или ещё проще: */
     /* margin-right: -9999px; */
     /* width: calc(100% + 9999px); */
@@ -344,7 +412,7 @@ right: 20px;
 
     order: 2;
 
-    margin-top: -220px;
+    margin-top: -280px;
   }
   .title {
     font-size: 58px;
@@ -357,7 +425,7 @@ right: 20px;
   .image {
     min-height: 430px;
     width: 150%;
-      top: 10px;
+      top: -40px;
 right: 30px;
   }
 
