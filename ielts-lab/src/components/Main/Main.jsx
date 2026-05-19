@@ -13,154 +13,126 @@ function Main() {
     <section className={styles.hero}>
       {/* PARTICLES BACKGROUND */}
 
-
+<div className={styles.clusterGlow}></div>
 <Particles
   id="tsparticles"
   init={particlesInit}
   className={styles.particles}
-  options={{
-    fullScreen: false,
+options={{
+  fullScreen: false,
 
-    background: {
-      color: "transparent",
-    },
+  background: {
+    color: "transparent",
+  },
 
-    fpsLimit: 120,
+  fpsLimit: 60,
 
-    particles: {
-      number: {
-        value: 180, // БЫЛО 90
-        density: {
-          enable: true,
-          area: 1000,
-        },
-      },
-
-      color: {
-        value: "#00b6b9", // var(--color-primary)
-      },
-
-      links: {
+  particles: {
+    number: {
+      value: 110,
+      density: {
         enable: true,
-
-        color: "#00b6b9",
-
-        distance: 140,
-
-        opacity: 0.12,
-
-        width: 1,
-
-        triangles: {
-          enable: true,
-          opacity: 0.015,
-        },
-      },
-
-      move: {
-        enable: true,
-
-        speed: 1.1,
-
-        direction: "none",
-
-        random: true,
-
-        straight: false,
-
-        outModes: {
-          default: "bounce",
-        },
-
-        attract: {
-          enable: true,
-          rotateX: 600,
-          rotateY: 1200,
-        },
-      },
-
-      opacity: {
-        value: {
-          min: 0.15,
-          max: 0.9,
-        },
-
-        animation: {
-          enable: true,
-          speed: 0.8,
-          minimumValue: 0.1,
-          sync: false,
-        },
-      },
-
-      size: {
-        value: {
-          min: 1,
-          max: 4,
-        },
-
-        animation: {
-          enable: true,
-          speed: 2,
-          minimumValue: 0.5,
-          sync: false,
-        },
-      },
-
-      shadow: {
-        enable: true,
-
-        color: "#00b6b9",
-
-        blur: 12,
+        area: 1400,
       },
     },
 
-    interactivity: {
-      detectsOn: "window",
+    color: {
+      value: "#00b6b9",
+    },
 
-      events: {
-        onHover: {
-          enable: true,
+    links: {
+      enable: true,
 
-          mode: ["grab", "bubble", "repulse"],
-        },
+      color: "#00b6b9",
 
-        onClick: {
-          enable: false,
-        },
+      distance: 150,
 
-        resize: true,
-      },
+      opacity: 0.12,
 
-      modes: {
-        grab: {
-          distance: 220,
+      width: 1,
 
-          links: {
-            opacity: 0.45,
-          },
-        },
-
-        bubble: {
-          distance: 250,
-
-          size: 7,
-
-          duration: 2,
-
-          opacity: 1,
-        },
-
-        repulse: {
-          distance: 120,
-          duration: 0.4,
-        },
+      triangles: {
+        enable: true, // ВАЖНО
       },
     },
 
-    detectRetina: true,
-  }}
+    move: {
+      enable: true,
+
+      speed: 0.6, // меньше лагов
+
+      random: true,
+
+      outModes: {
+        default: "out",
+      },
+    },
+
+opacity: {
+  value: {
+    min: 0.05,
+    max: 0.9,
+  },
+
+  animation: {
+    enable: true,
+    speed: 0.3,
+    sync: false,
+  },
+},
+
+size: {
+  value: {
+    min: 0.6,
+    max: 3.2,
+  },
+
+  animation: {
+    enable: true,
+    speed: 1,
+    minimumValue: 0.3,
+    sync: false,
+  },
+},
+
+    shadow: {
+      enable: false, // ОЧЕНЬ ЖРЕТ FPS
+    },
+  },
+
+  interactivity: {
+    detectsOn: "canvas",
+
+    events: {
+      onHover: {
+        enable: true,
+
+        mode: "grab",
+      },
+
+      resize: true,
+    },
+    number: {
+  value: 140,
+  density: {
+    enable: true,
+    area: 1300,
+  },
+},
+
+    modes: {
+      grab: {
+        distance: 180,
+
+        links: {
+          opacity: 0.35,
+        },
+      },
+    },
+  },
+
+  detectRetina: false, // ОЧЕНЬ ВАЖНО
+}}
 />
 
       {/* GLOW */}
