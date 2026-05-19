@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <Main />
       <Results />
-      <Teachers />
       <FreeResources />
+      <Teachers />
     </>
   );
 }
