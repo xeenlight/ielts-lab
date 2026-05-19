@@ -245,3 +245,32 @@ background: var(--color-primary-light);
     padding-bottom: 22px;
   }
 }
+
+.themeIcon {
+  width: 24px;           /* подбери нужный размер */
+  height: 24px;
+  transition: all 0.3s ease;
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(61%)
+    sepia(88%)
+    saturate(1186%)
+    hue-rotate(136deg)
+    brightness(95%)
+    contrast(101%);
+
+}
+
+/* Наведение (по желанию) */
+.themeIcon:hover {
+  transform: scale(1.1);
+  filter:     brightness(0)
+    saturate(100%)
+    invert(73%)
+    sepia(66%)
+    saturate(1235%)
+    hue-rotate(136deg)
+    brightness(105%)
+    contrast(105%);
+}

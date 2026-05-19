@@ -3,6 +3,8 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import hederlogo from '../../assets/headerlogo.png';
+import Sun from '../../assets/sun.png';
+import Moon from '../../assets/moon.png';
 
 export default function Header() {
   const { t, i18n } = useTranslation();
@@ -79,8 +81,11 @@ export default function Header() {
             className={styles.themeBtn}
             title="Change theme"
           >
-            {theme === 'dark' ? '☀️' : '🌙'}
-          </button>
+{theme === 'dark' ? (
+  <img src={Sun} alt="Sun" className={styles.themeIcon} />
+) : (
+  <img src={Moon} alt="Moon" className={styles.themeIcon} />
+)}          </button>
 
           {/* LANGUAGE */}
           <div className={styles.lang}>
