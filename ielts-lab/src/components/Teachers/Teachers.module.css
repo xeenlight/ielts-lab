@@ -1,5 +1,5 @@
 .teachersSection {
-  padding: 100px 20px;
+  padding: 60px 40px;
   background: var(--color-bg);
   text-align: center;
 }
@@ -72,7 +72,7 @@
 
 .band {
   display: inline-block;
-  background: #00b6b9;
+  background: var(--color-primary);
   color: white;
   padding: 4px 14px;
   border-radius: 30px;
@@ -159,7 +159,7 @@
 }
 
 .qualification {
-  color: #00b6b9;
+  color: var(--color-primary);
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -313,7 +313,7 @@
   background: rgba(0, 182, 185, 0.14);
   border: 1px solid rgba(0, 182, 185, 0.25);
 
-  color: #42e8eb;
+  color: var(--color-primary);
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.4px;

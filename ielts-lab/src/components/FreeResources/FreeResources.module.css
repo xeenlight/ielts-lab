@@ -5,7 +5,7 @@
 
 /* текст */
 .sub {
-  color: #00b6b9;
+  color: var(--color-primary);
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -70,7 +70,7 @@
   padding: 12px 16px;
   border-radius: 30px;
   border: none;
-  background: linear-gradient(135deg, #00b6b9, #00d4d7);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
   color: #ffffff;
   cursor: pointer;
   font-size: 14px;

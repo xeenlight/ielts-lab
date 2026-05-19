@@ -3,11 +3,20 @@ import styles from "./Main.module.css";
 function Main() {
   return (
     <section className={styles.hero}>
+      {/* MOLECULES */}
+      <div className={`${styles.molecule} ${styles.molecule1}`}></div>
+      <div className={`${styles.molecule} ${styles.molecule2}`}></div>
+      <div className={`${styles.molecule} ${styles.molecule3}`}></div>
+
+      <div className={`${styles.molecule} ${styles.molecule4}`}></div>
+      <div className={`${styles.molecule} ${styles.molecule5}`}></div>
+      <div className={`${styles.molecule} ${styles.molecule6}`}></div>
+
+      {/* GLOW */}
+      <div className={styles.glow}></div>
+
       <div className={styles.container}>
-        {/* LEFT */}
         <div className={styles.content}>
-
-
           <h1 className={styles.title}>
             ENGLISH
             <span>FOR THE FUTURE</span>
@@ -50,9 +59,6 @@ function Main() {
             </div>
           </div>
         </div>
-
-        {/* RIGHT */}
-        <div className={styles.image}></div>
       </div>
     </section>
   );
