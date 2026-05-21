@@ -1,142 +1,172 @@
-// Main.jsx
+import { useEffect, useMemo, useState } from "react";
 
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
+
 import styles from "./Main.module.css";
 
 function Main() {
+  const [mainColor, setMainColor] = useState("#00b6b9");
+
+  // INIT PARTICLES
   const particlesInit = async (engine) => {
     await loadSlim(engine);
   };
-const rootStyles = getComputedStyle(document.documentElement);
 
-const mainColor =
-  rootStyles.getPropertyValue("--color-bg-main").trim();
-  return (
-    <section className={styles.hero}>
-      {/* PARTICLES BACKGROUND */}
+  // THEME COLOR UPDATE
+  useEffect(() => {
+    const updateThemeColor = () => {
+      const rootStyles = getComputedStyle(
+        document.documentElement
+      );
 
-<div className={styles.clusterGlow}></div>
-<Particles
-  id="tsparticles"
-  init={particlesInit}
-  className={styles.particles}
-options={{
-  fullScreen: false,
+      const color = rootStyles
+        .getPropertyValue("--color-bg-main")
+        .trim();
 
-  background: {
-    color: "transparent",
-  },
+      setMainColor(color);
+    };
 
-  fpsLimit: 60,
+    updateThemeColor();
 
-  particles: {
-    number: {
-      value: 110,
-      density: {
-        enable: true,
-        area: 1400,
-      },
-    },
+    const observer = new MutationObserver(
+      updateThemeColor
+    );
 
-    color: {
-      value: "#00b6b9",
-    },
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
-    links: {
-      enable: true,
+    return () => observer.disconnect();
+  }, []);
 
-        color: mainColor,
+  // PARTICLES OPTIONS
+  const particlesOptions = useMemo(
+    () => ({
+      fullScreen: false,
 
-      distance: 150,
-
-      opacity: 0.12,
-
-      width: 1,
-
-      triangles: {
-        enable: true, // ВАЖНО
-      },
-    },
-
-    move: {
-      enable: true,
-
-      speed: 0.6, // меньше лагов
-
-      random: true,
-
-      outModes: {
-        default: "out",
-      },
-    },
-
-opacity: {
-  value: {
-    min: 0.05,
-    max: 0.9,
-  },
-
-  animation: {
-    enable: true,
-    speed: 0.3,
-    sync: false,
-  },
-},
-
-size: {
-  value: {
-    min: 0.6,
-    max: 3.2,
-  },
-
-  animation: {
-    enable: true,
-    speed: 1,
-    minimumValue: 0.3,
-    sync: false,
-  },
-},
-
-    shadow: {
-      enable: false, // ОЧЕНЬ ЖРЕТ FPS
-    },
-  },
-
-  interactivity: {
-    detectsOn: "canvas",
-
-    events: {
-      onHover: {
-        enable: true,
-
-        mode: "grab",
-      },
-
-      resize: true,
-    },
-    number: {
-  value: 140,
-  density: {
-    enable: true,
-    area: 1300,
-  },
-},
-
-    modes: {
-      grab: {
-        distance: 180,
-
-        links: {
-          opacity: 0.35,
+      background: {
+        color: {
+          value: "transparent",
         },
       },
-    },
-  },
 
-  detectRetina: false, // ОЧЕНЬ ВАЖНО
-}}
-/>
+      fpsLimit: 60,
+
+      particles: {
+        number: {
+          value: 110,
+
+          density: {
+            enable: true,
+            area: 1400,
+          },
+        },
+
+        color: {
+          value: "transparent",
+        },
+
+        links: {
+          enable: true,
+
+          color: mainColor,
+
+          distance: 150,
+
+          opacity: 0.12,
+
+          width: 1,
+
+          triangles: {
+            enable: true,
+          },
+        },
+
+        move: {
+          enable: true,
+
+          speed: 0.6,
+
+          random: true,
+
+          outModes: {
+            default: "out",
+          },
+        },
+
+        opacity: {
+          value: {
+            min: 0.05,
+            max: 0.9,
+          },
+
+          animation: {
+            enable: true,
+            speed: 0.3,
+            sync: false,
+          },
+        },
+
+        size: {
+          value: {
+            min: 0.6,
+            max: 3.2,
+          },
+
+          animation: {
+            enable: true,
+            speed: 1,
+            minimumValue: 0.3,
+            sync: false,
+          },
+        },
+
+        shadow: {
+          enable: false,
+        },
+      },
+
+      interactivity: {
+        detectsOn: "canvas",
+
+        events: {
+          onHover: {
+            enable: true,
+            mode: "grab",
+          },
+
+          resize: true,
+        },
+
+        modes: {
+          grab: {
+            distance: 180,
+
+            links: {
+              opacity: 0.35,
+            },
+          },
+        },
+      },
+
+      detectRetina: false,
+    }),
+    [mainColor]
+  );
+
+  return (
+    <section className={styles.hero}>
+      {/* PARTICLES */}
+      <div className={styles.clusterGlow}></div>
+
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        className={styles.particles}
+        options={particlesOptions}
+      />
 
       {/* GLOW */}
       <div className={styles.glow}></div>
