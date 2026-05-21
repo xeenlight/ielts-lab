@@ -309,7 +309,7 @@ background: var(--color-primary-light);
 .logoText::after {
   content: "Lab";
 
-  color: var(--color-accent);
+  color: var(--color-text);
 
   margin-left: 6px;
 }

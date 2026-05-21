@@ -269,7 +269,7 @@ color: var(--color-text);
 }
 
 .stats p {
-  color: rgba(255,255,255,0.65);
+  color: var(--color-text-secondary);
 }
 
 .lines {

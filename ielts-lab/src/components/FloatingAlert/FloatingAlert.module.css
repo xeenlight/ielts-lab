@@ -311,3 +311,35 @@
 
   transform: rotate(90deg);
 }
+/* CLICKABLE */
+.alert {
+  cursor: pointer;
+}
+
+/* smoother hover */
+.alert:hover {
+  border-color: rgba(0, 182, 185, 0.4);
+
+  transform:
+    translateX(-50%)
+    translateY(-6px);
+
+  box-shadow:
+    0 25px 60px rgba(0, 182, 185, 0.12);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .alert {
+    cursor: pointer;
+  }
+
+  .content {
+    padding-right: 10px;
+  }
+
+  .content p {
+    margin-top: 6px;
+  }
+}

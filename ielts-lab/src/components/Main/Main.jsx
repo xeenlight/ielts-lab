@@ -12,7 +12,11 @@ function Main() {
   const particlesInit = async (engine) => {
     await loadSlim(engine);
   };
-
+const isLight =
+  document.documentElement.getAttribute(
+    "data-theme"
+  ) === "light";
+  
   // THEME COLOR UPDATE
   useEffect(() => {
     const updateThemeColor = () => {
@@ -42,8 +46,14 @@ function Main() {
   }, []);
 
   // PARTICLES OPTIONS
-  const particlesOptions = useMemo(
-    () => ({
+const particlesOptions = useMemo(
+  () => {
+    const isLight =
+      document.documentElement.getAttribute(
+        "data-theme"
+      ) === "light";
+
+    return {
       fullScreen: false,
 
       background: {
@@ -52,20 +62,29 @@ function Main() {
         },
       },
 
-      fpsLimit: 60,
+      fpsLimit: 120,
 
       particles: {
         number: {
-          value: 110,
+          value: isLight ? 135 : 110,
 
           density: {
             enable: true,
-            area: 1400,
+            area: 1200,
           },
         },
+number: {
+  value: isLight ? 135 : 110,
 
+  limit: 90,
+
+  density: {
+    enable: true,
+    area: 1200,
+  },
+},
         color: {
-          value: "transparent",
+          value: mainColor,
         },
 
         links: {
@@ -73,68 +92,85 @@ function Main() {
 
           color: mainColor,
 
-          distance: 150,
+          distance: 155,
 
-          opacity: 0.12,
+          opacity: isLight ? 0.32 : 0.14,
 
-          width: 1,
+          width: isLight ? 1.2 : 1,
 
           triangles: {
             enable: true,
+            opacity: isLight ? 0.04 : 0.02,
           },
         },
 
         move: {
           enable: true,
 
-          speed: 0.6,
+          speed: 0.8,
 
-          random: true,
+          random: false,
+
+          straight: false,
 
           outModes: {
-            default: "out",
+            default: "bounce",
+          },
+
+          attract: {
+            enable: false,
           },
         },
 
         opacity: {
-          value: {
-            min: 0.05,
-            max: 0.9,
-          },
+          value: isLight
+            ? { min: 0.15, max: 1 }
+            : { min: 0.05, max: 0.9 },
 
           animation: {
             enable: true,
-            speed: 0.3,
+            speed: 0.8,
             sync: false,
           },
         },
 
         size: {
           value: {
-            min: 0.6,
-            max: 3.2,
+            min: isLight ? 1 : 0.6,
+            max: isLight ? 4 : 3.2,
           },
 
           animation: {
             enable: true,
-            speed: 1,
+            speed: 2,
             minimumValue: 0.3,
             sync: false,
           },
         },
 
         shadow: {
-          enable: false,
+          enable: isLight,
+
+          color: mainColor,
+
+          blur: 12,
         },
       },
 
       interactivity: {
-        detectsOn: "canvas",
+        detectsOn: "window",
 
         events: {
           onHover: {
             enable: true,
-            mode: "grab",
+
+            mode: ["grab"],
+          },
+
+          onClick: {
+            enable: true,
+
+            mode: ["push"],
           },
 
           resize: true,
@@ -142,24 +178,39 @@ function Main() {
 
         modes: {
           grab: {
-            distance: 180,
+            distance: 220,
 
             links: {
-              opacity: 0.35,
+              opacity: isLight ? 0.8 : 0.45,
             },
+          },
+
+          repulse: {
+            distance: 140,
+
+            duration: 0.4,
+
+            factor: 100,
+          },
+
+          push: {
+            quantity: 2,
           },
         },
       },
 
-      detectRetina: false,
-    }),
-    [mainColor]
-  );
+      detectRetina: true,
+    };
+  },
+  [mainColor]
+);
 
   return (
     <section className={styles.hero}>
       {/* PARTICLES */}
-      <div className={styles.clusterGlow}></div>
+      {!isLight && (
+  <div className={styles.clusterGlow}></div>
+)}
 
       <Particles
         id="tsparticles"
