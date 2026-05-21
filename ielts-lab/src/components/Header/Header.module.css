@@ -97,7 +97,7 @@ background: var(--color-primary-light);
   padding: 10px;
   border-radius: 16px;
 
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
 
   backdrop-filter: blur(18px);
@@ -273,4 +273,52 @@ background: var(--color-primary-light);
     hue-rotate(136deg)
     brightness(105%)
     contrast(105%);
+}
+.logo {
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 20;
+}
+
+.logoText {
+  font-size: 1.8rem;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  text-transform: uppercase;
+
+  color: var(--color-primary);
+
+  position: relative;
+
+  transition: 0.3s ease;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  line-height: 1;
+}
+
+/* LAB */
+.logoText::after {
+  content: "Lab";
+
+  color: var(--color-accent);
+
+  margin-left: 6px;
+}
+
+/* hover */
+.logo:hover .logoText {
+  transform: translateY(-1px);
+
+  text-shadow:
+    0 0 14px rgba(255,255,255,0.08),
+    0 0 30px rgba(0,182,185,0.12);
 }

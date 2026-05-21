@@ -1,0 +1,313 @@
+.alert {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(920px, calc(100% - 30px));
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  padding: 28px;
+
+  border-radius: 32px;
+
+  border: 1px solid var(--color-border);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  overflow: hidden;
+
+  z-index: 9999;
+
+  animation: slideUp 0.5s ease;
+
+  box-shadow:
+    0 20px 50px rgba(0, 182, 185, 0.08);
+}
+
+/* Glow overlay */
+.alert::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 182, 185, 0.15),
+      transparent 55%
+    );
+
+  opacity: 1;
+
+  pointer-events: none;
+}
+
+/* Hover */
+.alert:hover {
+  border-color: rgba(0, 182, 185, 0.4);
+
+  transform:
+    translateX(-50%)
+    translateY(-6px);
+}
+
+/* ================= ICON ================= */
+
+.icon {
+  width: 74px;
+  height: 74px;
+
+  flex-shrink: 0;
+
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+    filter:
+    brightness(0)
+    saturate(100%)
+    invert(61%)
+    sepia(88%)
+    saturate(1186%)
+    hue-rotate(136deg)
+    brightness(95%)
+    contrast(101%);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 182, 185, 0.2),
+      rgba(0, 182, 185, 0.08)
+    );
+
+  border: 1px solid rgba(0, 182, 185, 0.2);
+
+  box-shadow:
+    0 0 30px rgba(0, 182, 185, 0.12);
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.content h4 {
+  margin-bottom: 10px;
+
+  font-size: 1.55rem;
+  font-weight: 800;
+
+  color: var(--color-text);
+}
+
+.content p {
+  line-height: 1.7;
+  font-size: 1rem;
+
+  color: var(--color-text-secondary);
+}
+
+/* ================= BUTTON ================= */
+
+.button {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+
+  padding: 18px 28px;
+
+  border-radius: 999px;
+
+  background: var(--color-primary);
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 0 30px rgba(0, 182, 185, 0.25);
+}
+
+.button:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 40px rgba(0, 182, 185, 0.4);
+}
+
+/* ================= CLOSE ================= */
+
+.close {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.06);
+
+  color: var(--color-text);
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  z-index: 5;
+}
+
+.close:hover {
+  background: rgba(0, 182, 185, 0.18);
+
+  transform: rotate(90deg);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      translateY(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .alert {
+    top: 14px;
+    bottom: auto;
+
+    width: calc(100% - 16px);
+
+    padding: 18px;
+
+    border-radius: 24px;
+
+    gap: 16px;
+
+    animation: slideDown 0.45s ease;
+    align-items: anchor-center;
+  }
+
+  .icon {
+    width: 58px;
+    height: 58px;
+    filter:
+    brightness(0)
+    saturate(100%)
+    invert(61%)
+    sepia(88%)
+    saturate(1186%)
+    hue-rotate(136deg)
+    brightness(95%)
+    contrast(101%);
+    font-size: 28px;
+
+    border-radius: 18px;
+  }
+
+  .content h4 {
+    font-size: 1rem;
+    line-height: 1.35;
+
+    padding-right: 30px;
+  }
+
+  .content p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .close {
+    width: 34px;
+    height: 34px;
+
+    top: 10px;
+    right: 10px;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform:
+        translateX(-50%)
+        translateY(-120px);
+    }
+
+    to {
+      opacity: 1;
+      transform:
+        translateX(-50%)
+        translateY(0);
+    }
+  }
+}
+.close {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.05);
+
+  color: var(--color-text);
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close:hover {
+  background: rgba(0, 182, 185, 0.18);
+
+  transform: rotate(90deg);
+}

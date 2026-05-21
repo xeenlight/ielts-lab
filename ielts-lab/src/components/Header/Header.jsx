@@ -56,11 +56,11 @@ export default function Header() {
         }`}
       >
         {/* LOGO */}
-        <img
-          className={styles.logo}
-          src={hederlogo}
-          alt="IELTS Lab Logo"
-        />
+<NavLink to="/" className={styles.logo}>
+  <p className={styles.logoText}>IELTS</p>
+</NavLink>
+
+
 
         {/* NAV */}
         <nav

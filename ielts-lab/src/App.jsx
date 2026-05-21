@@ -10,6 +10,7 @@ export default function App() {
     <BrowserRouter>
       <Header />
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/course" element={<Course />} />

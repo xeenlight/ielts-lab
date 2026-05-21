@@ -8,7 +8,10 @@ function Main() {
   const particlesInit = async (engine) => {
     await loadSlim(engine);
   };
+const rootStyles = getComputedStyle(document.documentElement);
 
+const mainColor =
+  rootStyles.getPropertyValue("--color-bg-main").trim();
   return (
     <section className={styles.hero}>
       {/* PARTICLES BACKGROUND */}
@@ -43,7 +46,7 @@ options={{
     links: {
       enable: true,
 
-      color: "#00b6b9",
+        color: mainColor,
 
       distance: 150,
 
