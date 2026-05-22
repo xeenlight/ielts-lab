@@ -208,9 +208,6 @@
 
   color: white;
 
-  box-shadow:
-
-    0 0 80px rgba(0, 182, 185, 0.18);
 }
 
 .primaryBtn:hover {
@@ -512,9 +509,6 @@
 
   color: white;
 
-  box-shadow:
-    0 0 10px rgba(0, 182, 185, 0.35),
-    0 0 80px rgba(0, 182, 185, 0.18);
 }
 
 .primaryBtn:hover {

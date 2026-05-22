@@ -2,62 +2,73 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Teachers.module.css';
-
+  import teacher1 from "../../assets/Teachers (8).jpg";
+import teacher2 from '../../assets/Teachers (2).jpg';
+import teacher3 from '../../assets/Teachers (3).jpg';
+import teacher4 from '../../assets/Teachers (4).jpg';
+import teacher5 from '../../assets/Teachers (5).jpg';
+import teacher6 from '../../assets/Teachers (6).jpg';
+import teacher7 from '../../assets/Teachers (7).jpg';
+import teacher8 from '../../assets/Teachers (8).jpg';
+import teacher9 from '../../assets/Teachers (9).jpg';
+import teacher10 from '../../assets/Teachers (10).jpg';
 export default function Teachers() {
   const { t, i18n } = useTranslation();
   const [selectedTeacher, setSelectedTeacher] = useState(null);
+
+
 
   // Только технические данные (id, фото, ключ для перевода)
   const teachers = [
     {
       id: 1,
       key: "teacher_1",
-      photo: "src/assets/Teachers (1).jpg",
+        photo: teacher1
     },
     {
       id: 2,
       key: "teacher_2",
-      photo: "src/assets/Teachers (2).jpg",
+      photo: teacher2
     },
     {
       id: 3,
       key: "teacher_3",
-      photo: "src/assets/Teachers (3).jpg",
+      photo: teacher3
     },
     {
       id: 4,
       key: "teacher_4",
-      photo: "src/assets/Teachers (4).jpg",
+      photo: teacher4
     },
     {
       id: 5,
       key: "teacher_5",
-      photo: "src/assets/Teachers (5).jpg",
+      photo: teacher5
     },
     {
       id: 6,
       key: "teacher_6",
-      photo: "src/assets/Teachers (6).jpg",
+      photo: teacher6
     },
     {
       id: 7,
       key: "teacher_7",
-      photo: "src/assets/Teachers (7).jpg",
+      photo: teacher7
     },
     {
       id: 8,
       key: "teacher_8",
-      photo: "src/assets/Teachers (8).jpg",
+      photo: teacher8
     },
     {
       id: 9,
       key: "teacher_9",
-      photo: "src/assets/Teachers (9).jpg",
+      photo: teacher9
     },
     {
       id: 10,
       key: "teacher_10",
-      photo: "src/assets/Teachers (10).jpg",
+      photo: teacher10
     },
   ];
 

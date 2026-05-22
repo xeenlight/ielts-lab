@@ -292,7 +292,7 @@ background: var(--color-primary-light);
 
   text-transform: uppercase;
 
-  color: var(--color-primary);
+  color: var(--color-text);
 
   position: relative;
 
@@ -309,7 +309,7 @@ background: var(--color-primary-light);
 .logoText::after {
   content: "Lab";
 
-  color: var(--color-text);
+  color: var(--color-primary);
 
   margin-left: 6px;
 }
