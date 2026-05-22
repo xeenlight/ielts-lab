@@ -581,6 +581,9 @@
 /* ================= MOBILE ================= */
 
 @media (max-width: 900px) {
+  .clusterGlow {
+    display: none;  
+  }
   .hero {
     min-height: 100svh;
 
@@ -594,6 +597,10 @@
   .title {
     line-height: 0.95;
     letter-spacing: -2px;
+    text-shadow: none;
+  }
+    .title span {
+    text-shadow: none;
   }
 
   .description {

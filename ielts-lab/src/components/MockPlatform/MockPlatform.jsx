@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./MockPlatform.module.css";
+import previewVideo from "../../assets/mock.mp4";
 
 export default function MockPlatform() {
   return (
@@ -64,7 +65,16 @@ export default function MockPlatform() {
             </div>
 
             <div className={styles.screen}>
-              <div className={styles.fakeChart}></div>
+              <div className={styles.fakeChart}>
+  <video
+    className={styles.video}
+    src={previewVideo}
+    autoPlay
+    muted
+    loop
+    playsInline
+  />
+</div>
 
               <div className={styles.stats}>
                 <div>
