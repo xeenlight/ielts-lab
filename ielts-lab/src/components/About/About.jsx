@@ -3,7 +3,7 @@ import brain from '../../assets/brain.png';
 import growth from '../../assets/growth.png';
 import earth from '../../assets/earth.png';
 import ieltsLabTeam3 from '../../assets/ieltsLabTeam3.jpg';
-import IMG_4662 from '../../assets/IMG_4662.jpg';
+import ieltslabteam from '../../assets/ieltslabteam.jpg';
 function About() {
   return (
     <section className={styles.about}>
@@ -28,7 +28,7 @@ function About() {
 
 <div className={styles.right}>
   <div className={styles.topImage}>
-    <img src={IMG_4662} alt="IELTS LAB" />
+    <img src={ieltslabteam} alt="IELTS LAB" />
   </div>
 
 
