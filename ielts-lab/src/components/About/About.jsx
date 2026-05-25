@@ -3,6 +3,7 @@ import brain from '../../assets/brain.png';
 import growth from '../../assets/growth.png';
 import earth from '../../assets/earth.png';
 import ieltsLabTeam3 from '../../assets/ieltsLabTeam3.jpg';
+import IMG_4662 from '../../assets/IMG_4662.jpg';
 function About() {
   return (
     <section className={styles.about}>
@@ -15,6 +16,7 @@ function About() {
 
       <div className={styles.container}>
         {/* TOP */}
+        
         <div className={styles.top}>
           <div className={styles.left}>
             <p className={styles.subtitle}>ABOUT US</p>
@@ -24,21 +26,38 @@ function About() {
             </h2>
           </div>
 
-          <div className={styles.right}>
-            <p>
-              Наша школа помогает студентам уверенно говорить на английском,
-              готовиться к IELTS, поступать в зарубежные университеты и строить
-              международную карьеру.
-            </p>
+<div className={styles.right}>
+  <div className={styles.topImage}>
+    <img src={IMG_4662} alt="IELTS LAB" />
+  </div>
 
-            <p>
-              Мы объединяем современные методики, живую практику и сильную
-              поддержку преподавателей, чтобы обучение было не только
-              эффективным, но и действительно интересным.
-            </p>
-          </div>
+
+</div>
+
         </div>
+<div className={styles.timeline}>
+  <div className={styles.timelineLine}></div>
 
+  <div className={styles.timelineItem}>
+    <span>START</span>
+    <p>Базовый английский</p>
+  </div>
+
+  <div className={styles.timelineItem}>
+    <span>STEP 2</span>
+    <p>Подготовка к IELTS</p>
+  </div>
+
+  <div className={styles.timelineItem}>
+    <span>STEP 3</span>
+    <p>Регистрация на экзамен</p>
+  </div>
+
+  <div className={styles.timelineItem}>
+    <span>6 MONTHS</span>
+    <p>Средний путь студента</p>
+  </div>
+</div>
         {/* CARDS */}
         <div className={styles.cards}>
           <div className={styles.card}>
@@ -48,10 +67,10 @@ function About() {
 
             <h3>Индивидуальное внимание</h3>
 
-            <p>
-              Максимум разговорной практики, реальные ситуации и современный
-              формат обучения без скучной теории.
-            </p>
+<p>
+  Каждый студент получает индивидуальный план обучения и постоянное
+  сопровождение преподавателя на всём пути подготовки.
+</p>
           </div>
 
           <div className={styles.card}>
@@ -61,10 +80,10 @@ function About() {
 
             <h3>Быстрые результаты</h3>
 
-            <p>
-              Наша программа помогает студентам быстрее преодолевать языковой
-              барьер и уверенно использовать английский каждый день.
-            </p>
+<p>
+  В среднем студенты достигают нужного уровня и готовности к IELTS
+  примерно за 6 месяцев обучения.
+</p>
           </div>
 
           <div className={styles.card}>
@@ -74,10 +93,10 @@ function About() {
 
             <h3>Полное сопровождение</h3>
 
-            <p>
-              IELTS, работа за границей, международные компании и зарубежные
-              университеты — всё начинается с языка.
-            </p>
+<p>
+  Мы помогаем подготовиться к IELTS, зарегистрироваться на экзамен и
+  уверенно пройти весь путь до результата.
+</p>
           </div>
         </div>
 

@@ -226,8 +226,7 @@ number: {
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.title}>
-            ENGLISH
-            <span>FOR THE FUTURE</span>
+            ХОЧЕШЬ ГОТОВИТЬСЯ К<span> IELTS </span> ПРЯМО СЕЙЧАС?
           </h1>
 
           <p className={styles.description}>
@@ -244,26 +243,7 @@ number: {
 
           </div>
 
-          <div className={styles.stats}>
-            <div className={styles.statItem}>
-              <h3>500+</h3>
-              <p>Студентов</p>
-            </div>
 
-            <div className={styles.line}></div>
-
-            <div className={styles.statItem}>
-              <h3>7.5</h3>
-              <p>Средний IELTS</p>
-            </div>
-
-            <div className={styles.line}></div>
-
-            <div className={styles.statItem}>
-              <h3>95%</h3>
-              <p>Довольных учеников</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

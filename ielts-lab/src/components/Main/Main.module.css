@@ -4,8 +4,7 @@
   position: relative;
 
   width: 100%;
-  height: 100vh;
-  min-height: 900px;
+  min-height: 100vh;
 
   overflow: hidden;
 
@@ -22,6 +21,8 @@
   justify-content: center;
 
   perspective: 1200px;
+
+  padding-block: 120px;
 }
 
 /* ================= PARTICLES ================= */
@@ -135,24 +136,49 @@
 /* ================= TITLE ================= */
 
 .title {
+  position: relative;
+
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
 
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
-  font-size: clamp(62px, 8vw, 130px);
-  line-height: 0.9;
+  font-size: 101px;
+
+  line-height: 0.95;
   font-weight: 900;
 
-  letter-spacing: -4px;
+  letter-spacing: -3px;
 
   color: var(--color-text);
 
-  text-shadow:
-    0 0 40px rgba(255, 255, 255, 0.08),
-    0 0 80px rgba(255, 255, 255, 0.04);
-}
+  text-align: center;
 
+  text-shadow:
+    0 0 30px rgba(255,255,255,0.06),
+    0 0 60px rgba(255,255,255,0.03);
+}
+.title span {
+  color: var(--color-primary);
+
+  animation: glowPulse 3s ease-in-out infinite;
+
+  text-shadow:
+    0 0 12px rgba(0,182,185,0.6),
+    0 0 28px rgba(0,182,185,0.35),
+    0 0 60px rgba(0,182,185,0.2);
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: clamp(36px, 11vw, 42px);
+
+    gap: 10px;
+
+    letter-spacing: -2px;
+  }
+}
 /* LIGHT THEME */
 [data-theme="light"] .title {
   text-shadow: none;
@@ -319,31 +345,6 @@
   .line {
     height: 45px;
   }
-}
-/* ================= HERO ================= */
-
-.hero {
-  position: relative;
-
-  width: 100%;
-  height: 100vh;
-  min-height: 900px;
-
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(0, 182, 185, 0.06) 0%,
-      transparent 45%
-    ),
-    var(--color-bg);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  perspective: 1200px;
 }
 
 /* ================= PARTICLES ================= */
