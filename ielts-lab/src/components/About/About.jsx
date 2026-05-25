@@ -20,7 +20,7 @@ function About() {
             <p className={styles.subtitle}>ABOUT US</p>
 
             <h2 className={styles.title}>
-              Мы создаём современное обучение английскому языку
+              Мы создаём современное - мы учебный центр с новым подходом к обучению
             </h2>
           </div>
 
@@ -46,7 +46,7 @@ function About() {
                 <img src={brain} alt="Brain Icon" className={styles.iconImage} />
             </div>
 
-            <h3>Практический подход</h3>
+            <h3>Индивидуальное внимание</h3>
 
             <p>
               Максимум разговорной практики, реальные ситуации и современный
@@ -59,7 +59,7 @@ function About() {
               <img src={growth} alt="Growth Icon" className={styles.iconImage} />
             </div>
 
-            <h3>Быстрый рост</h3>
+            <h3>Быстрые результаты</h3>
 
             <p>
               Наша программа помогает студентам быстрее преодолевать языковой
@@ -72,7 +72,7 @@ function About() {
               <img src={earth} alt="Earth Icon" className={styles.iconImage} />
             </div>
 
-            <h3>Международные цели</h3>
+            <h3>Полное сопровождение</h3>
 
             <p>
               IELTS, работа за границей, международные компании и зарубежные
@@ -129,29 +129,6 @@ function About() {
                 <p>Поддержка преподавателей и комьюнити</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* STATS */}
-        <div className={styles.stats}>
-          <div className={styles.stat}>
-            <h3>500+</h3>
-            <p>Студентов</p>
-          </div>
-
-          <div className={styles.stat}>
-            <h3>7.5</h3>
-            <p>Средний IELTS</p>
-          </div>
-
-          <div className={styles.stat}>
-            <h3>95%</h3>
-            <p>Довольных учеников</p>
-          </div>
-
-          <div className={styles.stat}>
-            <h3>4+</h3>
-            <p>Года опыта</p>
           </div>
         </div>
       </div>

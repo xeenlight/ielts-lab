@@ -28,16 +28,14 @@ export default function MockPlatform() {
           </h2>
 
           <p>
-            Practice in a real exam environment with
-            timer, analytics, band prediction and
-            detailed feedback.
+            Practice in a real exam environment and receive a detailed feedback from an expert.
           </p>
 
           <div className={styles.features}>
-            <div>✓ Real exam simulation</div>
+            <div>✓ No ai involved</div>
             <div>✓ Instant band prediction</div>
-            <div>✓ AI-powered analytics</div>
-            <div>✓ Speaking & Writing evaluation</div>
+            <div>✓ Results in 1-3 days</div>
+            <div>✓ Face-to-face speaking only</div>
           </div>
 
           <a
@@ -79,12 +77,12 @@ export default function MockPlatform() {
               <div className={styles.stats}>
                 <div>
                   <h3>7.5</h3>
-                  <p>Predicted Band</p>
+                  <p>Free online mock tests</p>
                 </div>
 
                 <div>
                   <h3>92%</h3>
-                  <p>Accuracy</p>
+                  <p>100 similar to the real test platform</p>
                 </div>
               </div>
 

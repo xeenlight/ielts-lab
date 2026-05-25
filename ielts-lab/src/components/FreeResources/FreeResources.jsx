@@ -1,5 +1,5 @@
 import styles from './FreeResources.module.css';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans  } from 'react-i18next';
 
 import img1 from '../../assets/LogoFooter.png';
 import img2 from '../../assets/LogoFooter.png';
@@ -21,11 +21,16 @@ export default function FreeResources() {
   return (
     <section className={styles.section}>
       
-      <p className={styles.sub}>{t('free_sub')}</p>
 
-      <h2 className={styles.title}>
-        {t('free_title')}
-      </h2>
+
+<h2 className={styles.title}>
+  <Trans
+    i18nKey="free_title"
+    components={{
+      primary: <span className={styles.primary} />
+    }}
+  />
+</h2>
 
       <p className={styles.desc}>{t('free_desc')}</p>
 

@@ -24,11 +24,22 @@
 }
 
 .desc2 {
-  font-size: 14px;
+  font-size: 24px;
   color: var(--color-text);
-  margin-top: 40px;
+  margin-top: 0px;
 }
-
+.ctaButton {
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 /* ==================== SLIDER ==================== */
 .slider {
   width: 100%;

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Teachers.module.css';
-  import teacher1 from "../../assets/Teachers (8).jpg";
+  import teacher1 from "../../assets/Teachers (1).jpg";
 import teacher2 from '../../assets/Teachers (2).jpg';
 import teacher3 from '../../assets/Teachers (3).jpg';
 import teacher4 from '../../assets/Teachers (4).jpg';
@@ -38,37 +38,37 @@ export default function Teachers() {
     {
       id: 4,
       key: "teacher_4",
-      photo: teacher4
+      photo: teacher10
     },
     {
       id: 5,
       key: "teacher_5",
-      photo: teacher5
+      photo: teacher6
     },
     {
       id: 6,
       key: "teacher_6",
-      photo: teacher6
+      photo: teacher7
     },
     {
       id: 7,
       key: "teacher_7",
-      photo: teacher7
+      photo: teacher9
     },
     {
       id: 8,
       key: "teacher_8",
-      photo: teacher8
+      photo: teacher5
     },
     {
       id: 9,
       key: "teacher_9",
-      photo: teacher9
+      photo: teacher8
     },
     {
       id: 10,
       key: "teacher_10",
-      photo: teacher10
+      photo: teacher4
     },
   ];
 

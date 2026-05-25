@@ -34,7 +34,6 @@ export default function Results() {
 
   return (
     <section className={styles.section}>
-      <p className={styles.sub}>{t('results_sub')}</p>
       <h2 className={styles.title}>{t('results_title')}</h2>
       <p className={styles.desc}>{t('results_desc')}</p>
 
@@ -83,7 +82,12 @@ export default function Results() {
       </Swiper>
 
       <p className={styles.desc2}>{t('results_desc2')}</p>
-
+        <button 
+          className={styles.ctaButton}
+          onClick={() => document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          {t('open_form')}
+        </button>
       {/* MODAL */}
       <AnimatePresence>
         {activeImg && (

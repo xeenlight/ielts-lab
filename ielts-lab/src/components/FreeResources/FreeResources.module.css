@@ -1,6 +1,7 @@
 .section {
   padding: 80px 20px;
   text-align: center;
+  justify-items: center;
 }
 
 /* текст */
@@ -16,8 +17,12 @@
   font-weight: 800;
   color: var(--color-text);
   margin-bottom: 10px;
+  text-transform: uppercase;
+  max-width: 800px;
 }
-
+.primary {
+  color: var(--color-primary);
+}
 .desc {
   color: var(--color-text);
   margin-bottom: 50px;

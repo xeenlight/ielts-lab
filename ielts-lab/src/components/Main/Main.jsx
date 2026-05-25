@@ -241,9 +241,7 @@ number: {
               Бесплатный урок
             </button>
 
-            <button className={styles.secondaryBtn}>
-              Смотреть видео
-            </button>
+
           </div>
 
           <div className={styles.stats}>
