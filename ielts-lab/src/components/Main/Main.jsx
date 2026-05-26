@@ -226,13 +226,13 @@ number: {
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.title}>
-            ХОЧЕШЬ ГОТОВИТЬСЯ К<span> IELTS </span> ПРЯМО СЕЙЧАС?
+            ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К<span> IELTS </span> ПРЯМО СЕЙЧАС?
           </h1>
 
           <p className={styles.description}>
-            Практические курсы английского языка
+            Уроки один на один с каждым
             <br />
-            для учебы, карьеры и уверенного будущего.
+            запишись сегодня и начни учиться уже завтра.
           </p>
 
           <div className={styles.buttons}>

@@ -124,6 +124,7 @@
 /* ==================== MOBILE ==================== */
 @media (max-width: 768px) {
   .section {
+      margin-top: -165px;
     padding: 40px 20px;
   }
 
