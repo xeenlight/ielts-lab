@@ -49,13 +49,40 @@ export default function FloatingAlert() {
   const [alertIndex, setAlertIndex] = useState(0);
 
   // FIRST SHOW
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(true);
-    }, 5000);
+// SHOW ALERT WHEN USER REACHES PAGE BOTTOM
+useEffect(() => {
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
 
-    return () => clearTimeout(timer);
-  }, []);
+    const windowHeight = window.innerHeight;
+
+    const documentHeight =
+      document.documentElement.scrollHeight;
+
+    // if user reached near bottom
+    if (
+      scrollTop + windowHeight >=
+      documentHeight - 120
+    ) {
+      setVisible(true);
+
+      // remove listener after showing
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener(
+      "scroll",
+      handleScroll
+    );
+  };
+}, []);
 
   // CLOSE ALERT
   const closeAlert = () => {
