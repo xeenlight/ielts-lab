@@ -33,7 +33,7 @@ export default function MockPlatform() {
 
           <div className={styles.features}>
             <div>✓ No ai involved</div>
-            <div>✓ Instant band prediction</div>
+            <div>✓ Realistic Mock Test Experience</div>
             <div>✓ Results in 1-3 days</div>
             <div>✓ Face-to-face speaking only</div>
           </div>

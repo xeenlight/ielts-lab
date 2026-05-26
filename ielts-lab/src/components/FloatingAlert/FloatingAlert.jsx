@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 
 import styles from "./FloatingAlert.module.css";
 
@@ -7,6 +10,8 @@ import giftIcon from "../../assets/gift.png";
 
 export default function FloatingAlert() {
   const navigate = useNavigate();
+
+  const location = useLocation();
 
   const touchStartY = useRef(0);
   const touchEndY = useRef(0);
@@ -46,64 +51,105 @@ export default function FloatingAlert() {
 
   const [visible, setVisible] = useState(false);
 
-  const [alertIndex, setAlertIndex] = useState(0);
+  const [alertIndex, setAlertIndex] =
+    useState(0);
 
-  // FIRST SHOW
-// SHOW ALERT WHEN USER REACHES PAGE BOTTOM
-useEffect(() => {
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
+  // SHOW ALERT
+  useEffect(() => {
+    const closedTime =
+      localStorage.getItem(
+        "floatingAlertClosed"
+      );
 
-    const windowHeight = window.innerHeight;
+    if (closedTime) {
+      const now = Date.now();
 
-    const documentHeight =
-      document.documentElement.scrollHeight;
+      const diff =
+        now - Number(closedTime);
 
-    // if user reached near bottom
-    if (
-      scrollTop + windowHeight >=
-      documentHeight - 420
-    ) {
+      // 5 MINUTES
+      const fiveMinutes =
+        1 * 60 * 200;
+
+      if (diff < fiveMinutes) return;
+    }
+
+    // IF USER IS NOT ON HOME PAGE
+    // SHOW ALERT IMMEDIATELY
+    if (location.pathname !== "/") {
       setVisible(true);
 
-      // remove listener after showing
+      return;
+    }
+
+    // HOME PAGE -> SHOW AFTER SCROLL
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      const windowHeight =
+        window.innerHeight;
+
+      const documentHeight =
+        document.documentElement
+          .scrollHeight;
+
+      // USER REACHED BOTTOM
+      if (
+        scrollTop + windowHeight >=
+        documentHeight - 960
+      ) {
+        setVisible(true);
+
+        window.removeEventListener(
+          "scroll",
+          handleScroll
+        );
+      }
+    };
+
+    window.addEventListener(
+      "scroll",
+      handleScroll
+    );
+
+    return () => {
       window.removeEventListener(
         "scroll",
         handleScroll
       );
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll);
-
-  return () => {
-    window.removeEventListener(
-      "scroll",
-      handleScroll
-    );
-  };
-}, []);
+    };
+  }, [location.pathname]);
 
   // CLOSE ALERT
-  const closeAlert = () => {
-    setVisible(false);
+const closeAlert = () => {
+  setVisible(false);
 
-    // show next alert
-    if (alertIndex < alerts.length - 1) {
-      setTimeout(() => {
-        setAlertIndex((prev) => prev + 1);
+  // IF THERE IS NEXT ALERT
+  if (alertIndex < alerts.length - 1) {
+    setTimeout(() => {
+      setAlertIndex((prev) => prev + 1);
 
-        setVisible(true);
-      }, 5000);
-    }
-  };
+      setVisible(true);
+    }, 5000);
+  } else {
+    // SAVE CLOSE TIME ONLY
+    // AFTER LAST ALERT
+    localStorage.setItem(
+      "floatingAlertClosed",
+      Date.now().toString()
+    );
+  }
+};
 
   const currentAlert = alerts[alertIndex];
 
   // REDIRECT
   const handleRedirect = () => {
     if (currentAlert.type === "external") {
-      window.open(currentAlert.link, "_blank");
+      window.open(
+        currentAlert.link,
+        "_blank"
+      );
     } else {
       navigate(currentAlert.link);
     }
@@ -111,18 +157,21 @@ useEffect(() => {
 
   // SWIPE MOBILE
   const handleTouchStart = (e) => {
-    touchStartY.current = e.targetTouches[0].clientY;
+    touchStartY.current =
+      e.targetTouches[0].clientY;
   };
 
   const handleTouchMove = (e) => {
-    touchEndY.current = e.targetTouches[0].clientY;
+    touchEndY.current =
+      e.targetTouches[0].clientY;
   };
 
   const handleTouchEnd = () => {
     const distance =
-      touchStartY.current - touchEndY.current;
+      touchStartY.current -
+      touchEndY.current;
 
-    // swipe up
+    // SWIPE UP
     if (distance > 80) {
       closeAlert();
     }
@@ -151,7 +200,9 @@ useEffect(() => {
       </button>
 
       {/* ICON */}
-      <div className={styles.iconBackground}>
+      <div
+        className={styles.iconBackground}
+      >
         <img
           className={styles.icon}
           src={giftIcon}
