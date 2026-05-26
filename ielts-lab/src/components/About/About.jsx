@@ -3,7 +3,7 @@ import brain from '../../assets/brain.png';
 import growth from '../../assets/growth.png';
 import earth from '../../assets/earth.png';
 import ieltsLabTeam3 from '../../assets/ieltsLabTeam3.jpg';
-import ieltslabteam1 from '../../assets/ieltslabteamtree.jpg';
+import ieltslabteam1 from '../../assets/ieltslabteamtree.png';
 function About() {
   return (
     <section className={styles.about}>
