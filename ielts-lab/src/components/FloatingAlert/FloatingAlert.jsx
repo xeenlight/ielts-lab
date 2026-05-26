@@ -62,7 +62,7 @@ useEffect(() => {
     // if user reached near bottom
     if (
       scrollTop + windowHeight >=
-      documentHeight - 120
+      documentHeight - 420
     ) {
       setVisible(true);
 
