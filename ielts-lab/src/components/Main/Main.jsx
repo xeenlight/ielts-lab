@@ -234,10 +234,10 @@ number: {
 </h1>
 
 <h1 className={`${styles.title} ${styles.mobile}`}>
-  ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К <span className={styles.ielts}>IELTS</span>
-
+  ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К <span className={styles.ielts}>IELTS </span>
+<span className={styles.highlight}>ПРЯМО</span>
   <div className={styles.mobileWords}>
-    <span className={styles.highlight}>ПРЯМО</span>
+    
 
     <span className={styles.highlight}>СЕЙЧАС?</span>
   </div>
