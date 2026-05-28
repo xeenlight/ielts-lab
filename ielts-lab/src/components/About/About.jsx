@@ -35,29 +35,103 @@ function About() {
 </div>
 
         </div>
-<div className={styles.timeline}>
-  <div className={styles.timelineLine}></div>
 
-  <div className={styles.timelineItem}>
-    <span>START</span>
-    <p>Базовый английский</p>
+<section className={styles.hybridSection}>
+
+  <div className={styles.hybridGlow}></div>
+
+  <div className={styles.hybridContainer}>
+
+    <div className={styles.hybridHeader}>
+      <span className={styles.hybridBadge}>
+        HYBRID SYSTEM
+      </span>
+
+      <h2>
+        Онлайн + Офлайн = <span>единая система</span>
+      </h2>
+
+      <p>
+        Полноценное обучение в любом формате
+      </p>
+    </div>
+
+    <div className={styles.hybridGrid}>
+
+      {/* LEFT */}
+
+      <div className={styles.hybridCard}>
+
+        <div className={styles.hybridCardGlow}></div>
+
+        <div className={styles.hybridIcon}>
+          🌐
+        </div>
+
+        <div className={styles.hybridInfo}>
+
+          <span>Онлайн</span>
+
+          <h3>Гибкость</h3>
+
+          <ul>
+            <li>Записи уроков</li>
+            <li>Платформа</li>
+            <li>Из любой точки</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      {/* CENTER */}
+
+      <div className={styles.hybridCenter}>
+
+        <div className={styles.hybridRing}></div>
+
+        <div className={styles.hybridOrb}>
+          SYNC
+        </div>
+
+      </div>
+
+      {/* RIGHT */}
+
+      <div className={styles.hybridCard}>
+
+        <div className={styles.hybridCardGlow}></div>
+
+        <div className={styles.hybridIcon}>
+          🏛️
+        </div>
+
+        <div className={styles.hybridInfo}>
+
+          <span>Офлайн</span>
+
+          <h3>Практика</h3>
+
+          <ul>
+            <li>Speaking club</li>
+            <li>Живое общение</li>
+            <li>Контроль прогресса</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div className={styles.timelineItem}>
-    <span>STEP 2</span>
-    <p>Подготовка к IELTS</p>
-  </div>
+</section>
 
-  <div className={styles.timelineItem}>
-    <span>STEP 3</span>
-    <p>Регистрация на экзамен</p>
-  </div>
 
-  <div className={styles.timelineItem}>
-    <span>6 MONTHS</span>
-    <p>Средний путь студента</p>
-  </div>
-</div>
+
+
+
         {/* CARDS */}
         <div className={styles.cards}>
           <div className={styles.card}>
@@ -135,11 +209,6 @@ function About() {
               <div className={styles.feature}>
                 <span>✔</span>
                 <p>Подготовка к IELTS и экзаменам</p>
-              </div>
-
-              <div className={styles.feature}>
-                <span>✔</span>
-                <p>Постоянная практика разговорного английского</p>
               </div>
 
               <div className={styles.feature}>
