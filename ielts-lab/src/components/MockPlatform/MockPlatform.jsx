@@ -76,13 +76,12 @@ export default function MockPlatform() {
 
               <div className={styles.stats}>
                 <div>
-                  <h3>7.5</h3>
-                  <p>Free online mock tests</p>
+                  <h3>Free online mock tests</h3>
                 </div>
 
                 <div>
-                  <h3>92%</h3>
-                  <p>100 similar to the real test platform</p>
+                  <h3>100%</h3>
+                  <p>Similar to the real test platform</p>
                 </div>
               </div>
 

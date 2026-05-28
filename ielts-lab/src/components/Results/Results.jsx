@@ -35,7 +35,6 @@ export default function Results() {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>{t('results_title')}</h2>
-      <p className={styles.desc}>{t('results_desc')}</p>
 
       <Swiper
         modules={[EffectCoverflow, Autoplay]}

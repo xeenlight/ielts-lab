@@ -41,9 +41,9 @@ export default function Location() {
               <span>📍</span>
 
               <p>
-                Ташкент, Yunusabad district
+                Ташкент, 1-й пр. Хроми, 4А
                 <br />
-                41°20'29.1"N 69°12'17.0"E
+                41°20'28.6"N 69°12'16.4"E
               </p>
             </div>
 

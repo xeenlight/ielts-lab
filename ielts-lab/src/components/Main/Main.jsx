@@ -225,14 +225,28 @@ number: {
       {/* CONTENT */}
       <div className={styles.container}>
         <div className={styles.content}>
-          <h1 className={styles.title}>
-            ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К<span> IELTS </span> ПРЯМО СЕЙЧАС?
-          </h1>
+<h1 className={`${styles.title} ${styles.desktop}`}>
+  ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К <span className={styles.ielts}>IELTS</span>{" "}
+
+  <span className={styles.highlight}>
+    ПРЯМО СЕЙЧАС?
+  </span>
+</h1>
+
+<h1 className={`${styles.title} ${styles.mobile}`}>
+  ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К <span className={styles.ielts}>IELTS</span>
+
+  <div className={styles.mobileWords}>
+    <span className={styles.highlight}>ПРЯМО</span>
+
+    <span className={styles.highlight}>СЕЙЧАС?</span>
+  </div>
+</h1>
 
           <p className={styles.description}>
-            Уроки один на один с каждым
+            Уроки один на один с каждым 🥊
             <br />
-            запишись сегодня и начни учиться уже завтра.
+            Запишись <span className={styles.ielts}> сегодня </span> и начни учиться уже <span className={styles.ielts}> завтра </span>.
           </p>
 
           <div className={styles.buttons}>
