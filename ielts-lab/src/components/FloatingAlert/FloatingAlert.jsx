@@ -1,208 +1,255 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import styles from "./FloatingAlert.module.css";
-
 import giftIcon from "../../assets/gift.png";
+
+const ALERT_DELAY = 5000;
+const COOLDOWN = 60 * 1000;
+
+const alerts = [
+  {
+    id: 1,
+    title: "Начните свой путь уже сегодня!",
+    text: "Запишитесь на бесплатный пробный урок и оцените наш подход к обучению.",
+    button: "Записаться",
+    type: "internal",
+    link: "/course",
+  },
+  {
+    id: 2,
+    title: "Подготовьтесь к IELTS вместе с нами!",
+    text: "Получите персональный план подготовки и узнайте свой текущий уровень английского.",
+    button: "Перейти к Mock",
+    type: "external",
+    link: "https://mock.ieltslab.uz/",
+  },
+];
 
 export default function FloatingAlert() {
   const navigate = useNavigate();
-
   const location = useLocation();
 
-  const touchStartY = useRef(0);
-  const touchEndY = useRef(0);
-
-  // ALERT TYPES
-  const alerts = [
-    {
-      id: 1,
-
-      title: "Начните свой путь уже сегодня!",
-
-      text:
-        "Запишитесь на бесплатный пробный урок и оцените наш подход к обучению.",
-
-      button: "Записаться",
-
-      type: "internal",
-
-      link: "/course",
-    },
-
-    {
-      id: 2,
-
-      title: "Подготовьтесь к IELTS вместе с нами!",
-
-      text:
-        "Получите персональный план подготовки и узнайте свой текущий уровень английского.",
-
-      button: "Перейти к Mock",
-
-      type: "external",
-
-      link: "https://mock.ieltslab.uz/",
-    },
-  ];
+  const isHome = location.pathname === "/";
 
   const [visible, setVisible] = useState(false);
+  const [currentAlert, setCurrentAlert] = useState(null);
 
-  const [alertIndex, setAlertIndex] =
-    useState(0);
+  const secondAlertTimeout = useRef(null);
 
-  // SHOW ALERT
-  useEffect(() => {
-    const closedTime =
-      localStorage.getItem(
-        "floatingAlertClosed"
-      );
+  // =========================
+  // STORAGE
+  // =========================
 
-    if (closedTime) {
-      const now = Date.now();
+  const getCooldown = () => {
+    const value = localStorage.getItem("floating-alert-cooldown");
 
-      const diff =
-        now - Number(closedTime);
+    if (!value) return false;
 
-      // 5 MINUTES
-      const fiveMinutes =
-        1 * 60 * 200;
+    const isActive = Date.now() - Number(value) < COOLDOWN;
 
-      if (diff < fiveMinutes) return;
+    // cooldown закончился → очищаем всё
+    if (!isActive) {
+      localStorage.removeItem("floating-alert-cooldown");
+
+      sessionStorage.removeItem("floating-alert-first-shown");
+      sessionStorage.removeItem("floating-alert-second-shown");
     }
 
-    // IF USER IS NOT ON HOME PAGE
-    // SHOW ALERT IMMEDIATELY
-    if (location.pathname !== "/") {
-      setVisible(true);
+    return isActive;
+  };
 
+  const showAlert = (alert) => {
+    setCurrentAlert(alert);
+    setVisible(true);
+  };
+
+  // =========================
+  // SECOND ALERT
+  // =========================
+
+  const scheduleSecondAlert = () => {
+    const secondShown = sessionStorage.getItem(
+      "floating-alert-second-shown"
+    );
+
+    if (secondShown) return;
+
+    clearTimeout(secondAlertTimeout.current);
+
+    secondAlertTimeout.current = setTimeout(() => {
+      sessionStorage.setItem("floating-alert-second-shown", "true");
+
+      showAlert(alerts[1]);
+    }, ALERT_DELAY);
+  };
+
+  // =========================
+  // FIRST ALERT
+  // =========================
+
+  const triggerFirstAlert = () => {
+    const firstShown = sessionStorage.getItem(
+      "floating-alert-first-shown"
+    );
+
+    if (firstShown) return;
+
+    sessionStorage.setItem("floating-alert-first-shown", "true");
+
+    showAlert(alerts[0]);
+
+    scheduleSecondAlert();
+  };
+
+  // =========================
+  // MAIN LOGIC
+  // =========================
+
+  useEffect(() => {
+    if (getCooldown()) return;
+
+    const firstShown = sessionStorage.getItem(
+      "floating-alert-first-shown"
+    );
+
+    const secondShown = sessionStorage.getItem(
+      "floating-alert-second-shown"
+    );
+
+    // Если первый уже был,
+    // но второй ещё нет → продолжаем цикл
+    if (firstShown && !secondShown) {
+      scheduleSecondAlert();
       return;
     }
 
-    // HOME PAGE -> SHOW AFTER SCROLL
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
+    // Если оба уже были → ничего не делаем
+    if (firstShown && secondShown) {
+      return;
+    }
 
-      const windowHeight =
-        window.innerHeight;
+    // =========================
+    // HOME PAGE
+    // =========================
 
-      const documentHeight =
-        document.documentElement
-          .scrollHeight;
+    if (isHome) {
+      const handleScroll = () => {
+        if (window.scrollY > 200) {
+          triggerFirstAlert();
 
-      // USER REACHED BOTTOM
-      if (
-        scrollTop + windowHeight >=
-        documentHeight - 960
-      ) {
-        setVisible(true);
+          window.removeEventListener("scroll", handleScroll);
+        }
+      };
 
-        window.removeEventListener(
-          "scroll",
-          handleScroll
-        );
-      }
-    };
+      window.addEventListener("scroll", handleScroll);
 
-    window.addEventListener(
-      "scroll",
-      handleScroll
-    );
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+
+    // =========================
+    // OTHER PAGES
+    // =========================
+
+    triggerFirstAlert();
 
     return () => {
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
+      clearTimeout(secondAlertTimeout.current);
     };
   }, [location.pathname]);
 
-  // CLOSE ALERT
-const closeAlert = () => {
-  setVisible(false);
+  // =========================
+  // CLOSE
+  // =========================
 
-  // IF THERE IS NEXT ALERT
-  if (alertIndex < alerts.length - 1) {
-    setTimeout(() => {
-      setAlertIndex((prev) => prev + 1);
+  const closeAlert = () => {
+    setVisible(false);
 
-      setVisible(true);
-    }, 5000);
-  } else {
-    // SAVE CLOSE TIME ONLY
-    // AFTER LAST ALERT
-    localStorage.setItem(
-      "floatingAlertClosed",
-      Date.now().toString()
-    );
-  }
-};
-
-  const currentAlert = alerts[alertIndex];
-
-  // REDIRECT
-  const handleRedirect = () => {
-    if (currentAlert.type === "external") {
-      window.open(
-        currentAlert.link,
-        "_blank"
+    // Если закрыли второй → cooldown
+    if (currentAlert?.id === 2) {
+      localStorage.setItem(
+        "floating-alert-cooldown",
+        Date.now().toString()
       );
+
+      clearTimeout(secondAlertTimeout.current);
+
+      // через минуту всё автоматически очистится
+      setTimeout(() => {
+        localStorage.removeItem("floating-alert-cooldown");
+
+        sessionStorage.removeItem(
+          "floating-alert-first-shown"
+        );
+
+        sessionStorage.removeItem(
+          "floating-alert-second-shown"
+        );
+      }, COOLDOWN);
+    }
+  };
+
+  // =========================
+  // REDIRECT
+  // =========================
+
+  const handleRedirect = () => {
+    if (!currentAlert) return;
+
+    if (currentAlert.type === "external") {
+      window.open(currentAlert.link, "_blank");
     } else {
       navigate(currentAlert.link);
     }
   };
 
-  // SWIPE MOBILE
+  // =========================
+  // SWIPE
+  // =========================
+
+  const touchStartY = useRef(0);
+  const touchEndY = useRef(0);
+
   const handleTouchStart = (e) => {
-    touchStartY.current =
-      e.targetTouches[0].clientY;
+    touchStartY.current = e.targetTouches[0].clientY;
   };
 
   const handleTouchMove = (e) => {
-    touchEndY.current =
-      e.targetTouches[0].clientY;
+    touchEndY.current = e.targetTouches[0].clientY;
   };
 
   const handleTouchEnd = () => {
     const distance =
-      touchStartY.current -
-      touchEndY.current;
+      touchStartY.current - touchEndY.current;
 
-    // SWIPE UP
     if (distance > 80) {
       closeAlert();
     }
   };
 
-  if (!visible) return null;
+  if (!visible || !currentAlert) return null;
 
   return (
     <div
       className={styles.alert}
+      onClick={handleRedirect}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      onClick={handleRedirect}
     >
-      {/* CLOSE */}
       <button
         className={styles.close}
         onClick={(e) => {
           e.stopPropagation();
-
           closeAlert();
         }}
       >
         ✕
       </button>
 
-      {/* ICON */}
-      <div
-        className={styles.iconBackground}
-      >
+      <div className={styles.iconBackground}>
         <img
           className={styles.icon}
           src={giftIcon}
@@ -210,19 +257,15 @@ const closeAlert = () => {
         />
       </div>
 
-      {/* CONTENT */}
       <div className={styles.content}>
         <h4>{currentAlert.title}</h4>
-
         <p>{currentAlert.text}</p>
       </div>
 
-      {/* BUTTON */}
       <button
         className={styles.button}
         onClick={(e) => {
           e.stopPropagation();
-
           handleRedirect();
         }}
       >

@@ -5,11 +5,12 @@ import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import Course from './pages/CourseAbout';
 import FloatingAlert from './components/FloatingAlert/FloatingAlert';
-
+import ScrollToTop from "./components/ScrollToTop";
 export default function App() {
   return (
     <BrowserRouter>
-          <FloatingAlert />
+      <ScrollToTop />
+      <FloatingAlert />
       <Header />
 
       <Routes>
