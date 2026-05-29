@@ -154,7 +154,7 @@
 .heroTitle {
   margin-bottom: 26px;
 
-  font-size: clamp(54px,7vw,110px);
+  font-size: clamp(54px,7vw,80px);
 
   line-height: 1;
 
@@ -187,6 +187,7 @@
 /* ================= BUTTON ================= */
 
 .ctaBig {
+  margin-top: 20px;
   border: none;
 
   padding: 22px 42px;
@@ -219,6 +220,7 @@
 
 .videoBlock {
   margin-top: 70px;
+  text-align: center;
 }
 
 .videoWrapper {
@@ -322,9 +324,9 @@
 
 .sectionTitle {
   font-size: clamp(42px,5vw,76px);
-
+    text-align: center;
   line-height: 1.05;
-
+    margin-bottom: 30px;
   font-weight: 900;
 
   color: var(--color-text);
@@ -514,7 +516,7 @@
 .testimonials,
 .faqSection,
 .formSection {
-  padding: 80px 0;
+  padding: 80px 0 0;
 }
 
 .testimonialGrid {
@@ -631,7 +633,7 @@
 .formSubtitle {
   max-width: 700px;
 
-  margin: -30px auto 60px;
+  margin: 30px auto 60px;
 
   text-align: center;
 

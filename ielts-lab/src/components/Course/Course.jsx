@@ -105,29 +105,21 @@ export default function Course() {
 
           <div className={styles.heroTop}>
 
-            <div className={styles.heroBadge}>
-              LIVE IELTS PREPARATION
-            </div>
+
 
             <h1 className={styles.heroTitle}>
-              Получи наконец
+              Наконец получи
               <span> 7+ по IELTS </span>
               <br />
-              не тратя свои деньги и время
+              не тратя свои деньги и время в пустую.
             </h1>
 
             <p className={styles.heroText}>
               Присоединяйся к нашим
-              <span> живым занятиям по IELTS </span>
+              <span> живым занятиям </span>
               и сэкономь кучу времени и нервов.
             </p>
 
-            <button
-              onClick={scrollToForm}
-              className={styles.ctaBig}
-            >
-              Оставить заявку
-            </button>
 
           </div>
 
@@ -157,7 +149,12 @@ export default function Course() {
               </p>
 
             </div>
-
+            <button
+              onClick={scrollToForm}
+              className={styles.ctaBig}
+            >
+              Оставить заявку
+            </button>
           </div>
 
         </div>
@@ -255,115 +252,11 @@ export default function Course() {
 
       </section>
 
-      {/* STATS */}
 
-      <section className={styles.statsSection}>
-
-        <div className={styles.container}>
-
-          <div className={styles.statsGrid}>
-
-            <div className={styles.statCard}>
-              <h3>3000+</h3>
-
-              <p>
-                Students trained
-              </p>
-            </div>
-
-            <div className={styles.statCard}>
-              <h3>8.0 Avg</h3>
-
-              <p>
-                Average band score
-              </p>
-            </div>
-
-            <div className={styles.statCard}>
-              <h3>8–12 Weeks</h3>
-
-              <p>
-                Structured preparation
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
 
       {/* TESTIMONIALS */}
 
-      <section className={styles.testimonials}>
 
-        <div className={styles.container}>
-
-          <h2 className={styles.sectionTitle}>
-            {t('testimonials_title')}
-          </h2>
-
-          <div className={styles.testimonialGrid}>
-
-            <div className={styles.testimonialCard}>
-
-              <p className={styles.quote}>
-                {t('testimonial1')}
-              </p>
-
-              <div className={styles.author}>
-                <strong>
-                  {t('testimonial1_name')}
-                </strong>
-
-                <span>
-                  Band 8.0
-                </span>
-              </div>
-
-            </div>
-
-            <div className={styles.testimonialCard}>
-
-              <p className={styles.quote}>
-                {t('testimonial2')}
-              </p>
-
-              <div className={styles.author}>
-                <strong>
-                  {t('testimonial2_name')}
-                </strong>
-
-                <span>
-                  Band 7.5
-                </span>
-              </div>
-
-            </div>
-
-            <div className={styles.testimonialCard}>
-
-              <p className={styles.quote}>
-                {t('testimonial3')}
-              </p>
-
-              <div className={styles.author}>
-                <strong>
-                  {t('testimonial3_name')}
-                </strong>
-
-                <span>
-                  Band 8.5
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
 
       {/* FAQ */}
 
@@ -457,7 +350,75 @@ export default function Course() {
         </div>
 
       </section>
+      <section className={styles.testimonials}>
 
+        <div className={styles.container}>
+
+          <h2 className={styles.sectionTitle}>
+            {t('testimonials_title')}
+          </h2>
+
+          <div className={styles.testimonialGrid}>
+
+            <div className={styles.testimonialCard}>
+
+              <p className={styles.quote}>
+                {t('testimonial1')}
+              </p>
+
+              <div className={styles.author}>
+                <strong>
+                  {t('testimonial1_name')}
+                </strong>
+
+                <span>
+                  Band 8.0
+                </span>
+              </div>
+
+            </div>
+
+            <div className={styles.testimonialCard}>
+
+              <p className={styles.quote}>
+                {t('testimonial2')}
+              </p>
+
+              <div className={styles.author}>
+                <strong>
+                  {t('testimonial2_name')}
+                </strong>
+
+                <span>
+                  Band 7.5
+                </span>
+              </div>
+
+            </div>
+
+            <div className={styles.testimonialCard}>
+
+              <p className={styles.quote}>
+                {t('testimonial3')}
+              </p>
+
+              <div className={styles.author}>
+                <strong>
+                  {t('testimonial3_name')}
+                </strong>
+
+                <span>
+                  Band 8.5
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
     </div>
   );
 }
