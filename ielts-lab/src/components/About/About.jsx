@@ -1,18 +1,63 @@
 import styles from "./About.module.css";
+
 import brain from '../../assets/brain.png';
 import growth from '../../assets/growth.png';
 import earth from '../../assets/earth.png';
+
 import ieltsLabTeam3 from '../../assets/ieltsLabTeam3.jpg';
 import ieltslabteam1 from '../../assets/ieltslabteamtree.png';
+
+import molecule1 from "../../assets/ielts Lab (1).png";
+import molecule2 from "../../assets/ielts Lab (2).png";
+import molecule3 from "../../assets/ielts Lab (3).png";
+import molecule4 from "../../assets/ielts Lab (4).png";
+import molecule5 from "../../assets/ielts Lab (5).png";
+import molecule6 from "../../assets/ielts Lab (6).png";
+
+import Results from "../Results/Results";
 function About() {
   return (
     <section className={styles.about}>
       {/* BACKGROUND GLOW */}
       <div className={styles.glow}></div>
 
-      {/* MOLECULES */}
-      <div className={`${styles.molecule} ${styles.molecule1}`}></div>
-      <div className={`${styles.molecule} ${styles.molecule2}`}></div>
+{/* FLOATING MOLECULES */}
+
+<img
+  src={molecule1}
+  className={`${styles.floating} ${styles.float1}`}
+  alt=""
+/>
+
+<img
+  src={molecule2}
+  className={`${styles.floating} ${styles.float2}`}
+  alt=""
+/>
+
+<img
+  src={molecule3}
+  className={`${styles.floating} ${styles.float3}`}
+  alt=""
+/>
+
+<img
+  src={molecule4}
+  className={`${styles.floating} ${styles.float4}`}
+  alt=""
+/>
+
+<img
+  src={molecule5}
+  className={`${styles.floating} ${styles.float5}`}
+  alt=""
+/>
+
+<img
+  src={molecule6}
+  className={`${styles.floating} ${styles.float6}`}
+  alt=""
+/>
 
       <div className={styles.container}>
         {/* TOP */}
@@ -36,96 +81,66 @@ function About() {
 
         </div>
 
+{/* HYBRID SECTION */}
 <section className={styles.hybridSection}>
-
-  <div className={styles.hybridGlow}></div>
-
-  <div className={styles.hybridContainer}>
+  <div className={styles.container}>
 
     <div className={styles.hybridHeader}>
-      <span className={styles.hybridBadge}>
-        HYBRID SYSTEM
-      </span>
+      <p className={styles.hybridLabel}>
+        HYBRID FORMAT
+      </p>
 
       <h2>
-        Онлайн + Офлайн = <span>единая система</span>
+        Мы сочетаем преимущества
+        каждого из форматов
       </h2>
-
-      <p>
-        Полноценное обучение в любом формате
-      </p>
     </div>
 
     <div className={styles.hybridGrid}>
 
-      {/* LEFT */}
-
+      {/* ONLINE */}
       <div className={styles.hybridCard}>
 
-        <div className={styles.hybridCardGlow}></div>
+        <div className={styles.hybridTop}>
+          <div className={styles.hybridIcon}>
+            💻
+          </div>
 
-        <div className={styles.hybridIcon}>
-          🌐
+          <h3>Онлайн</h3>
         </div>
 
-        <div className={styles.hybridInfo}>
-
-          <span>Онлайн</span>
-
-          <h3>Гибкость</h3>
-
-          <ul>
-            <li>Записи уроков</li>
-            <li>Платформа</li>
-            <li>Из любой точки</li>
-          </ul>
-
-        </div>
+        <ul>
+          <li>Удобная платформа</li>
+          <li>Записи уроков</li>
+          <li>
+            Возможности для самостоятельной подготовки
+          </li>
+        </ul>
 
       </div>
 
-      {/* CENTER */}
-
-      <div className={styles.hybridCenter}>
-
-        <div className={styles.hybridRing}></div>
-
-        <div className={styles.hybridOrb}>
-          SYNC
-        </div>
-
-      </div>
-
-      {/* RIGHT */}
-
+      {/* OFFLINE */}
       <div className={styles.hybridCard}>
 
-        <div className={styles.hybridCardGlow}></div>
+        <div className={styles.hybridTop}>
+          <div className={styles.hybridIcon}>
+            🎓
+          </div>
 
-        <div className={styles.hybridIcon}>
-          🏛️
+          <h3>Офлайн</h3>
         </div>
 
-        <div className={styles.hybridInfo}>
-
-          <span>Офлайн</span>
-
-          <h3>Практика</h3>
-
-          <ul>
-            <li>Speaking club</li>
-            <li>Живое общение</li>
-            <li>Контроль прогресса</li>
-          </ul>
-
-        </div>
+        <ul>
+          <li>Полное сопровождение</li>
+          <li>Живые уроки</li>
+          <li>Контроль прогресса</li>
+        </ul>
 
       </div>
 
     </div>
 
   </div>
-
 </section>
 
 
@@ -165,10 +180,11 @@ function About() {
               <img src={earth} alt="Earth Icon" className={styles.iconImage} />
             </div>
 
-            <h3>Полное сопровождение</h3>
+            <h3>Живые уроки</h3>
 
 <p>
-   Мы не только проходим уроки по IELTS , но также сопровождаем вас во всем пути и доводим каждого ученика до успешного результата
+   Во многих учебных центрах, если студент не понял тему — это его проблема. У нас наоборот: если ученик что-то не понял, значит мы должны объяснить по-другому и довести до результата.
+
 </p>
           </div>
         </div>
@@ -200,24 +216,10 @@ function About() {
               системе поддержки студенты достигают результатов намного быстрее.
             </p>
 
-            <div className={styles.features}>
-              <div className={styles.feature}>
-                <span>✔</span>
-                <p>Современная методика обучения</p>
-              </div>
 
-              <div className={styles.feature}>
-                <span>✔</span>
-                <p>Подготовка к IELTS и экзаменам</p>
-              </div>
-
-              <div className={styles.feature}>
-                <span>✔</span>
-                <p>Поддержка преподавателей и комьюнити</p>
-              </div>
-            </div>
           </div>
         </div>
+        <Results />
       </div>
     </section>
   );

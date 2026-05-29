@@ -3,6 +3,7 @@
 :root {
   /* ==================== ТЁМНАЯ ТЕМА (по умолчанию) ==================== */
   --color-primary: #00b6b9;
+  --color-accent: #be0000;
   --color-primary-hover: #00d4d7;
   --color-primary-light: rgba(0, 182, 185, 0.15);
   --color-primary-border: rgba(0, 182, 185, 0.25);

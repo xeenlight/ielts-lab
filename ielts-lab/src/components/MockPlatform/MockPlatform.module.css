@@ -276,7 +276,7 @@ border: 1px solid rgba(0, 182, 185, 0.22);
   font-size: 34px;
   font-weight: 900;
 
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .stats p {

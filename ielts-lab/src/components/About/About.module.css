@@ -574,7 +574,6 @@
 .hybridSection {
   position: relative;
 
-  margin-bottom: 120px;
 }
 
 .hybridContainer {
@@ -685,20 +684,21 @@
 .hybridHeader p {
   font-size: 17px;
 
-  color: var(--color-text-secondary);
 }
 
 /* GRID */
 
 .hybridGrid {
+  position: relative;
+  z-index: 2;
+
   display: grid;
 
-  grid-template-columns:
-    1fr 180px 1fr;
+  grid-template-columns: repeat(2,1fr);
 
-  align-items: center;
+  gap: 28px;
 
-  gap: 24px;
+  align-items: stretch;
 }
 
 /* CARD */
@@ -706,31 +706,34 @@
 .hybridCard {
   position: relative;
 
+  height: 100%;
+
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
-  gap: 24px;
+  padding: 38px;
 
-  padding: 28px;
-
-  border-radius: 28px;
+  border-radius: 34px;
 
   overflow: hidden;
 
-  background:
-    rgba(255,255,255,0.03);
+  border:
+    1px solid rgba(255,255,255,0.08);
 
-  border: 1px solid var(--color-border);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.025)
+    );
+
+  backdrop-filter: blur(18px);
 
   transition:
     transform .4s ease,
     border-color .4s ease,
-    background .4s ease;
-
-  animation:
-    hybridFadeUp 1s ease;
+    box-shadow .4s ease;
 }
-
 .hybridCard:hover {
   transform:
     translateY(-8px);
@@ -998,6 +1001,8 @@
   }
 
   .hybridCard {
+      height: 100%;
+
     flex-direction: column;
 
     text-align: center;
@@ -1009,5 +1014,517 @@
 
   .hybridInfo li::before {
     display: none;
+  }
+}
+/* ================================================= */
+/* ================= HYBRID PREMIUM ================= */
+/* ================================================= */
+
+.hybridSection {
+  position: relative;
+
+  padding: 0px 0 110px;
+
+  overflow: hidden;
+}
+
+/* BACKGROUND GLOW */
+
+.hybridSection::before {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  left: 50%;
+  top: 10%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,182,185,0.12),
+      transparent 70%
+    );
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+.hybridHeader {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  margin-bottom: 56px;
+}
+
+.hybridLabel {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  margin-bottom: 22px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  color: var(--color-primary);
+
+  border:
+    1px solid rgba(0,182,185,0.22);
+
+  background:
+    rgba(0,182,185,0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+.hybridHeader h2 {
+  max-width: 1020px;
+
+  margin: 0 auto;
+
+  font-size: clamp(38px,5vw,72px);
+  line-height: 1.05;
+  font-weight: 900;
+
+  color: var(--color-text);
+}
+
+/* GRID */
+
+.hybridGrid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 28px;
+}
+
+/* CARD */
+
+.hybridCard {
+  position: relative;
+  height: 270px;
+
+  padding: 38px;
+
+  border-radius: 34px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.025)
+    );
+
+  backdrop-filter: blur(18px);
+
+  transition:
+    transform .4s ease,
+    border-color .4s ease,
+    box-shadow .4s ease;
+}
+
+/* HOVER */
+
+.hybridCard:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(0,182,185,0.28);
+
+  box-shadow:
+    0 20px 50px rgba(0,182,185,0.08);
+}
+
+/* GLOW INSIDE */
+
+.hybridCard::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -100px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,182,185,0.14),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition: .4s ease;
+}
+
+.hybridCard:hover::before {
+  opacity: 1;
+}
+
+/* TOP */
+
+.hybridTop {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 34px;
+}
+
+.hybridIcon {
+  width: 64px;
+  height: 64px;
+
+  border-radius: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  color: var(--color-primary);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,182,185,0.16),
+      rgba(0,182,185,0.06)
+    );
+
+  border:
+    1px solid rgba(0,182,185,0.22);
+
+  box-shadow:
+    0 0 30px rgba(0,182,185,0.12);
+}
+
+.hybridTop h3 {
+  font-size: 34px;
+  font-weight: 900;
+
+  color: var(--color-text);
+}
+
+/* LIST */
+
+.hybridCard ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.hybridCard li {
+  position: relative;
+
+  padding-left: 24px;
+
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 500;
+
+  color: var(--color-text-secondary);
+}
+
+/* CUSTOM BULLET */
+
+.hybridCard li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 11px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  box-shadow:
+    0 0 14px rgba(0,182,185,0.55);
+}
+
+/* MOBILE */
+
+@media (max-width: 950px) {
+
+  .hybridGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+
+
+
+  .hybridHeader {
+    margin-bottom: 34px;
+  }
+
+  .hybridHeader h2 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .hybridCard {
+    padding: 28px;
+    border-radius: 26px;
+  }
+
+  .hybridTop {
+    margin-bottom: 26px;
+  }
+
+  .hybridTop h3 {
+    font-size: 28px;
+  }
+
+  .hybridIcon {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 18px;
+
+    font-size: 24px;
+  }
+
+  .hybridCard li {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+/* ================================================= */
+/* =============== FLOATING OBJECTS ================= */
+/* ================================================= */
+
+.floating {
+  position: absolute;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  opacity: 0.14;
+
+  z-index: 1;
+
+  filter:
+    drop-shadow(0 0 30px rgba(0,182,185,0.15));
+
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* OBJECT 1 */
+
+.float1 {
+  width: 240px;
+
+  top: 180px;
+  left: -60px;
+
+  animation:
+    floatSlow 8s infinite;
+}
+
+/* OBJECT 2 */
+
+.float2 {
+  width: 170px;
+
+  top: 620px;
+  right: 40px;
+
+  animation:
+    floatRotate 11s infinite;
+}
+
+/* OBJECT 3 */
+
+.float3 {
+  width: 140px;
+
+  top: 1200px;
+  left: 8%;
+
+  animation:
+    floatSoft 9s infinite;
+}
+
+/* OBJECT 4 */
+
+.float4 {
+  width: 220px;
+
+  top: 1800px;
+  right: -40px;
+
+  animation:
+    floatSlow 12s infinite;
+}
+
+/* OBJECT 5 */
+
+.float5 {
+  width: 160px;
+
+  top: 2400px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  animation:
+    floatRotate 14s infinite;
+}
+
+/* OBJECT 6 */
+
+.float6 {
+  width: 200px;
+
+  bottom: 200px;
+  left: -50px;
+
+  animation:
+    floatSoft 10s infinite;
+}
+
+/* ================================================= */
+/* ================= ANIMATIONS ==================== */
+/* ================================================= */
+
+@keyframes floatSlow {
+
+  0% {
+    transform:
+      translateY(0px)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-24px)
+      rotate(5deg);
+  }
+
+  100% {
+    transform:
+      translateY(0px)
+      rotate(0deg);
+  }
+}
+
+@keyframes floatRotate {
+
+  0% {
+    transform:
+      translateY(0px)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-18px)
+      rotate(-8deg);
+  }
+
+  100% {
+    transform:
+      translateY(0px)
+      rotate(0deg);
+  }
+}
+
+@keyframes floatSoft {
+
+  0% {
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(0,-20px,0)
+      scale(1.04);
+  }
+
+  100% {
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+  }
+}
+@media (max-width: 700px) {
+
+  .floating {
+    opacity: 0.07;
+  }
+
+  .float1 {
+    width: 120px;
+    top: 140px;
+    left: -30px;
+  }
+
+  .float2 {
+    width: 90px;
+    right: -10px;
+  }
+
+  .float3 {
+    width: 80px;
+  }
+
+  .float4 {
+    width: 120px;
+  }
+
+  .float5 {
+    width: 90px;
+  }
+
+  .float6 {
+    width: 100px;
   }
 }

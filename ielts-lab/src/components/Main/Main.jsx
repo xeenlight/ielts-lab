@@ -234,19 +234,19 @@ number: {
 </h1>
 
 <h1 className={`${styles.title} ${styles.mobile}`}>
-  ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К <span className={styles.ielts}>IELTS </span>
-<span className={styles.highlight}>ПРЯМО</span>
-  <div className={styles.mobileWords}>
-    
+  <span>ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К   <span className={styles.ielts}>IELTS</span></span>
 
-    <span className={styles.highlight}>СЕЙЧАС?</span>
+
+
+  <div className={styles.mobileWords}>
+    <span className={styles.highlight}>ПРЯМО СЕЙЧАС?</span>
   </div>
 </h1>
 
           <p className={styles.description}>
             Уроки один на один с каждым 🥊
             <br />
-            Запишись <span className={styles.ielts}> сегодня </span> и начни учиться уже <span className={styles.ielts}> завтра </span>.
+            Запишись <span className={styles.accent}> сегодня </span> и начни учиться уже <span className={styles.accent}> завтра </span>.
           </p>
 
           <div className={styles.buttons}>

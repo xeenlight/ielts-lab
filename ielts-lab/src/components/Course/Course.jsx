@@ -2,15 +2,26 @@ import styles from './Course.module.css';
 import { useTranslation } from 'react-i18next';
 import { useRef, useState } from 'react';
 
+// BACKGROUND IMAGES
+import molecule1 from '../../assets/ielts Lab (1).png';
+import molecule2 from '../../assets/ielts Lab (2).png';
+import molecule3 from '../../assets/ielts Lab (3).png';
+import molecule4 from '../../assets/ielts Lab (4).png';
+import molecule5 from '../../assets/ielts Lab (5).png';
+import molecule6 from '../../assets/ielts Lab (6).png';
+
 const videoId = "M3FNjV4br7k";
 
 export default function Course() {
+
   const { t } = useTranslation();
+
   const formRef = useRef(null);
 
   const [openIndex, setOpenIndex] = useState(0);
 
   const scrollToForm = () => {
+
     formRef.current?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -18,10 +29,6 @@ export default function Course() {
   };
 
   const faqs = [
-    {
-      q: t('faq1_q'),
-      a: t('faq1_a')
-    },
     {
       q: t('faq2_q'),
       a: t('faq2_a')
@@ -41,250 +48,400 @@ export default function Course() {
   ];
 
   const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+
+    setOpenIndex(
+      openIndex === index ? null : index
+    );
   };
 
   return (
     <div className={styles.coursePage}>
+
+      {/* FLOATING BACKGROUND */}
+
+      <img
+        src={molecule1}
+        className={`${styles.bgShape} ${styles.shape1}`}
+        alt=""
+      />
+
+      <img
+        src={molecule2}
+        className={`${styles.bgShape} ${styles.shape2}`}
+        alt=""
+      />
+
+      <img
+        src={molecule3}
+        className={`${styles.bgShape} ${styles.shape3}`}
+        alt=""
+      />
+
+      <img
+        src={molecule4}
+        className={`${styles.bgShape} ${styles.shape4}`}
+        alt=""
+      />
+
+      <img
+        src={molecule5}
+        className={`${styles.bgShape} ${styles.shape5}`}
+        alt=""
+      />
+
+      <img
+        src={molecule6}
+        className={`${styles.bgShape} ${styles.shape6}`}
+        alt=""
+      />
+
       {/* HERO */}
+
       <section className={styles.hero}>
-        <div className={styles.glow}></div>
+
+        <div className={styles.heroGlow}></div>
 
         <div className={styles.container}>
-          <p className={styles.subtitle}>
-            IELTS LAB COURSE
-          </p>
 
-          <h1 className={styles.title}>
-            IELTS TO <span>8.0+</span>
-          </h1>
+          <div className={styles.heroTop}>
 
-          <p className={styles.heroDesc}>
-            {t('course_subtitle')}
-          </p>
+            <div className={styles.heroBadge}>
+              LIVE IELTS PREPARATION
+            </div>
 
-          <div className={styles.videoWrapper}>
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}?rel=0`}
-              title="IELTS Lab Course"
-              frameBorder="0"
-              allowFullScreen
-            />
+            <h1 className={styles.heroTitle}>
+              Получи наконец
+              <span> 7+ по IELTS </span>
+              <br />
+              не тратя свои деньги и время
+            </h1>
+
+            <p className={styles.heroText}>
+              Присоединяйся к нашим
+              <span> живым занятиям по IELTS </span>
+              и сэкономь кучу времени и нервов.
+            </p>
+
+            <button
+              onClick={scrollToForm}
+              className={styles.ctaBig}
+            >
+              Оставить заявку
+            </button>
+
           </div>
 
-          <button
-            onClick={scrollToForm}
-            className={styles.ctaBig}
-          >
-            {t('open_form')}
-          </button>
+          {/* VIDEO */}
+
+          <div className={styles.videoBlock}>
+
+            <div className={styles.videoWrapper}>
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+                title="IELTS Lab Course"
+                frameBorder="0"
+                allowFullScreen
+              />
+            </div>
+
+            <div className={styles.videoInfo}>
+
+              <div className={styles.liveDot}></div>
+
+              <p>
+                Ежедневные живые занятия 1 на 1
+                с преподавателями уровня
+                <span> C1 </span>
+                и многолетним опытом подготовки
+                студентов к IELTS.
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
+
+      </section>
+
+      {/* EXPERIENCE */}
+
+      <section className={styles.experienceSection}>
+
+        <div className={styles.container}>
+
+          <div className={styles.sectionHead}>
+            <p>
+              IELTS LAB EXPERIENCE
+            </p>
+
+            <h2 className={styles.sectionTitle}>
+              Что вас ждёт
+              в IELTS LAB?
+            </h2>
+          </div>
+
+          <div className={styles.experienceLayout}>
+
+            {/* BIG CARD */}
+
+            <div className={styles.experienceMain}>
+
+              <div className={styles.cardGlow}></div>
+
+              <span>
+                01
+              </span>
+
+              <h3>
+                Живые уроки 1 на 1
+              </h3>
+
+              <p>
+                Полное внимание преподавателя,
+                индивидуальная стратегия подготовки
+                и работа именно над вашими
+                слабыми местами.
+              </p>
+
+            </div>
+
+            {/* RIGHT */}
+
+            <div className={styles.experienceSide}>
+
+              <div className={styles.miniCard}>
+
+                <span>
+                  02
+                </span>
+
+                <h4>
+                  Поддержка
+                  на каждом этапе
+                </h4>
+
+                <p>
+                  Учитель помогает вам
+                  во время всего обучения,
+                  а не только на уроках.
+                </p>
+
+              </div>
+
+              <div className={styles.miniCard}>
+
+                <span>
+                  03
+                </span>
+
+                <h4>
+                  Настоящие IELTS материалы
+                </h4>
+
+                <p>
+                  Используем только реальные
+                  экзаменационные задания
+                  и актуальные структуры.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
       {/* STATS */}
+
       <section className={styles.statsSection}>
+
         <div className={styles.container}>
+
           <div className={styles.statsGrid}>
+
             <div className={styles.statCard}>
               <h3>3000+</h3>
-              <p>Students trained</p>
+
+              <p>
+                Students trained
+              </p>
             </div>
 
             <div className={styles.statCard}>
               <h3>8.0 Avg</h3>
-              <p>Average band score</p>
+
+              <p>
+                Average band score
+              </p>
             </div>
 
             <div className={styles.statCard}>
               <h3>8–12 Weeks</h3>
-              <p>Structured preparation</p>
+
+              <p>
+                Structured preparation
+              </p>
             </div>
+
           </div>
+
         </div>
-      </section>
 
-      {/* BENEFITS */}
-      <section className={styles.benefits}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>
-            What You Get
-          </h2>
-
-          <div className={styles.benefitsGrid}>
-            <div className={styles.card}>
-              <h3>Writing Templates</h3>
-              <p>
-                Band 8+ structures for Task 1 & Task 2.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <h3>Speaking Practice</h3>
-              <p>
-                Mock speaking sessions with expert feedback.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <h3>Reading Strategies</h3>
-              <p>
-                Time-saving techniques for every question type.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <h3>Listening System</h3>
-              <p>
-                Train accuracy, speed, and vocabulary recognition.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROGRAM */}
-      <section className={styles.program}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>
-            Course Program
-          </h2>
-
-          <div className={styles.programGrid}>
-            <div className={styles.card}>
-              <span className={styles.week}>
-                Week 1–2
-              </span>
-
-              <h3>Foundation</h3>
-
-              <p>
-                Assessment, strategy building,
-                weak area analysis.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <span className={styles.week}>
-                Week 3–6
-              </span>
-
-              <h3>Skill Development</h3>
-
-              <p>
-                Writing, speaking, listening
-                and reading systems.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <span className={styles.week}>
-                Week 7–12
-              </span>
-
-              <h3>Exam Simulation</h3>
-
-              <p>
-                Mocks, corrections, timing
-                and exam psychology.
-              </p>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* TESTIMONIALS */}
+
       <section className={styles.testimonials}>
+
         <div className={styles.container}>
+
           <h2 className={styles.sectionTitle}>
             {t('testimonials_title')}
           </h2>
 
           <div className={styles.testimonialGrid}>
+
             <div className={styles.testimonialCard}>
+
               <p className={styles.quote}>
                 {t('testimonial1')}
               </p>
 
               <div className={styles.author}>
-                <strong>{t('testimonial1_name')}</strong>
-                <span>Band 8.0</span>
+                <strong>
+                  {t('testimonial1_name')}
+                </strong>
+
+                <span>
+                  Band 8.0
+                </span>
               </div>
+
             </div>
 
             <div className={styles.testimonialCard}>
+
               <p className={styles.quote}>
                 {t('testimonial2')}
               </p>
 
               <div className={styles.author}>
-                <strong>{t('testimonial2_name')}</strong>
-                <span>Band 7.5</span>
+                <strong>
+                  {t('testimonial2_name')}
+                </strong>
+
+                <span>
+                  Band 7.5
+                </span>
               </div>
+
             </div>
 
             <div className={styles.testimonialCard}>
+
               <p className={styles.quote}>
                 {t('testimonial3')}
               </p>
 
               <div className={styles.author}>
-                <strong>{t('testimonial3_name')}</strong>
-                <span>Band 8.5</span>
+                <strong>
+                  {t('testimonial3_name')}
+                </strong>
+
+                <span>
+                  Band 8.5
+                </span>
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* FAQ */}
+
       <section className={styles.faqSection}>
+
         <div className={styles.container}>
+
           <h2 className={styles.sectionTitle}>
             {t('faq_title')}
           </h2>
 
           <div className={styles.accordion}>
+
             {faqs.map((item, index) => (
+
               <div
                 key={index}
                 className={`${styles.faqItem} ${
-                  openIndex === index ? styles.active : ''
+                  openIndex === index
+                    ? styles.active
+                    : ''
                 }`}
-                onClick={() => toggleAccordion(index)}
+                onClick={() =>
+                  toggleAccordion(index)
+                }
               >
+
                 <div className={styles.faqQuestion}>
-                  <h3>{item.q}</h3>
+
+                  <h3>
+                    {item.q}
+                  </h3>
 
                   <span className={styles.plus}>
-                    {openIndex === index ? '−' : '+'}
+                    {openIndex === index
+                      ? '−'
+                      : '+'}
                   </span>
+
                 </div>
 
                 <div className={styles.faqAnswer}>
-                  <p>{item.a}</p>
+                  <p>
+                    {item.a}
+                  </p>
                 </div>
+
               </div>
+
             ))}
+
           </div>
 
           <div className={styles.ctaCenter}>
+
             <button
               onClick={scrollToForm}
               className={styles.ctaBig}
             >
               {t('open_form')}
             </button>
+
           </div>
+
         </div>
+
       </section>
 
       {/* FORM */}
+
       <section
         ref={formRef}
         id="form"
         className={styles.formSection}
       >
+
         <div className={styles.container}>
+
           <h2 className={styles.sectionTitle}>
             {t('form_title')}
           </h2>
@@ -296,8 +453,11 @@ export default function Course() {
           <div className={styles.formCard}>
             {/* amoCRM form */}
           </div>
+
         </div>
+
       </section>
+
     </div>
   );
 }

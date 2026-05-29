@@ -32,7 +32,14 @@ export default function FreeResources() {
   />
 </h2>
 
-      <p className={styles.desc}>{t('free_desc')}</p>
+      <p className={styles.desc}>
+        <Trans
+          i18nKey="free_desc"
+          components={{
+            primary: <span className={styles.primary} />
+          }}
+        />
+      </p>
 
       <div className={styles.grid}>
         {data.map((item, i) => (

@@ -160,7 +160,9 @@
 .ielts {
   color: var(--color-primary);
 }
-
+.accent {
+  color: var(--color-accent);
+}
 .highlight {
   position: relative;
 
@@ -219,8 +221,6 @@
 
     align-items: center;
 
-    gap: 10px;
-
   }
 
   .highlight::after {
@@ -261,15 +261,8 @@
     letter-spacing: -2px;
   }
 }
-@media (max-width: 768px) {
-  .title {
-    font-size: clamp(36px, 11vw, 42px);
 
-    gap: 10px;
 
-    letter-spacing: -2px;
-  }
-}
 /* LIGHT THEME */
 [data-theme="light"] .title {
   text-shadow: none;
@@ -801,7 +794,34 @@
     contrast(1.08)
     saturate(1.1);
 }
+@media (max-width: 768px) {
+  .mobile {
+    display: flex;
 
+    flex-direction: column;
+
+    align-items: center;
+
+  }
+
+  .mobileWords {
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .title {
+    font-size: clamp(32px, 11vw, 33px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    text-align: center;
+  }
+}
 /* DARK MODE */
 [data-theme="dark"] .particles,
 :root .particles {
