@@ -14,7 +14,6 @@ import molecule4 from "../../assets/ielts Lab (4).png";
 import molecule5 from "../../assets/ielts Lab (5).png";
 import molecule6 from "../../assets/ielts Lab (6).png";
 
-import Results from "../Results/Results";
 function About() {
   return (
     <section className={styles.about}>
@@ -219,7 +218,6 @@ function About() {
 
           </div>
         </div>
-        <Results />
       </div>
     </section>
   );

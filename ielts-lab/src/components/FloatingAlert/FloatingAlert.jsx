@@ -35,38 +35,47 @@ export default function FloatingAlert() {
   const [visible, setVisible] = useState(false);
   const [currentAlert, setCurrentAlert] = useState(null);
 
-  const secondAlertTimeout = useRef(null);
+  const timeoutRef = useRef(null);
 
-  // =========================
-  // STORAGE
-  // =========================
+  const isCooldownActive = () => {
+    const cooldown = localStorage.getItem(
+      "floating-alert-cooldown"
+    );
 
-  const getCooldown = () => {
-    const value = localStorage.getItem("floating-alert-cooldown");
+    if (!cooldown) return false;
 
-    if (!value) return false;
+    const active =
+      Date.now() - Number(cooldown) < COOLDOWN;
 
-    const isActive = Date.now() - Number(value) < COOLDOWN;
+    if (!active) {
+      localStorage.removeItem(
+        "floating-alert-cooldown"
+      );
 
-    // cooldown закончился → очищаем всё
-    if (!isActive) {
-      localStorage.removeItem("floating-alert-cooldown");
+      sessionStorage.removeItem(
+        "floating-alert-first-shown"
+      );
 
-      sessionStorage.removeItem("floating-alert-first-shown");
-      sessionStorage.removeItem("floating-alert-second-shown");
+      sessionStorage.removeItem(
+        "floating-alert-first-closed"
+      );
+
+      sessionStorage.removeItem(
+        "floating-alert-second-shown"
+      );
+
+      sessionStorage.removeItem(
+        "floating-alert-second-pending"
+      );
     }
 
-    return isActive;
+    return active;
   };
 
   const showAlert = (alert) => {
     setCurrentAlert(alert);
     setVisible(true);
   };
-
-  // =========================
-  // SECOND ALERT
-  // =========================
 
   const scheduleSecondAlert = () => {
     const secondShown = sessionStorage.getItem(
@@ -75,125 +84,164 @@ export default function FloatingAlert() {
 
     if (secondShown) return;
 
-    clearTimeout(secondAlertTimeout.current);
+    clearTimeout(timeoutRef.current);
 
-    secondAlertTimeout.current = setTimeout(() => {
-      sessionStorage.setItem("floating-alert-second-shown", "true");
+    sessionStorage.setItem(
+      "floating-alert-second-pending",
+      Date.now().toString()
+    );
+
+    timeoutRef.current = setTimeout(() => {
+      sessionStorage.setItem(
+        "floating-alert-second-shown",
+        "true"
+      );
+
+      sessionStorage.removeItem(
+        "floating-alert-second-pending"
+      );
 
       showAlert(alerts[1]);
     }, ALERT_DELAY);
   };
 
-  // =========================
-  // FIRST ALERT
-  // =========================
+  useEffect(() => {
+    if (isCooldownActive()) return;
 
-  const triggerFirstAlert = () => {
     const firstShown = sessionStorage.getItem(
       "floating-alert-first-shown"
     );
 
-    if (firstShown) return;
-
-    sessionStorage.setItem("floating-alert-first-shown", "true");
-
-    showAlert(alerts[0]);
-
-    scheduleSecondAlert();
-  };
-
-  // =========================
-  // MAIN LOGIC
-  // =========================
-
-  useEffect(() => {
-    if (getCooldown()) return;
-
-    const firstShown = sessionStorage.getItem(
-      "floating-alert-first-shown"
+    const firstClosed = sessionStorage.getItem(
+      "floating-alert-first-closed"
     );
 
     const secondShown = sessionStorage.getItem(
       "floating-alert-second-shown"
     );
 
-    // Если первый уже был,
-    // но второй ещё нет → продолжаем цикл
-    if (firstShown && !secondShown) {
-      scheduleSecondAlert();
+    const secondPending = sessionStorage.getItem(
+      "floating-alert-second-pending"
+    );
+
+    // восстановление таймера второго после перехода между страницами
+    if (
+      firstClosed &&
+      !secondShown &&
+      secondPending
+    ) {
+      const startTime = Number(secondPending);
+
+      const elapsed = Date.now() - startTime;
+
+      const remaining = Math.max(
+        ALERT_DELAY - elapsed,
+        0
+      );
+
+      timeoutRef.current = setTimeout(() => {
+        sessionStorage.setItem(
+          "floating-alert-second-shown",
+          "true"
+        );
+
+        sessionStorage.removeItem(
+          "floating-alert-second-pending"
+        );
+
+        showAlert(alerts[1]);
+      }, remaining);
+
       return;
     }
 
-    // Если оба уже были → ничего не делаем
-    if (firstShown && secondShown) {
-      return;
-    }
+    if (firstShown) return;
 
-    // =========================
-    // HOME PAGE
-    // =========================
+    const triggerFirstAlert = () => {
+      sessionStorage.setItem(
+        "floating-alert-first-shown",
+        "true"
+      );
+
+      showAlert(alerts[0]);
+    };
 
     if (isHome) {
       const handleScroll = () => {
         if (window.scrollY > 200) {
           triggerFirstAlert();
 
-          window.removeEventListener("scroll", handleScroll);
+          window.removeEventListener(
+            "scroll",
+            handleScroll
+          );
         }
       };
 
-      window.addEventListener("scroll", handleScroll);
+      window.addEventListener(
+        "scroll",
+        handleScroll
+      );
 
       return () => {
-        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener(
+          "scroll",
+          handleScroll
+        );
       };
     }
-
-    // =========================
-    // OTHER PAGES
-    // =========================
 
     triggerFirstAlert();
 
     return () => {
-      clearTimeout(secondAlertTimeout.current);
+      clearTimeout(timeoutRef.current);
     };
   }, [location.pathname]);
-
-  // =========================
-  // CLOSE
-  // =========================
 
   const closeAlert = () => {
     setVisible(false);
 
-    // Если закрыли второй → cooldown
+    if (currentAlert?.id === 1) {
+      sessionStorage.setItem(
+        "floating-alert-first-closed",
+        "true"
+      );
+
+      scheduleSecondAlert();
+      return;
+    }
+
     if (currentAlert?.id === 2) {
       localStorage.setItem(
         "floating-alert-cooldown",
         Date.now().toString()
       );
 
-      clearTimeout(secondAlertTimeout.current);
+      clearTimeout(timeoutRef.current);
 
-      // через минуту всё автоматически очистится
       setTimeout(() => {
-        localStorage.removeItem("floating-alert-cooldown");
+        localStorage.removeItem(
+          "floating-alert-cooldown"
+        );
 
         sessionStorage.removeItem(
           "floating-alert-first-shown"
         );
 
         sessionStorage.removeItem(
+          "floating-alert-first-closed"
+        );
+
+        sessionStorage.removeItem(
           "floating-alert-second-shown"
+        );
+
+        sessionStorage.removeItem(
+          "floating-alert-second-pending"
         );
       }, COOLDOWN);
     }
   };
-
-  // =========================
-  // REDIRECT
-  // =========================
 
   const handleRedirect = () => {
     if (!currentAlert) return;
@@ -205,19 +253,17 @@ export default function FloatingAlert() {
     }
   };
 
-  // =========================
-  // SWIPE
-  // =========================
-
   const touchStartY = useRef(0);
   const touchEndY = useRef(0);
 
   const handleTouchStart = (e) => {
-    touchStartY.current = e.targetTouches[0].clientY;
+    touchStartY.current =
+      e.targetTouches[0].clientY;
   };
 
   const handleTouchMove = (e) => {
-    touchEndY.current = e.targetTouches[0].clientY;
+    touchEndY.current =
+      e.targetTouches[0].clientY;
   };
 
   const handleTouchEnd = () => {
