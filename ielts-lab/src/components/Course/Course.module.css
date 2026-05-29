@@ -735,6 +735,8 @@
 
   .sectionTitle {
     font-size: 46px;
+    margin-bottom: 34px;
+            text-align: center;
   }
 
   .experienceMain,
