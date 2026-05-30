@@ -70,7 +70,7 @@ export default function Header() {
         >
           <NavLink to="/">{t('home')}</NavLink>
           <NavLink to="/about">{t('about')}</NavLink>
-          <NavLink to="/course">{t('course')}</NavLink>
+          <NavLink to="/course">{t('Курс')}</NavLink>
         </nav>
 
         {/* RIGHT */}
