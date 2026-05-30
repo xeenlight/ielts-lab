@@ -141,19 +141,21 @@ export default function Course() {
               />
             </div>
 
-            <div className={styles.videoInfo}>
 
-              <div className={styles.liveDot}></div>
+              <div className={styles.heroText}>
 
-              <p>
+                              <p>
                 Ежедневные живые занятия 1 на 1
                 с преподавателями уровня
                 <span> C1 </span>
                 и многолетним опытом подготовки
                 студентов к IELTS.
               </p>
+              </div>
 
-            </div>
+
+
+
             <button
               onClick={scrollToForm}
               className={styles.ctaBig}
