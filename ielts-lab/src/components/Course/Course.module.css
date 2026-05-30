@@ -354,12 +354,7 @@
 
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.05),
-      rgba(255,255,255,0.025)
-    );
+  background:var(--color-bg-secondary);
 
   border:
     1px solid rgba(255,255,255,0.08);
@@ -434,8 +429,7 @@
 
   border-radius: 32px;
 
-  background:
-    rgba(255,255,255,0.03);
+  background:var(--color-bg-secondary);
 
   border:
     1px solid rgba(255,255,255,0.06);

@@ -40,6 +40,7 @@
 
   --color-bg: #f5f6f8;
   --color-bg-secondary: rgb(0 0 0 / 15%);
+    --color-bg-secondary: rgb(231, 231, 231,  0.85);
     --color-bg-span: rgba(0 0 0 / 15%);
   --color-bg-card: #ffffff;
   --color-bg-input: #f1f3f5;
@@ -61,19 +62,3 @@
       --color-bg-main: #00b6b9;
 
 }
-
-/* ===================== СВЕТЛАЯ ТЕМА (пока закомментирована) ===================== */
-/*
-[data-theme="light"] {
-  --color-primary: #00a3a6;
-  --color-bg: #f8f9fa;
-  --color-bg-secondary: #ffffff;
-  --color-bg-card: #ffffff;
-  --color-bg-input: #f1f3f5;
-  --color-text: #1a1a1a;
-  --color-text-secondary: #555;
-  --color-text-muted: #777;
-  --color-border: rgba(0, 0, 0, 0.1);
-}
-*/
-

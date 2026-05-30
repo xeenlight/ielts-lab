@@ -112,7 +112,7 @@ export default function Course() {
   <br />
   <span className={styles.accent}>7+ по IELTS</span>,
   <br />
-  не тратя,{" "}
+  не тратя{" "}
   <span className={styles.money}>деньги</span>
   {" и "}
   <span className={styles.time}>время </span>{" "}
