@@ -13,6 +13,7 @@ import molecule3 from "../../assets/ielts Lab (3).png";
 import molecule4 from "../../assets/ielts Lab (4).png";
 import molecule5 from "../../assets/ielts Lab (5).png";
 import molecule6 from "../../assets/ielts Lab (6).png";
+import HybridLearning from "../HybridLearning/HybridLearning";
 
 function About() {
   return (
@@ -81,66 +82,7 @@ function About() {
         </div>
 
 {/* HYBRID SECTION */}
-<section className={styles.hybridSection}>
-  <div className={styles.container}>
-
-    <div className={styles.hybridHeader}>
-      <p className={styles.hybridLabel}>
-        HYBRID FORMAT
-      </p>
-
-      <h2>
-        Мы сочетаем преимущества
-        каждого из форматов
-      </h2>
-    </div>
-
-    <div className={styles.hybridGrid}>
-
-      {/* ONLINE */}
-      <div className={styles.hybridCard}>
-
-        <div className={styles.hybridTop}>
-          <div className={styles.hybridIcon}>
-            💻
-          </div>
-
-          <h3>Онлайн</h3>
-        </div>
-
-        <ul>
-          <li>Удобная платформа</li>
-          <li>Записи уроков</li>
-          <li>
-            Возможности для самостоятельной подготовки
-          </li>
-        </ul>
-
-      </div>
-
-      {/* OFFLINE */}
-      <div className={styles.hybridCard}>
-
-        <div className={styles.hybridTop}>
-          <div className={styles.hybridIcon}>
-            🎓
-          </div>
-
-          <h3>Офлайн</h3>
-        </div>
-
-        <ul>
-          <li>Полное сопровождение</li>
-          <li>Живые уроки</li>
-          <li>Контроль прогресса</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
+<HybridLearning />
 
 
 
