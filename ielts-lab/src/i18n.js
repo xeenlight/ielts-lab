@@ -69,7 +69,7 @@ teacher_2_name: "Maxkamov Asilbek",
 teacher_2_role: "Co-Founder",
 teacher_2_exp: "More than 5 years",
 teacher_2_band: "IELTS 9.0",
-teacher_2_students: "3000+",
+teacher_2_students: "7.5+/100+",
 teacher_2_desc:
   "Co-founder of IELTS Lab and IELTS 9.0 instructor.",
 
@@ -77,7 +77,7 @@ teacher_3_name: "Nazirov Samandar",
 teacher_3_role: "Co-Founder",
 teacher_3_exp: "More than 5 years",
 teacher_3_band: "IELTS 9.0",
-teacher_3_students: "2500+",
+teacher_3_students: "7.5+/100+",
 teacher_3_desc:
   "Experienced IELTS instructor specializing in comprehensive preparation.",
 
@@ -247,14 +247,14 @@ teacher_1_desc:
 teacher_2_name: "Макхамов Асилбек",
 teacher_2_role: "Сооснователь",
 teacher_2_exp: "Более 5 лет",
-teacher_2_students: "3000+",
+teacher_2_students: "7.5+/100+",
 teacher_2_desc:
   "Сооснователь IELTS Lab и преподаватель с результатом IELTS 9.0.",
 
 teacher_3_name: "Назиров Самандар",
 teacher_3_role: "Сооснователь",
 teacher_3_exp: "Более 5 лет",
-teacher_3_students: "2500+",
+teacher_3_students: "7.5+/100+",
 teacher_3_desc:
   "Опытный преподаватель IELTS, специализирующийся на комплексной подготовке.",
 
@@ -376,14 +376,14 @@ teacher_1_desc:
 teacher_2_name: "Maxkamov Asilbek",
 teacher_2_role: "Hammuassis",
 teacher_2_exp: "5 yildan ortiq",
-teacher_2_students: "3000+",
+teacher_2_students: "7.5+/100+",
 teacher_2_desc:
   "IELTS Lab hammuassisi va IELTS 9.0 natijaga ega o‘qituvchi.",
 
 teacher_3_name: "Nazirov Samandar",
 teacher_3_role: "Hammuassis",
 teacher_3_exp: "5 yildan ortiq",
-teacher_3_students: "2500+",
+teacher_3_students: "7.5+/100+",
 teacher_3_desc:
   "Kompleks IELTS tayyorgarligi bo‘yicha tajribali o‘qituvchi.",
 
