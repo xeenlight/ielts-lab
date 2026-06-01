@@ -58,8 +58,9 @@ const resources = {
 
 
       teacher_1_role: "Founder",
+      teacher_1_name: "Faxriyev Xushvaqt",
 teacher_1_exp: "More than 5 years",
-teacher_1_students: "7.0+/8.0",
+teacher_1_students: "7.5+/100+",
 teacher_1_band: "IELTS 9.0",
 teacher_1_desc:
   "Founder of IELTS Lab. Expert in IELTS preparation with more than 5 years of teaching experience.",
@@ -84,7 +85,7 @@ teacher_4_name: "Akramova Munisa",
 teacher_4_role: "Teacher",
 teacher_4_exp: "About 3 years",
 teacher_4_band: "IELTS 9.0",
-teacher_4_students: "1000+",
+teacher_4_students: "100+",
 teacher_4_desc:
   "IELTS teacher with a modern and practical teaching approach.",
 
@@ -92,7 +93,7 @@ teacher_5_name: "Vahabova Zebo",
 teacher_5_role: "Teacher",
 teacher_5_exp: "About 3 years",
 teacher_5_band: "IELTS 9.0",
-teacher_5_students: "1200+",
+teacher_5_students: "120+",
 teacher_5_desc:
   "Reading and Listening specialist.",
 
@@ -100,7 +101,7 @@ teacher_6_name: "Salieva Soburahonim",
 teacher_6_role: "Teacher",
 teacher_6_exp: "About 3 years",
 teacher_6_band: "IELTS 9.0",
-teacher_6_students: "900+",
+teacher_6_students: "100+",
 teacher_6_desc:
   "IELTS teacher focused on Speaking development.",
 
@@ -108,7 +109,7 @@ teacher_7_name: "Toxirov Azamhoja",
 teacher_7_role: "Teacher",
 teacher_7_exp: "About 3 years",
 teacher_7_band: "IELTS 9.0",
-teacher_7_students: "850+",
+teacher_7_students: "110+",
 teacher_7_desc:
   "Writing and grammar expert.",
 
@@ -116,15 +117,15 @@ teacher_8_name: "Alikhujaev Azizhon",
 teacher_8_role: "Speaking Teacher",
 teacher_8_exp: "About 3 years",
 teacher_8_band: "IELTS 9.0",
-teacher_8_students: "1500+",
+teacher_8_students: "150+",
 teacher_8_desc:
-  "IELTS Speaking specialist focused on fluency and pronunciation.",
+  "IELTS Speaking 9.0 specialist focused on fluency and pronunciation.",
 
 teacher_9_name: "Sagdulayev Asadullo",
 teacher_9_role: "Teacher",
 teacher_9_exp: "About 3 years",
 teacher_9_band: "IELTS 9.0",
-teacher_9_students: "1000+",
+teacher_9_students: "100+",
 teacher_9_desc:
   "IELTS teacher with an individual approach to every student.",
 
@@ -132,7 +133,7 @@ teacher_10_name: "Baxriddinov Elnur",
 teacher_10_role: "Speaking Teacher",
 teacher_10_exp: "About 3 years",
 teacher_10_band: "IELTS 9.0",
-teacher_10_students: "1400+",
+teacher_10_students: "140+",
 teacher_10_desc:
   "Professional IELTS Speaking instructor with a 9.0 Speaking score.",
     },
@@ -239,7 +240,7 @@ teacher_10_desc:
     teacher_1_name: "Фахриев Хушвакт",
 teacher_1_role: "Основатель",
 teacher_1_exp: "Более 5 лет",
-teacher_1_students: "7.0+/8.0",
+teacher_1_students: "7.5+/100+",
 teacher_1_desc:
   "Основатель IELTS Lab. Эксперт по подготовке к IELTS с опытом преподавания более 5 лет.",
 
@@ -260,49 +261,49 @@ teacher_3_desc:
 teacher_4_name: "Акрамова Муниса",
 teacher_4_role: "Преподаватель",
 teacher_4_exp: "Около 3 лет",
-teacher_4_students: "1000+",
+teacher_4_students: "100+",
 teacher_4_desc:
   "Преподаватель IELTS с современным и практическим подходом.",
 
 teacher_5_name: "Вахабова Зебо",
 teacher_5_role: "Преподаватель",
 teacher_5_exp: "Около 3 лет",
-teacher_5_students: "1200+",
+teacher_5_students: "120+",
 teacher_5_desc:
   "Специалист по Reading и Listening.",
 
 teacher_6_name: "Салиева Собурахоним",
 teacher_6_role: "Преподаватель",
 teacher_6_exp: "Около 3 лет",
-teacher_6_students: "900+",
+teacher_6_students: "100+",
 teacher_6_desc:
   "Преподаватель IELTS с акцентом на развитие Speaking.",
 
 teacher_7_name: "Тохиров Азамходжа",
 teacher_7_role: "Преподаватель",
 teacher_7_exp: "Около 3 лет",
-teacher_7_students: "850+",
+teacher_7_students: "110+",
 teacher_7_desc:
   "Эксперт по Writing и грамматике.",
 
 teacher_8_name: "Алихужаев Азизхон",
 teacher_8_role: "Speaking преподаватель",
 teacher_8_exp: "Около 3 лет",
-teacher_8_students: "1500+",
+teacher_8_students: "150+",
 teacher_8_desc:
-  "Специалист по IELTS Speaking. Развивает fluency и pronunciation.",
+  "Специалист по IELTS Speaking 9.0. Развивает fluency и pronunciation.",
 
 teacher_9_name: "Сагдулаев Асадулло",
 teacher_9_role: "Преподаватель",
 teacher_9_exp: "Около 3 лет",
-teacher_9_students: "1000+",
+teacher_9_students: "100+",
 teacher_9_desc:
   "Преподаватель IELTS с индивидуальным подходом к каждому студенту.",
 
 teacher_10_name: "Бахриддинов Элнур",
 teacher_10_role: "Speaking преподаватель",
 teacher_10_exp: "Около 3 лет",
-teacher_10_students: "1400+",
+teacher_10_students: "140+",
 teacher_10_desc:
   "Профессиональный IELTS Speaking преподаватель с результатом 9.0 Speaking.",
     },
@@ -368,7 +369,7 @@ teacher_10_desc:
     teacher_1_name: "Faxriyev Xushvaqt",
 teacher_1_role: "Asoschi",
 teacher_1_exp: "5 yildan ortiq",
-teacher_1_students: "7.0+/8.0",
+teacher_1_students: "7.5+/100+",
 teacher_1_desc:
   "IELTS Lab asoschisi. 5 yildan ortiq tajribaga ega IELTS mutaxassisi.",
 
@@ -389,49 +390,49 @@ teacher_3_desc:
 teacher_4_name: "Akramova Munisa",
 teacher_4_role: "O‘qituvchi",
 teacher_4_exp: "Taxminan 3 yil",
-teacher_4_students: "1000+",
+teacher_4_students: "100+",
 teacher_4_desc:
   "Zamonaviy va amaliy yondashuvga ega IELTS o‘qituvchisi.",
 
 teacher_5_name: "Vahabova Zebo",
 teacher_5_role: "O‘qituvchi",
 teacher_5_exp: "Taxminan 3 yil",
-teacher_5_students: "1200+",
+teacher_5_students: "120+",
 teacher_5_desc:
   "Reading va Listening bo‘yicha mutaxassis.",
 
 teacher_6_name: "Salieva Soburahonim",
 teacher_6_role: "O‘qituvchi",
 teacher_6_exp: "Taxminan 3 yil",
-teacher_6_students: "900+",
+teacher_6_students: "100+",
 teacher_6_desc:
   "Speaking rivojlantirishga ixtisoslashgan IELTS o‘qituvchisi.",
 
 teacher_7_name: "Toxirov Azamhoja",
 teacher_7_role: "O‘qituvchi",
 teacher_7_exp: "Taxminan 3 yil",
-teacher_7_students: "850+",
+teacher_7_students: "110+",
 teacher_7_desc:
   "Writing va grammatika bo‘yicha mutaxassis.",
 
 teacher_8_name: "Alikhujaev Azizhon",
 teacher_8_role: "Speaking o‘qituvchisi",
 teacher_8_exp: "Taxminan 3 yil",
-teacher_8_students: "1500+",
+teacher_8_students: "150+",
 teacher_8_desc:
-  "IELTS Speaking mutaxassisi. Fluency va pronunciation ustida ishlaydi.",
+  "IELTS Speaking 9.0 mutaxassisi. Fluency va pronunciation ustida ishlaydi.",
 
 teacher_9_name: "Sagdulayev Asadullo",
 teacher_9_role: "O‘qituvchi",
 teacher_9_exp: "Taxminan 3 yil",
-teacher_9_students: "1000+",
+teacher_9_students: "100+",
 teacher_9_desc:
   "Har bir talabaga individual yondashuvga ega IELTS o‘qituvchisi.",
 
 teacher_10_name: "Baxriddinov Elnur",
 teacher_10_role: "Speaking o‘qituvchisi",
 teacher_10_exp: "Taxminan 3 yil",
-teacher_10_students: "1400+",
+teacher_10_students: "140+",
 teacher_10_desc:
   "9.0 Speaking natijaga ega professional IELTS Speaking o‘qituvchisi.",
     },

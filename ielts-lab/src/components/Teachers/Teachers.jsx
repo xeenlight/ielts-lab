@@ -23,52 +23,62 @@ export default function Teachers() {
     {
       id: 1,
       key: "teacher_1",
-        photo: teacher1
+        photo: teacher1,
+        IELTS: "IELTS 9.0"
     },
     {
       id: 2,
       key: "teacher_2",
-      photo: teacher2
+      photo: teacher2,
+      IELTS: "IELTS 9.0"
     },
     {
       id: 3,
       key: "teacher_3",
-      photo: teacher3
+      photo: teacher3,
+      IELTS: "IELTS 9.0"
     },
     {
       id: 4,
       key: "teacher_4",
-      photo: teacher10
+      photo: teacher10,
+      IELTS: "IELTS 8.5"
     },
     {
       id: 5,
       key: "teacher_5",
-      photo: teacher6
+      photo: teacher6,
+      IELTS: "IELTS 8.5"
     },
     {
       id: 6,
       key: "teacher_6",
-      photo: teacher7
+      photo: teacher7,
+      IELTS: "IELTS 8.5"
     },
     {
       id: 7,
       key: "teacher_7",
-      photo: teacher9
+      photo: teacher9,
+      IELTS: "IELTS 8.0"
     },
     {
       id: 8,
       key: "teacher_8",
-      photo: teacher5
+      photo: teacher5,
+      IELTS: "IELTS 7.5"
     },
     {
       id: 9,
       key: "teacher_9",
-      photo: teacher8
+      photo: teacher8,
+      IELTS: "IELTS 8.0"
     },
     {
       id: 10,
       key: "teacher_10",
-      photo: teacher4
+      photo: teacher4,
+      IELTS: "IELTS 9.0"
     },
   ];
 
@@ -91,7 +101,7 @@ export default function Teachers() {
               
               <div className={styles.info}>
                 <h3>{t(`${teacher.key}_name`)}</h3>
-                <div className={styles.band}>{t(`${teacher.key}_band`)}</div>
+                <div className={styles.band}>{teacher.IELTS}</div>
                 
                 <div className={styles.stats}>
                   <div>
