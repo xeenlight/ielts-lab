@@ -100,49 +100,6 @@ export default function HybridLearning() {
           </div>
         </div>
 
-        {/* RESULTS */}
-
-        <div className={styles.results}>
-          <div className={styles.resultsTitle}>
-
-                <img src={silhouette} alt="Sync Icon" className={styles.iconImage} />
-
-
-            <h3>
-              Результат,
-              <br />
-              который вы получаете
-            </h3>
-          </div>
-
-          <div className={styles.resultItem}>
-                        <div className={styles.smallIcon}>
-                <img src={dart} alt="Dart Icon" className={styles.iconsmallIcon} />
-            </div>
-            <span>Высокий балл на IELTS</span>
-          </div>
-
-          <div className={styles.resultItem}>
-                                    <div className={styles.smallIcon}>
-                <img src={rocket} alt="Rocket Icon" className={styles.iconsmallIcon} />
-            </div>
-            <span>Реальный прогресс каждую неделю</span>
-          </div>
-
-          <div className={styles.resultItem}>
-                                    <div className={styles.smallIcon}>
-                <img src={openbook} alt="Open Book Icon" className={styles.iconsmallIcon} />
-            </div>
-            <span>Глубокое понимание языка</span>
-          </div>
-
-          <div className={styles.resultItem}>
-                                    <div className={styles.smallIcon}>
-                <img src={earth} alt="Earth Icon" className={styles.iconsmallIcon} />
-            </div>
-            <span>Свобода и возможности</span>
-          </div>
-        </div>
       </div>
     </section>
   );
