@@ -43,6 +43,7 @@ export default function Footer() {
         <div className={styles.nav}>
           <NavLink to="/">{t('home')}</NavLink>
           <NavLink to="/about">{t('about')}</NavLink>
+          <NavLink to="/course">{t('course')}</NavLink>
         </div>
 
 

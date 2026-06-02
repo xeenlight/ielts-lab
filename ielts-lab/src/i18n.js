@@ -77,6 +77,64 @@ location_subtitle: "LOCATION",
 
 
 
+    about_subtitle: "ABOUT US",
+    about_title: "We are an educational center with a new approach to learning",
+
+    about_card1_title: "Individual Attention",
+    about_card1_desc: "Every student receives an individual study plan and constant support from the teacher throughout the entire preparation journey.",
+
+    about_card2_title: "Fast Results",
+    about_card2_desc: "On average, students reach the required level and IELTS readiness in about 6 months of study.",
+
+    about_card3_title: "Live Lessons",
+    about_card3_desc: "In many educational centers, if a student doesn't understand the topic, it's their problem. With us it's the opposite: if a student doesn't understand something, we must explain it differently and bring them to the result.",
+
+    about_big_title: "We believe that English is not a subject, but a tool for the future.",
+    about_big_desc1: "Our team creates an atmosphere where students feel confident and motivated. We pay attention not only to grammar, but also to thinking, pronunciation, confidence in speaking and the ability to use the language in real life.",
+    about_big_desc2: "Thanks to a modern approach, interactive classes and a strong support system, students achieve results much faster.",
+
+
+
+
+
+
+    hybrid_title1: "We combine the advantages of",
+    hybrid_title2: "online and offline learning",
+
+    hybrid_subtitle: "We combine the flexibility of technology and live communication so that you achieve maximum results in learning English.",
+
+    hybrid_online: "ONLINE",
+    hybrid_online_1: "Convenient educational platform",
+    hybrid_online_2: "Unlimited access to all lesson recordings",
+    hybrid_online_3: "Homework and materials in one place",
+    hybrid_online_4: "24/7 course access from any device",
+    hybrid_online_5: "Interactive IELTS tests and simulators",
+    hybrid_online_6: "Ability to review difficult topics",
+    hybrid_online_7: "Self-paced preparation",
+
+    hybrid_best_of_both: "BEST OF BOTH WORLDS",
+    hybrid_best_1: "Flexibility of online learning",
+    hybrid_best_2: "Efficiency of live classes",
+    hybrid_best_3: "Maximum Speaking practice",
+    hybrid_best_4: "Constant access to materials",
+    hybrid_best_5: "Fast IELTS preparation",
+    hybrid_best_6: "Systematic progress control",
+    hybrid_best_7: "Teacher support",
+
+    hybrid_offline: "OFFLINE",
+    hybrid_offline_1: "Full teacher support",
+    hybrid_offline_2: "Live lessons and constant practice",
+    hybrid_offline_3: "Progress monitoring at every stage",
+    hybrid_offline_4: "Instant teacher feedback",
+    hybrid_offline_5: "Speaking sessions and error correction",
+    hybrid_offline_6: "Motivation and discipline of the learning environment",
+    hybrid_offline_7: "Support and communication with other students",
+
+
+
+
+
+
 
     hero_sub: "INTER NATION ENGLISH SCHOOL",
     hero_title: "ENGLISH FOR THE FUTURE",
@@ -320,6 +378,61 @@ location_subtitle: "LOCATION",
 
 
 
+    about_subtitle: "ABOUT US",
+    about_title: "Мы учебный центр с новым подходом к обучению",
+
+    about_card1_title: "Индивидуальное внимание",
+    about_card1_desc: "Каждый студент получает индивидуальный план обучения и постоянное сопровождение преподавателя на всём пути подготовки.",
+
+    about_card2_title: "Быстрые результаты",
+    about_card2_desc: "В среднем студенты достигают нужного уровня и готовности к IELTS примерно за 6 месяцев обучения.",
+
+    about_card3_title: "Живые уроки",
+    about_card3_desc: "Во многих учебных центрах, если студент не понял тему — это его проблема. У нас наоборот: если ученик что-то не понял, значит мы должны объяснить по-другому и довести до результата.",
+
+    about_big_title: "Мы верим, что английский — это не предмет, а инструмент для будущего.",
+    about_big_desc1: "Наша команда создаёт атмосферу, в которой студенты чувствуют уверенность и мотивацию. Мы уделяем внимание не только грамматике, но и мышлению, произношению, уверенности в разговоре и умению использовать язык в реальной жизни.",
+    about_big_desc2: "Благодаря современному подходу, интерактивным занятиям и сильной системе поддержки студенты достигают результатов намного быстрее.",
+
+
+
+
+
+    hybrid_title1: "Мы объединяем преимущества",
+    hybrid_title2: "онлайн и офлайн обучения",
+
+    hybrid_subtitle: "Сочетаем гибкость технологий и живое общение, чтобы вы достигли максимального результата в изучении английского языка.",
+
+    hybrid_online: "ONLINE",
+    hybrid_online_1: "Удобная образовательная платформа",
+    hybrid_online_2: "Записи всех уроков без ограничений",
+    hybrid_online_3: "Домашние задания и материалы в одном месте",
+    hybrid_online_4: "Доступ к курсу 24/7 с любого устройства",
+    hybrid_online_5: "Интерактивные тесты и тренажёры IELTS",
+    hybrid_online_6: "Возможность пересматривать сложные темы",
+    hybrid_online_7: "Самостоятельная подготовка в удобном темпе",
+
+    hybrid_best_of_both: "ЛУЧШЕЕ ИЗ ДВУХ МИРОВ",
+    hybrid_best_1: "Гибкость онлайн-обучения",
+    hybrid_best_2: "Эффективность живых занятий",
+    hybrid_best_3: "Максимум практики Speaking",
+    hybrid_best_4: "Постоянный доступ к материалам",
+    hybrid_best_5: "Быстрая подготовка к IELTS",
+    hybrid_best_6: "Системный контроль прогресса",
+    hybrid_best_7: "Поддержка преподавателей",
+
+    hybrid_offline: "OFFLINE",
+    hybrid_offline_1: "Полное сопровождение преподавателей",
+    hybrid_offline_2: "Живые уроки и постоянная практика",
+    hybrid_offline_3: "Контроль прогресса на каждом этапе",
+    hybrid_offline_4: "Мгновенная обратная связь от учителя",
+    hybrid_offline_5: "Speaking-сессии и работа над ошибками",
+    hybrid_offline_6: "Мотивация и дисциплина учебной среды",
+    hybrid_offline_7: "Поддержка и общение с другими студентами",
+
+
+
+
 
 
       hero_sub: "INTER NATION ENGLISH SCHOOL",
@@ -555,6 +668,65 @@ location_subtitle: "JOYLASHUV",
 
     experience_card3_title: "Haqiqiy IELTS materiallari",
     experience_card3_desc: "Faqat real imtihon topshiriqlari va dolzarb strukturalardan foydalanamiz.",
+
+
+
+
+
+
+    about_subtitle: "BIZ HAQIMIZDA",
+    about_title: "Biz yangicha yondashuvga ega o‘quv markazimiz",
+
+    about_card1_title: "Individual e’tibor",
+    about_card1_desc: "Har bir o‘quvchi shaxsiy o‘quv rejasini va o‘qituvchining butun tayyorgarlik jarayonida doimiy qo‘llab-quvvatlashini oladi.",
+
+    about_card2_title: "Tez natijalar",
+    about_card2_desc: "O‘rtacha hisobda o‘quvchilar kerakli darajaga va IELTSga tayyor holatga taxminan 6 oy ichida erishadi.",
+
+    about_card3_title: "Jonli darslar",
+    about_card3_desc: "Ko‘pgina o‘quv markazlarida agar o‘quvchi mavzuni tushunmasa — bu uning muammosi. Bizda aksincha: agar o‘quvchi biror narsani tushunmasa, demak biz boshqacha tushuntirishimiz va natijaga olib chiqishimiz kerak.",
+
+    about_big_title: "Biz ingliz tilini fan emas, balki kelajak uchun vosita deb hisoblaymiz.",
+    about_big_desc1: "Bizning jamoamiz o‘quvchilarda ishonch va motivatsiya hissi yaratadigan muhitni shakllantiradi. Biz nafaqat grammatikaga, balki fikrlashga, talaffuzga, suhbatdagi ishonchga va tilni haqiqiy hayotda qo‘llash qobiliyatiga ham e’tibor qaratamiz.",
+    about_big_desc2: "Zamonaviy yondashuv, interaktiv darslar va kuchli qo‘llab-quvvatlash tizimi tufayli o‘quvchilar natijalarga ancha tezroq erishadi.",
+
+
+
+
+
+
+    hybrid_title1: "Biz birlashtiramiz",
+    hybrid_title2: "onlayn va oflayn o‘qitish afzalliklarini",
+
+    hybrid_subtitle: "Texnologiyalar moslashuvchanligi va jonli muloqotni birlashtiramiz, ingliz tilini o‘rganishda maksimal natijaga erishishingiz uchun.",
+
+    hybrid_online: "ONLINE",
+    hybrid_online_1: "Qulay ta'lim platformasi",
+    hybrid_online_2: "Barcha darslarning yozuvlari cheksiz",
+    hybrid_online_3: "Uy vazifalari va materiallar bitta joyda",
+    hybrid_online_4: "Kursga 24/7 istalgan qurilmadan kirish",
+    hybrid_online_5: "Interaktiv IELTS testlari va trenajyorlari",
+    hybrid_online_6: "Murakkab mavzularni qayta ko‘rish imkoniyati",
+    hybrid_online_7: "O‘zingizga qulay sur'atda tayyorgarlik",
+
+    hybrid_best_of_both: "IKKI DUNYONING ENG YAXSHISI",
+    hybrid_best_1: "Onlayn o‘qitishning moslashuvchanligi",
+    hybrid_best_2: "Jonli darslarning samaradorligi",
+    hybrid_best_3: "Speaking amaliyotining maksimal darajasi",
+    hybrid_best_4: "Materiallarga doimiy kirish",
+    hybrid_best_5: "Tez IELTS tayyorgarligi",
+    hybrid_best_6: "Progressni tizimli nazorat qilish",
+    hybrid_best_7: "O‘qituvchilar qo‘llab-quvvatlashi",
+
+    hybrid_offline: "OFFLINE",
+    hybrid_offline_1: "O‘qituvchilar tomonidan to‘liq hamrohlik",
+    hybrid_offline_2: "Jonli darslar va doimiy amaliyot",
+    hybrid_offline_3: "Har bir bosqichda progress nazorati",
+    hybrid_offline_4: "O‘qituvchidan tezkor fikr-mulohaza",
+    hybrid_offline_5: "Speaking sessiyalari va xatolarni tuzatish",
+    hybrid_offline_6: "O‘quv muhitining motivatsiyasi va tartibi",
+    hybrid_offline_7: "Boshqa o‘quvchilar bilan qo‘llab-quvvatlash va muloqot",
+
 
 
 
