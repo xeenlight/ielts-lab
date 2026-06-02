@@ -6,6 +6,7 @@ en: {
   translation: {
     home: "Home",
     about: "About Us",
+    course: "Course",
 
 
 
@@ -245,6 +246,7 @@ location_subtitle: "LOCATION",
     translation: {
       home: "Главная",
       about: "О нас",
+          course: "Курс",
 
 
 
@@ -488,6 +490,7 @@ uz: {
   translation: {
     home: "Bosh sahifa",
     about: "Biz haqimizda",
+    course: "Kurs",
 
 
 
