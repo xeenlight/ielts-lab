@@ -97,76 +97,56 @@ export default function Course() {
 
       {/* HERO */}
 
-      <section className={styles.hero}>
+<section className={styles.hero}>
+  <div className={styles.heroGlow}></div>
 
-        <div className={styles.heroGlow}></div>
+  <div className={styles.container}>
+    <div className={styles.heroTop}>
+      <h1 className={styles.heroTitle}>
+        {t("hero_final_get")}
+        <br />
+        <span className={styles.accent}>{t("hero_final_ielts")}</span>,
+        <br />
+        {t("hero_final_without")}{" "}
+        <span className={styles.money}>{t("hero_final_money")}</span>
+        {" и "}
+        <span className={styles.time}>{t("hero_final_time")}</span>{" "}
+        <span className={styles.wasted}>{t("hero_final_wasted")}</span>.
+      </h1>
 
-        <div className={styles.container}>
+      <p className={styles.heroText}>
+        {t("hero_final_join")}{" "}
+        <span>{t("hero_final_live_classes")}</span>{" "}
+        {t("hero_final_save")}
+      </p>
+    </div>
 
-          <div className={styles.heroTop}>
+    {/* VIDEO */}
+    <div className={styles.videoBlock}>
+      <div className={styles.videoWrapper}>
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+          title="IELTS Lab Course"
+          frameBorder="0"
+          allowFullScreen
+        />
+      </div>
 
+      <div className={styles.heroText}>
+        <p>
+          {t("hero_final_daily")}{" "}
+          <span>{t("hero_final_c1")}</span>{" "}
+          {t("hero_final_experience")}
+        </p>
+      </div>
 
+      <button onClick={scrollToForm} className={styles.ctaBig}>
+        {t("hero_final_button")}
+      </button>
+    </div>
+  </div>
+</section>
 
-<h1 className={styles.heroTitle}>
-  Наконец получи
-  <br />
-  <span className={styles.accent}>7+ по IELTS</span>,
-  <br />
-  не тратя{" "}
-  <span className={styles.money}>деньги</span>
-  {" и "}
-  <span className={styles.time}>время </span>{" "}
-  <span className={styles.wasted}>впустую</span>.
-</h1>
-
-            <p className={styles.heroText}>
-              Присоединяйся к нашим
-              <span> живым занятиям </span>
-              и сэкономь кучу времени и нервов.
-            </p>
-
-
-          </div>
-
-          {/* VIDEO */}
-
-          <div className={styles.videoBlock}>
-
-            <div className={styles.videoWrapper}>
-              <iframe
-                src={`https://www.youtube.com/embed/${videoId}?rel=0`}
-                title="IELTS Lab Course"
-                frameBorder="0"
-                allowFullScreen
-              />
-            </div>
-
-
-              <div className={styles.heroText}>
-
-                              <p>
-                Ежедневные живые занятия 1 на 1
-                с преподавателями уровня от
-                <span> C1 </span>
-                и многолетним опытом подготовки
-                студентов к IELTS.
-              </p>
-              </div>
-
-
-
-
-            <button
-              onClick={scrollToForm}
-              className={styles.ctaBig}
-            >
-              Оставить заявку
-            </button>
-          </div>
-
-        </div>
-
-      </section>
       <section className={styles.testimonials}>
 
         <div className={styles.container}>
@@ -238,94 +218,45 @@ export default function Course() {
       </section>
       {/* EXPERIENCE */}
 
-      <section className={styles.experienceSection}>
+<section className={styles.experienceSection}>
+  <div className={styles.container}>
+    <div className={styles.sectionHead}>
+      <p>{t("experience_subtitle")}</p>
 
-        <div className={styles.container}>
+      <h2 className={styles.sectionTitle}>
+        {t("experience_title")}
+      </h2>
+    </div>
 
-          <div className={styles.sectionHead}>
-            <p>
-              IELTS LAB EXPERIENCE
-            </p>
+    <div className={styles.experienceLayout}>
+      {/* BIG CARD */}
+      <div className={styles.experienceMain}>
+        <div className={styles.cardGlow}></div>
 
-            <h2 className={styles.sectionTitle}>
-              Что вас ждёт
-              в IELTS LAB?
-            </h2>
-          </div>
+        <span>01</span>
 
-          <div className={styles.experienceLayout}>
+        <h3>{t("experience_card1_title")}</h3>
 
-            {/* BIG CARD */}
+        <p>{t("experience_card1_desc")}</p>
+      </div>
 
-            <div className={styles.experienceMain}>
-
-              <div className={styles.cardGlow}></div>
-
-              <span>
-                01
-              </span>
-
-              <h3>
-                Живые уроки 1 на 1
-              </h3>
-
-              <p>
-                Полное внимание преподавателя,
-                индивидуальная стратегия подготовки
-                и работа именно над вашими
-                слабыми местами.
-              </p>
-
-            </div>
-
-            {/* RIGHT */}
-
-            <div className={styles.experienceSide}>
-
-              <div className={styles.miniCard}>
-
-                <span>
-                  02
-                </span>
-
-                <h4>
-                  Поддержка
-                  на каждом этапе
-                </h4>
-
-                <p>
-                  Учитель помогает вам
-                  во время всего обучения,
-                  а не только на уроках.
-                </p>
-
-              </div>
-
-              <div className={styles.miniCard}>
-
-                <span>
-                  03
-                </span>
-
-                <h4>
-                  Настоящие IELTS материалы
-                </h4>
-
-                <p>
-                  Используем только реальные
-                  экзаменационные задания
-                  и актуальные структуры.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
+      {/* RIGHT SIDE */}
+      <div className={styles.experienceSide}>
+        <div className={styles.miniCard}>
+          <span>02</span>
+          <h4>{t("experience_card2_title")}</h4>
+          <p>{t("experience_card2_desc")}</p>
         </div>
 
-      </section>
+        <div className={styles.miniCard}>
+          <span>03</span>
+          <h4>{t("experience_card3_title")}</h4>
+          <p>{t("experience_card3_desc")}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

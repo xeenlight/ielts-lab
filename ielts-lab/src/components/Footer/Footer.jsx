@@ -45,15 +45,7 @@ export default function Footer() {
           <NavLink to="/about">{t('about')}</NavLink>
         </div>
 
-        {/* RIGHT */}
-        <div className={styles.map}>
-          <iframe
-            title="map"
-            src="https://yandex.com/map-widget/v1/?ll=69.2065%2C41.3275&z=12"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
-        </div>
+
 
       </div>
 

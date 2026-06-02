@@ -110,7 +110,6 @@ export default function Teachers() {
                   </div>
                   <div>
                     <strong>{t(`${teacher.key}_students`)}</strong>
-                    <span>{t('teacher_students')}</span>
                   </div>
                 </div>
               </div>
