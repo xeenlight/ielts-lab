@@ -11,7 +11,24 @@ en: {
 
 
 
-hero_title_1: "WANT TO START PREPARING FOR",
+
+
+    alert_1_title: "Start your journey today!",
+alert_1_text:
+  "Book a free trial lesson and experience our teaching approach.",
+alert_1_button: "Sign Up",
+
+alert_2_title: "Prepare for IELTS with us!",
+alert_2_text:
+  "Get a personalized study plan and discover your current English level.",
+alert_2_button: "Go to Mock",
+
+
+
+
+
+
+hero_title_1: "WANT TO START PREPARING FOR <primary>IELTS</primary>",
 hero_title_2: "RIGHT NOW?",
 
 hero_desc_1: "One-on-one lessons for every student 🥊",
@@ -43,12 +60,8 @@ location_subtitle: "LOCATION",
 
 
 
-    hero_final_get: "Finally get",
-    hero_final_ielts: "7+ in IELTS",
-    hero_final_without: "without wasting",
-    hero_final_money: "money",
-    hero_final_time: "time",
-    hero_final_wasted: "in vain",
+hero_final_title:
+  "Finally get<br/><accent>7+ in IELTS</accent>,<br/>without wasting <money>money</money> and <time>time</time> <wasted>for nothing</wasted>.",
     hero_final_join: "Join our",
     hero_final_live_classes: "live classes",
     hero_final_save: "and save a lot of time and nerves.",
@@ -70,7 +83,7 @@ location_subtitle: "LOCATION",
     experience_card2_title: "Support at Every Stage",
     experience_card2_desc: "The teacher helps you throughout the entire training, not just during lessons.",
 
-    experience_card3_title: "Real IELTS Materials",
+    experience_card3_title: "Authentic IELTS materials",
     experience_card3_desc: "We use only real exam tasks and up-to-date structures.",
 
 
@@ -172,7 +185,7 @@ location_subtitle: "LOCATION",
     free_item4: "Writing Samples",
     free_item5: "Listening Practice",
 
-    open_form: "Enroll in a Course",
+    open_form: "Join our courses",
     form_title: "Leave an Application",
     form_name: "Your Name",
     form_phone: "Phone Number",
@@ -310,7 +323,22 @@ location_subtitle: "LOCATION",
 
 
 
-hero_title_1: "ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К",
+
+          alert_1_title: "Начните свой путь уже сегодня!",
+alert_1_text:
+  "Запишитесь на бесплатный пробный урок и оцените наш подход к обучению.",
+alert_1_button: "Записаться",
+
+alert_2_title: "Подготовьтесь к IELTS вместе с нами!",
+alert_2_text:
+  "Получите персональный план подготовки и узнайте свой текущий уровень английского.",
+alert_2_button: "Перейти к Mock",
+
+
+
+
+
+hero_title_1: "ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К <primary>IELTS</primary>",
 hero_title_2: "ПРЯМО СЕЙЧАС?",
 
 hero_desc_1: "Уроки один на один с каждым 🥊",
@@ -344,12 +372,8 @@ location_subtitle: "LOCATION",
 
 
 
-    hero_final_get: "Наконец получи",
-    hero_final_ielts: "7+ по IELTS",
-    hero_final_without: "не тратя",
-    hero_final_money: "деньги",
-    hero_final_time: "время",
-    hero_final_wasted: "впустую",
+hero_final_title:
+  "Наконец получи<br/><accent>7+ по IELTS</accent>,<br/>не тратя <money>деньги</money> и <time>время</time> <wasted>впустую</wasted>.",
     hero_final_join: "Присоединяйся к нашим",
     hero_final_live_classes: "живым занятиям",
     hero_final_save: "и сэкономь кучу времени и нервов.",
@@ -609,14 +633,29 @@ uz: {
 
 
 
-hero_title_1: "IELTS GA TAYYORLANISHNI",
+    alert_1_title: "Yo‘lingizni bugunoq boshlang!",
+alert_1_text:
+  "Bepul sinov darsiga yoziling va o‘qitish uslubimizni baholang.",
+alert_1_button: "Yozilish",
+
+alert_2_title: "IELTS ga biz bilan tayyorlaning!",
+alert_2_text:
+  "Shaxsiy tayyorgarlik rejasini oling va ingliz tilingiz darajasini bilib oling.",
+alert_2_button: "Mock ga o‘tish",
+
+
+
+
+
+
+hero_title_1: "<primary>IELTS</primary> GA TAYYORLANISHNI",
 hero_title_2: "HOZIROQ BOSHLASHNI XOHLAYSIZMI?",
 
-hero_desc_1: "Har bir o‘quvchi uchun individual darslar 🥊",
-hero_desc_2: "Bugunoq",
+hero_desc_1: "Har bir o'quvchi bilan birga bir darslar 🥊",
+hero_desc_2: "Bugun",
 hero_desc_3: "ro‘yxatdan o‘ting",
-hero_desc_4: "va o‘qishni",
-hero_desc_5: "ertaga boshlang",
+hero_desc_4: "va ertgayoq o'qishni",
+hero_desc_5: "boshlang!",
 
 hero_btn: "Bepul dars",
 
@@ -639,12 +678,9 @@ location_subtitle: "JOYLASHUV",
 
 
 
-    hero_final_get: "Nihoyat erish",
-    hero_final_ielts: "IELTSdan 7+",
-    hero_final_without: "sarflamasdan",
-    hero_final_money: "pulni",
-    hero_final_time: "vaqtni",
-    hero_final_wasted: "bekorga",
+hero_final_title:
+  "Nihoyat erish<br/><accent>IELTSdan 7+</accent>,<br/><money>pulni</money> va <time>vaqtni</time> <wasted>bekorga</wasted> sarflamasdan.",
+    
     hero_final_join: "Bizning",
     hero_final_live_classes: "jonli darslarimizga",
     hero_final_save: "qo‘shiling va ko‘p vaqt hamda asablarni tejang.",
@@ -660,11 +696,11 @@ location_subtitle: "JOYLASHUV",
     experience_subtitle: "IELTS LAB TAJRIBASI",
     experience_title: "IELTS LABda sizni nima kutmoqda?",
 
-    experience_card1_title: "Jonli 1 nafar o‘qituvchi bilan darslar",
+    experience_card1_title: "1 ga 1 jonli darslar",
     experience_card1_desc: "O‘qituvchining to‘liq e’tibori, individual tayyorgarlik strategiyasi va sizning zaif joylaringiz ustida ishlash.",
 
     experience_card2_title: "Har bir bosqichda qo‘llab-quvvatlash",
-    experience_card2_desc: "O‘qituvchi sizga faqat darslarda emas, balki butun o‘qish davomida yordam beradi.",
+    experience_card2_desc: "O‘qituvchi sizga faqat darslarda emas, balki butun tayyorgarlik jarayoni davomida yordam beradi.",
 
     experience_card3_title: "Haqiqiy IELTS materiallari",
     experience_card3_desc: "Faqat real imtihon topshiriqlari va dolzarb strukturalardan foydalanamiz.",
@@ -675,7 +711,7 @@ location_subtitle: "JOYLASHUV",
 
 
     about_subtitle: "BIZ HAQIMIZDA",
-    about_title: "Biz yangicha yondashuvga ega o‘quv markazimiz",
+    about_title: "Biz yangicha yondashuvga ega o‘quv markazmiz",
 
     about_card1_title: "Individual e’tibor",
     about_card1_desc: "Har bir o‘quvchi shaxsiy o‘quv rejasini va o‘qituvchining butun tayyorgarlik jarayonida doimiy qo‘llab-quvvatlashini oladi.",
@@ -695,10 +731,10 @@ location_subtitle: "JOYLASHUV",
 
 
 
-    hybrid_title1: "Biz birlashtiramiz",
-    hybrid_title2: "onlayn va oflayn o‘qitish afzalliklarini",
+    hybrid_title1: "Biz onlayn va oflayn format ",
+    hybrid_title2: "afzalliklarini bir kursda jamladik",
 
-    hybrid_subtitle: "Texnologiyalar moslashuvchanligi va jonli muloqotni birlashtiramiz, ingliz tilini o‘rganishda maksimal natijaga erishishingiz uchun.",
+    hybrid_subtitle: "Siz maksimal natijaga erishishingiz uchun, texnologiyalar moslashuvchanligini va jonli muloqotni birlashtiramiz.",
 
     hybrid_online: "ONLINE",
     hybrid_online_1: "Qulay ta'lim platformasi",
@@ -756,9 +792,9 @@ location_subtitle: "JOYLASHUV",
 
     free_sub: "BEPUL MATERIALLAR",
     free_title:
-      "<primary>Bepul</primary> mustaqil tayyorgarlik materiallari",
+      "mustaqil tayyorlanish uchun <primary>Bepul</primary> materiallar",
     free_desc:
-      "Videolar, elektron kitoblar, shablonlar va yanada samarali tayyorgarlik ko‘rishingiz uchun ko‘plab foydali materiallar",
+      "Videolar, elektron kitoblar, shablonlar va yanada ko‘plab foydali materiallar",
 
     free_btn: "Yuklab olish",
 
@@ -804,7 +840,7 @@ location_subtitle: "JOYLASHUV",
 
     faq2_q: "Kurs qancha davom etadi?",
     faq2_a:
-      "IELTS LAB’da o‘qish muddati o‘rtacha 6 oy atrofida. Ba’zi o‘quvchilar oldindan tayyorgarligi sababli kerakli natijaga tezroq erishadilar, boshqalarga esa kursni muvaffaqiyatli yakunlash uchun ko‘proq vaqt kerak bo‘lishi mumkin.",
+      "IELTS Lab'da o'quvchilar o'rtacha 6 oy ichida muvofaqayatli natijaga erishishadi. Sizning IELTS bilan oldingi tajribangiz, kuchli ingliz tili bilimingiz va intizomingiz jarayonni tezlashtirishga yordam beradi.",
 
     faq3_q: "Bu kurs menga mos keladimi?",
     faq3_a:
@@ -826,58 +862,58 @@ location_subtitle: "JOYLASHUV",
     teacher_students: "Talabalar",
 
     teacher_1_name: "Xushvaqt Faxriyev",
-    teacher_1_role: "Asoschi",
+    teacher_1_role: "Founder",
     teacher_1_exp: "5 yildan ortiq",
-    teacher_1_students: "Asoschi",
+    teacher_1_students: "Founder",
     teacher_1_desc:
       "IELTS Lab asoschisi. IELTS tayyorlov bo‘yicha 5 yildan ortiq tajribaga ega mutaxassis.",
 
     teacher_2_name: "Asilbek Maxkamov",
-    teacher_2_role: "Hammuassis",
+    teacher_2_role: "Co-Founder",
     teacher_2_exp: "5 yildan ortiq",
-    teacher_2_students: "Hammuassis",
+    teacher_2_students: "Co-Founder",
     teacher_2_desc:
       "IELTS Lab hammuassisi va IELTS 9.0 natijasiga ega ustoz.",
 
     teacher_3_name: "Samandar Nazirov",
-    teacher_3_role: "Hammuassis",
+    teacher_3_role: "Co-Founder",
     teacher_3_exp: "5 yildan ortiq",
-    teacher_3_students: "Hammuassis",
+    teacher_3_students: "Co-Founder",
     teacher_3_desc:
       "Tajribali IELTS ustozi va IELTS Lab hammuassisi.",
 
     teacher_4_name: "Munisa Akramova",
-    teacher_4_role: "Ustoz",
+    teacher_4_role: "Teacher",
     teacher_4_exp: "Taxminan 3 yil",
-    teacher_4_students: "Ustoz",
+    teacher_4_students: "Teacher",
     teacher_4_desc:
       "Zamonaviy va amaliy yondashuvga ega IELTS ustozi.",
 
     teacher_5_name: "Zebo Vahobova",
-    teacher_5_role: "Ustoz",
+    teacher_5_role: "Teacher",
     teacher_5_exp: "Taxminan 3 yil",
-    teacher_5_students: "Ustoz",
+    teacher_5_students: "Teacher",
     teacher_5_desc:
       "Talabalarni IELTS imtihoniga muvaffaqiyatli tayyorlash bo‘yicha 3 yillik tajribaga ega ustoz.",
 
     teacher_6_name: "Soburaxonim Saliyeva",
-    teacher_6_role: "Ustoz",
+    teacher_6_role: "Teacher",
     teacher_6_exp: "Taxminan 3 yil",
-    teacher_6_students: "Ustoz",
+    teacher_6_students: "Teacher",
     teacher_6_desc:
       "Speaking ko‘nikmalarini rivojlantirishga ixtisoslashgan IELTS ustozi.",
 
     teacher_7_name: "Azamxo‘ja Toxirov",
-    teacher_7_role: "Ustoz",
+    teacher_7_role: "Teacher",
     teacher_7_exp: "Taxminan 3 yil",
-    teacher_7_students: "Ustoz",
+    teacher_7_students: "Teacher",
     teacher_7_desc:
       "Talabalarni IELTS imtihoniga tayyorlash bo‘yicha 3 yildan ortiq tajribaga ega mutaxassis.",
 
     teacher_8_name: "Azizxon Alixo‘jayev",
-    teacher_8_role: "Speaking ustozi",
+    teacher_8_role: "Speaking teacher",
     teacher_8_exp: "Taxminan 3 yil",
-    teacher_8_students: "Speaking ustozi",
+    teacher_8_students: "Speaking teacher",
     teacher_8_desc:
       "IELTS Speaking bo‘yicha mutaxassis, Speaking natijasi — 9.0.",
 
@@ -889,9 +925,9 @@ location_subtitle: "JOYLASHUV",
       "3 yillik ish tajribasiga ega IELTS ustozi.",
 
     teacher_10_name: "Elnur Baxriddinov",
-    teacher_10_role: "Speaking ustozi",
+    teacher_10_role: "Speaking teacher",
     teacher_10_exp: "Taxminan 3 yil",
-    teacher_10_students: "Speaking ustozi",
+    teacher_10_students: "Speaking teacher",
     teacher_10_desc:
       "Speaking bo‘yicha 9.0 natijaga ega professional IELTS ustozi.",
   },

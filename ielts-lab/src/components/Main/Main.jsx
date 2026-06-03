@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";   // ← Добавь этот импорт
+import { useTranslation, Trans } from "react-i18next";  // ← Добавь этот импорт
 
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
@@ -7,7 +7,7 @@ import { loadSlim } from "tsparticles-slim";
 import styles from "./Main.module.css";
 
 function Main() {
-  const { t } = useTranslation();   // ← Подключаем переводы
+  const { t, i18n } = useTranslation();   // ← Подключаем переводы
 
   const [mainColor, setMainColor] = useState("#00b6b9");
 
@@ -140,23 +140,35 @@ function Main() {
       <div className={styles.container}>
         <div className={styles.content}>
           {/* Desktop Title */}
-          <h1 className={`${styles.title} ${styles.desktop}`}>
-            {t("hero_title_1")}{" "}
-            <span className={styles.ielts}>IELTS</span>{" "}
-            <span className={styles.highlight}>{t("hero_title_2")}</span>
-          </h1>
+<h1 className={`${styles.title} ${styles.desktop}`}>
+  <Trans
+    i18nKey="hero_title_1"
+    components={{
+      primary: <span className={styles.ielts} />
+    }}
+  />{" "}
+  <span className={styles.highlight}>
+    {t("hero_title_2")}
+  </span>
+</h1>
 
           {/* Mobile Title */}
-          <h1 className={`${styles.title} ${styles.mobile}`}>
-            <span>
-              {t("hero_title_1")}{" "}
-              <span className={styles.ielts}>IELTS</span>
-            </span>
+<h1 className={`${styles.title} ${styles.mobile}`}>
+  <span>
+    <Trans
+      i18nKey="hero_title_1"
+      components={{
+        primary: <span className={styles.ielts} />
+      }}
+    />
+  </span>
 
-            <div className={styles.mobileWords}>
-              <span className={styles.highlight}>{t("hero_title_2")}</span>
-            </div>
-          </h1>
+  <div className={styles.mobileWords}>
+    <span className={styles.highlight}>
+      {t("hero_title_2")}
+    </span>
+  </div>
+</h1>
 
           {/* Description */}
           <p className={styles.description}>

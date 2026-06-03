@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import styles from "./FloatingAlert.module.css";
 import giftIcon from "../../assets/gift.png";
@@ -7,26 +8,30 @@ import giftIcon from "../../assets/gift.png";
 const ALERT_DELAY = 5000;
 const COOLDOWN = 60 * 1000;
 
+
+export default function FloatingAlert() {
+const { t } = useTranslation();
 const alerts = [
   {
     id: 1,
-    title: "Начните свой путь уже сегодня!",
-    text: "Запишитесь на бесплатный пробный урок и оцените наш подход к обучению.",
-    button: "Записаться",
+    title: t("alert_1_title"),
+    text: t("alert_1_text"),
+    button: t("alert_1_button"),
     type: "internal",
     link: "/course",
   },
   {
     id: 2,
-    title: "Подготовьтесь к IELTS вместе с нами!",
-    text: "Получите персональный план подготовки и узнайте свой текущий уровень английского.",
-    button: "Перейти к Mock",
+    title: t("alert_2_title"),
+    text: t("alert_2_text"),
+    button: t("alert_2_button"),
     type: "external",
     link: "https://mock.ieltslab.uz/",
   },
 ];
 
-export default function FloatingAlert() {
+
+
   const navigate = useNavigate();
   const location = useLocation();
 

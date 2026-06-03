@@ -1,5 +1,5 @@
 import styles from './Course.module.css';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { useRef, useState } from 'react';
 
 // BACKGROUND IMAGES
@@ -14,7 +14,7 @@ const videoId = "M3FNjV4br7k";
 
 export default function Course() {
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const formRef = useRef(null);
 
@@ -102,17 +102,17 @@ export default function Course() {
 
   <div className={styles.container}>
     <div className={styles.heroTop}>
-      <h1 className={styles.heroTitle}>
-        {t("hero_final_get")}
-        <br />
-        <span className={styles.accent}>{t("hero_final_ielts")}</span>,
-        <br />
-        {t("hero_final_without")}{" "}
-        <span className={styles.money}>{t("hero_final_money")}</span>
-        {" и "}
-        <span className={styles.time}>{t("hero_final_time")}</span>{" "}
-        <span className={styles.wasted}>{t("hero_final_wasted")}</span>.
-      </h1>
+<h1 className={styles.heroTitle}>
+  <Trans
+    i18nKey="hero_final_title"
+    components={{
+      accent: <span className={styles.accent} />,
+      money: <span className={styles.money} />,
+      time: <span className={styles.time} />,
+      wasted: <span className={styles.wasted} />
+    }}
+  />
+</h1>
 
       <p className={styles.heroText}>
         {t("hero_final_join")}{" "}

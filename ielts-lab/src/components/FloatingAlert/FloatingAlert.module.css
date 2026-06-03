@@ -343,3 +343,22 @@
     margin-top: 6px;
   }
 }
+.alert {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.button {
+  pointer-events: auto;
+}
+
+.close {
+  pointer-events: auto;
+}
+
+.iconBackground,
+.icon,
+.content,
+.content h4,
+.content p {
+  pointer-events: none;
+}
