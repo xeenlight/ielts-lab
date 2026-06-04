@@ -154,7 +154,7 @@
 .heroTitle {
   margin-bottom: 26px;
 
-  font-size: clamp(54px,7vw,80px);
+  font-size: clamp(54px,7vw,75px);
 
   line-height: 1;
 
