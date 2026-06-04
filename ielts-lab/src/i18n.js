@@ -61,7 +61,7 @@ location_subtitle: "LOCATION",
 
 
 hero_final_title:
-  "Finally get<br/><accent>7+ in IELTS</accent>,<br/>without wasting <money>money</money> and <time>time</time> <wasted>for nothing</wasted>.",
+  "Finally get <accent>7+ in IELTS</accent>,<br/>without wasting <money>money</money><br/>and <time>time</time> <wasted>for nothing</wasted>.",
     hero_final_join: "Join our",
     hero_final_live_classes: "live classes",
     hero_final_save: "and save a lot of time and nerves.",

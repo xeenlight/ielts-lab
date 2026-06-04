@@ -242,7 +242,9 @@
 
   color: var(--color-text-secondary);
 }
-
+.info p:last-child {
+    margin-bottom: 154px;
+}
 /* ================= FEATURES ================= */
 
 .features {
@@ -426,6 +428,9 @@
   .info p {
     font-size: 16px;
   }
+  .info p:last-child {
+    margin-bottom: 50px;
+}
 
   .fakeImage {
   height: 100%;
