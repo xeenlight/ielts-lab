@@ -155,8 +155,46 @@
 
   animation: titleFade 1s ease;
 }
+.uzTitle {
+  max-width: 1100px;
 
+  margin-bottom: 32px;
 
+  font-size: clamp(48px, 6vw, 66px);
+
+  line-height: 1;
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+  text-align: center;
+
+  color: var(--color-text);
+
+  text-wrap: balance;
+
+  animation: titleFade 1s ease;;
+}
+.ruTitle {
+  max-width: 1100px;
+
+  margin-bottom: 32px;
+
+  font-size: clamp(48px, 6vw, 81px);
+
+  line-height: 1;
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+  text-align: center;
+
+  color: var(--color-text);
+
+  text-wrap: balance;
+
+  animation: titleFade 1s ease;;
+}
 .ielts {
   color: var(--color-primary);
 }
@@ -820,6 +858,13 @@
     letter-spacing: -2px;
 
     text-align: center;
+  }
+    .uzTitle {
+    font-size: clamp(24px, 7vw, 27px);
+  }
+      .enTitle {
+    font-size: clamp(24px, 8vw, 32px);
+
   }
 }
 /* DARK MODE */

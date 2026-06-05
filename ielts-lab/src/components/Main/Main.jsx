@@ -140,34 +140,39 @@ function Main() {
       <div className={styles.container}>
         <div className={styles.content}>
           {/* Desktop Title */}
-<h1 className={`${styles.title} ${styles.desktop}`}>
+<h1
+className={`${styles.title}
+${styles.desktop}
+${i18n.language === "uz" ? styles.uzTitle : ""}
+${i18n.language === "ru" ? styles.ruTitle : ""}`}>
   <Trans
     i18nKey="hero_title_1"
     components={{
-      primary: <span className={styles.ielts} />
+      primary: <span className={styles.ielts} />,
+      highlight: <span className={styles.highlight} />
     }}
-  />{" "}
-  <span className={styles.highlight}>
-    {t("hero_title_2")}
-  </span>
+  />
 </h1>
 
           {/* Mobile Title */}
-<h1 className={`${styles.title} ${styles.mobile}`}>
+<h1
+  className={`
+    ${styles.title}
+    ${styles.mobile}
+    ${i18n.language === "uz" ? styles.uzTitle : ""}
+    ${i18n.language === "en" ? styles.enTitle : ""}
+  `}
+>
   <span>
-    <Trans
-      i18nKey="hero_title_1"
-      components={{
-        primary: <span className={styles.ielts} />
-      }}
-    />
+  <Trans
+    i18nKey="hero_title_1"
+    components={{
+      primary: <span className={styles.ielts} />,
+      highlight: <span className={styles.highlight} />
+    }}
+  />
   </span>
 
-  <div className={styles.mobileWords}>
-    <span className={styles.highlight}>
-      {t("hero_title_2")}
-    </span>
-  </div>
 </h1>
 
           {/* Description */}
