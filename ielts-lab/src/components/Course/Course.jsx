@@ -133,11 +133,14 @@ export default function Course() {
       </div>
 
       <div className={styles.heroText}>
-        <p>
-          {t("hero_final_daily")}{" "}
-          <span>{t("hero_final_c1")}</span>{" "}
-          {t("hero_final_experience")}
-        </p>
+<p>
+  <Trans
+    i18nKey="hero_final_daily_text"
+    components={{
+      accent: <span className={styles.accent} />
+    }}
+  />
+</p>
       </div>
 
       <button onClick={scrollToForm} className={styles.ctaBig}>

@@ -31,10 +31,8 @@ alert_2_button: "Go to Mock",
 hero_title_1: "WANT TO START PREPARING FOR <primary>IELTS</primary> <highlight>RIGHT NOW?</highlight>",
 
 hero_desc_1: "One-on-one lessons for every student 🥊",
-hero_desc_2: "Sign up",
-hero_desc_3: "today",
-hero_desc_4: "and start learning",
-hero_desc_5: "tomorrow",
+hero_desc_full:
+  "Sign up <accent>today</accent> and start learning as early as <accent>tomorrow</accent>!",
 
 hero_btn: "Free Trial Lesson",
 
@@ -64,6 +62,7 @@ hero_final_title:
     hero_final_join: "Join our",
     hero_final_live_classes: "live classes",
     hero_final_save: "and save a lot of time and nerves.",
+    hero_final_daily_text: "Daily live one-on-one lessons with a teacher of <accent>C1</accent> level and extensive IELTS preparation experience." ,
     hero_final_daily: "Daily live 1-on-1 classes with teachers of",
     hero_final_c1: "C1",
     hero_final_experience: "level and many years of experience in preparing students for IELTS.",
@@ -340,10 +339,8 @@ alert_2_button: "Перейти к Mock",
 hero_title_1: "ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К <primary>IELTS</primary> <highlight>ПРЯМО СЕЙЧАС?</highlight>",
 
 hero_desc_1: "Уроки один на один с каждым 🥊",
-hero_desc_2: "Запишись",
-hero_desc_3: "сегодня",
-hero_desc_4: "и начни учиться уже",
-hero_desc_5: "завтра",
+hero_desc_full:
+  "Запишитесь <accent>сегодня</accent> и начните обучение уже <accent>завтра</accent>!",
 
 hero_btn: "Бесплатный урок",
 
@@ -375,9 +372,7 @@ hero_final_title:
     hero_final_join: "Присоединяйся к нашим",
     hero_final_live_classes: "живым занятиям",
     hero_final_save: "и сэкономь кучу времени и нервов.",
-    hero_final_daily: "Ежедневные живые занятия 1 на 1 с преподавателями уровня от",
-    hero_final_c1: "C1",
-    hero_final_experience: "и многолетним опытом подготовки студентов к IELTS.",
+    hero_final_daily_text: "Ежедневные живые индивидуальные занятия с преподавателем уровня <accent>C1</accent> и многолетним опытом подготовки студентов к IELTS.",
     hero_final_button: "Оставить заявку",
 
 
@@ -649,10 +644,8 @@ alert_2_button: "Mock ga o‘tish",
 hero_title_1: "<primary>IELTS</primary> GA TAYYORLANISHNI <highlight>HOZIROQ</highlight> BOSHLASHNI XOHLAYSIZMI?",
 
 hero_desc_1: "Har bir o'quvchi bilan birga bir darslar 🥊",
-hero_desc_2: "Bugun",
-hero_desc_3: "ro‘yxatdan o‘ting",
-hero_desc_4: "va ertgayoq o'qishni",
-hero_desc_5: "boshlang!",
+hero_desc_full:
+  "<accent>Bugun</accent> ro‘yxatdan o‘ting va <accent>ertagayoq</accent> o‘qishni boshlang!",
 
 hero_btn: "Bepul dars",
 
@@ -676,14 +669,14 @@ location_subtitle: "JOYLASHUV",
 
 
 hero_final_title:
-  "Nihoyat erish<br/><accent>IELTSdan 7+</accent>,<br/><money>pulni</money> va <time>vaqtni</time> <wasted>bekorga</wasted> sarflamasdan.",
+  "Pul bilan vaqtni <wasted>bekorga</wasted> sarflamasdan, nihoyat <br><accent>IELTSdan 7+</accent> erish.",
     
     hero_final_join: "Bizning",
-    hero_final_live_classes: "jonli darslarimizga",
-    hero_final_save: "qo‘shiling va ko‘p vaqt hamda asablarni tejang.",
-    hero_final_daily: "Har kuni 1 nafar o‘qituvchi bilan jonli individual darslar",
-    hero_final_c1: "C1",
-    hero_final_experience: "darajadagi va ko‘p yillik IELTS tayyorlash tajribasiga ega o‘qituvchilar bilan.",
+    hero_final_live_classes: "jonli darslarga",
+    hero_final_save: " qo’shiling va vaqtingiz bilan asabingizni tejang!",
+
+  hero_final_daily_text: "Har kuni <accent>C1</accent> va undanam baland darajaga ega bo’lgan ustozlar bilan 1 ga 1 darslar.",
+
     hero_final_button: "Ariza qoldirish",
 
 

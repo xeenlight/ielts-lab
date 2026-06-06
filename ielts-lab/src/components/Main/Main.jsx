@@ -176,14 +176,17 @@ ${i18n.language === "ru" ? styles.ruTitle : ""}`}>
 </h1>
 
           {/* Description */}
-          <p className={styles.description}>
-            {t("hero_desc_1")}
-            <br />
-            {t("hero_desc_2")}{" "}
-            <span className={styles.accent}>{t("hero_desc_3")}</span>{" "}
-            {t("hero_desc_4")}{" "}
-            <span className={styles.accent}>{t("hero_desc_5")}</span>.
-          </p>
+<p className={styles.description}>
+  {t("hero_desc_1")}
+  <br />
+
+  <Trans
+    i18nKey="hero_desc_full"
+    components={{
+      accent: <span className={styles.accent} />
+    }}
+  />
+</p>
 
           {/* Button */}
           <div className={styles.buttons}>
