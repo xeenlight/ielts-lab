@@ -675,7 +675,7 @@ location_subtitle: "JOYLASHUV",
 
 hero_final_title:
   "Pul bilan vaqtni <wasted>bekorga</wasted> sarflamasdan, nihoyat <br><accent>IELTSdan 7+</accent> erish.",
-  hero_final_title_mobile:"Pul bilan vaqtni <wasted>bekorga</wasted> sarflamasdan, nihoyat <br><accent>IELTSdan 7+</accent> erish.",
+  hero_final_title_mobile:"Pul bilan vaqtni <wasted>bekorga</wasted> sarflamasdan, nihoyat <br><accent>IELTSdan 7+</accent> erishing.",
     
     hero_final_join: "Bizning",
     hero_final_live_classes: "jonli darslarga",
