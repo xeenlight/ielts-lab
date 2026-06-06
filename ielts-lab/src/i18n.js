@@ -931,10 +931,14 @@ hero_final_title:
 };
 
 
+const isFirstVisit = !localStorage.getItem('i18nextLng');
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: isFirstVisit ? 'uz' : undefined, // 👈 ключевой момент
+
     fallbackLng: "uz",
     supportedLngs: ["uz", "ru", "en"],
 
