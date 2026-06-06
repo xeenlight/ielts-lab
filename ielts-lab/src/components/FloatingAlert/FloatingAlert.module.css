@@ -362,3 +362,126 @@
 .content p {
   pointer-events: none;
 }
+/* ================= LANGUAGE PICKER ================= */
+
+.languageAlert {
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 24px 40px;
+
+  background: rgba(12, 16, 20, 0.96);
+
+  backdrop-filter: blur(24px);
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  animation: slideUp 0.45s ease;
+}
+
+.languageContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageContent h4 {
+  margin: 0 0 6px;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+
+  color: var(--color-text);
+}
+
+.languageContent p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+}
+
+.languageButtons {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.languageButtons button {
+  min-width: 80px;
+
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 999px;
+
+  background: rgba(0, 182, 185, 0.12);
+
+  border: 1px solid rgba(0, 182, 185, 0.25);
+
+  color: var(--color-text);
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.languageButtons button:hover {
+  transform: translateY(-2px);
+
+  background: var(--color-primary);
+
+  color: white;
+
+  box-shadow:
+    0 0 25px rgba(0,182,185,0.35);
+}
+
+.languageButtons button:active {
+  transform: scale(0.96);
+}
+@media (max-width: 768px) {
+  .languageAlert {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 20px;
+
+    padding: 20px;
+  }
+
+  .languageContent h4 {
+    font-size: 1.1rem;
+  }
+
+  .languageButtons {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .languageButtons button {
+    flex: 1;
+
+    min-width: auto;
+  }
+}
