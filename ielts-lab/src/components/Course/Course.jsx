@@ -1,6 +1,6 @@
 import styles from './Course.module.css';
 import { useTranslation, Trans } from 'react-i18next';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 // BACKGROUND IMAGES
 import molecule1 from '../../assets/ielts Lab (1).png';
@@ -17,6 +17,24 @@ export default function Course() {
   const { t, i18n } = useTranslation();
 
   const formRef = useRef(null);
+
+
+  const [isMobileTitle, setIsMobileTitle] = useState(
+    window.innerWidth < 900
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileTitle(window.innerWidth < 900);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -102,16 +120,25 @@ export default function Course() {
 
   <div className={styles.container}>
     <div className={styles.heroTop}>
-<h1 className={styles.heroTitle}>
-  <Trans
-    i18nKey="hero_final_title"
-    components={{
-      accent: <span className={styles.accent} />,
-      money: <span className={styles.money} />,
-      time: <span className={styles.time} />,
-      wasted: <span className={styles.wasted} />
-    }}
-  />
+<h1
+  className={`${styles.heroTitle} ${
+    i18n.language === "ru" ? styles.ruTitle : ""
+  }`}
+>
+<Trans
+  i18nKey={
+    isMobileTitle
+      ? "hero_final_title_mobile"
+      : "hero_final_title"
+  }
+  components={{
+    accent: <span className={styles.accent} />,
+    money: <span className={styles.money} />,
+    time: <span className={styles.time} />,
+    wasted: <span className={styles.wasted} />,
+    br: <br />
+  }}
+/>
 </h1>
 
       <p className={styles.heroText}>

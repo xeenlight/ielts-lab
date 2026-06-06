@@ -367,8 +367,11 @@ location_subtitle: "LOCATION",
 
 
 
-hero_final_title:
-  "Наконец получи<br/><accent>7+ по IELTS</accent>,<br/>не тратя <money>деньги</money> и <time>время</time> <wasted>впустую</wasted>.",
+
+  hero_final_title: "Наконец получи<accent> 7+ по IELTS</accent>, <br/>не тратя <money>деньги</money> и <time>время</time> <wasted>впустую</wasted>.",
+  
+  hero_final_title_mobile: "Наконец получи<accent><br/>7+ по IELTS</accent>, не тратя <money>деньги</money> и <time>время</time> <wasted>впустую</wasted>.",
+
     hero_final_join: "Присоединяйся к нашим",
     hero_final_live_classes: "живым занятиям",
     hero_final_save: "и сэкономь кучу времени и нервов.",

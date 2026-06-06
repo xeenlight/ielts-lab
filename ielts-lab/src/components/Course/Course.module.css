@@ -136,7 +136,7 @@
 
   border-radius: 999px;
 
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 
   font-size: 12px;
   font-weight: 800;
@@ -152,7 +152,7 @@
 }
 
 .heroTitle {
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 
   font-size: clamp(54px,7vw,35px);
 
@@ -232,7 +232,7 @@
 
   overflow: hidden;
 
-  border-radius: 36px;
+
 
   border:
     1px solid var(--color-border);
@@ -708,11 +708,14 @@
   }
 
   .hero {
-    padding: 140px 0 0px;
+    padding: 110px 0 0px;
   }
 
   .heroTitle {
     font-size: 28px;
+  }
+  .ruTitle {
+    font-size: 32px;
   }
 
   .heroText {
@@ -823,4 +826,14 @@
   display: inline-block;
 
   color: var(--color-primary);
+}
+.mobileBreak {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobileBreak {
+    display: block;
+    height: 0;
+  }
 }
