@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 const resources = {
 en: {
@@ -927,20 +928,36 @@ hero_final_title:
 },
 };
 
+
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    fallbackLng: "uz",
+    supportedLngs: ["uz", "ru", "en"],
+
     resources,
-    lng: localStorage.getItem('lang') || 'ru',
-    fallbackLng: 'en',
+
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
+    },
+
     interpolation: {
       escapeValue: false,
     },
+
+    react: {
+      useSuspense: false,
+    }
   });
 
-// 🔥 сохраняем язык при каждом изменении
+// === Устанавливаем узбекский ТОЛЬКО при первом посещении ===
+
+// Сохраняем при смене языка
 i18n.on('languageChanged', (lng) => {
-  localStorage.setItem('lang', lng);
+  localStorage.setItem('i18nextLng', lng);
+  localStorage.setItem('site-language-selected', 'true');
 });
 
 export default i18n;
