@@ -60,6 +60,7 @@ location_subtitle: "LOCATION",
 
 hero_final_title:
   "Finally get <accent>7+ in IELTS</accent>,<br/>without wasting <money>money</money><br/>and <time>time</time> <wasted>for nothing</wasted>.",
+  hero_final_title_mobile:"Finally get <accent>7+ in IELTS</accent>,<br/>without wasting <money>money</money><br/>and <time>time</time> <wasted>for nothing</wasted>.",
     hero_final_join: "Join our",
     hero_final_live_classes: "live classes",
     hero_final_save: "and save a lot of time and nerves.",
@@ -674,6 +675,7 @@ location_subtitle: "JOYLASHUV",
 
 hero_final_title:
   "Pul bilan vaqtni <wasted>bekorga</wasted> sarflamasdan, nihoyat <br><accent>IELTSdan 7+</accent> erish.",
+  hero_final_title_mobile:"Pul bilan vaqtni <wasted>bekorga</wasted> sarflamasdan, nihoyat <br><accent>IELTSdan 7+</accent> erish.",
     
     hero_final_join: "Bizning",
     hero_final_live_classes: "jonli darslarga",
