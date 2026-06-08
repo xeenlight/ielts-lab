@@ -10,7 +10,7 @@ import earth from '../../assets/earth.png';
 
 
 import ieltsLabTeam3 from '../../assets/ieltsLabTeam3.jpg';
-import ieltslabteam1 from '../../assets/ieltslabteamtree.jpg';
+import ieltslabteam1 from '../../assets/teamiltslab.png';
 
 import molecule1 from "../../assets/ielts Lab (1).png";
 import molecule2 from "../../assets/ielts Lab (2).png";
