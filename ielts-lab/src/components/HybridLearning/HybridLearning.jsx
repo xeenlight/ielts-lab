@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import styles from "./HybridLearning.module.css";
 
-import teacher1 from "../../assets/about1.jpg";
-import teacher2 from "../../assets/about2.jpg";
-import teacher3 from "../../assets/about3.jpg";
+import teacher1 from "../../assets/about1.png";
+import teacher2 from "../../assets/about2.png";
+import teacher3 from "../../assets/about3.png";
 
 import teacher4 from "../../assets/about4.png";
 import teacher5 from "../../assets/about5.png";
