@@ -142,7 +142,11 @@ hero_final_title:
     hybrid_offline_5: "Speaking sessions and error correction",
     hybrid_offline_6: "Motivation and discipline of the learning environment",
     hybrid_offline_7: "Support and communication with other students",
+hybrid_offline_description:
+  "Face-to-face lessons with experienced teachers help students stay motivated, receive instant feedback, and develop their speaking skills more effectively.",
 
+hybrid_online_description:
+  "Our online platform allows students to learn anytime, review lessons whenever needed, and access all course materials from anywhere in the world.",
 
 
 
@@ -451,7 +455,11 @@ location_subtitle: "LOCATION",
     hybrid_offline_5: "Speaking-сессии и работа над ошибками",
     hybrid_offline_6: "Мотивация и дисциплина учебной среды",
     hybrid_offline_7: "Поддержка и общение с другими студентами",
+hybrid_offline_description:
+  "Живые занятия с преподавателями помогают сохранять мотивацию, получать мгновенную обратную связь и быстрее развивать разговорные навыки.",
 
+hybrid_online_description:
+  "Онлайн-платформа позволяет учиться в любое время, пересматривать уроки и получать доступ ко всем материалам курса из любой точки мира.",
 
 
 
@@ -758,7 +766,11 @@ hero_final_title:
     hybrid_offline_5: "Speaking sessiyalari va xatolarni tuzatish",
     hybrid_offline_6: "O‘quv muhitining motivatsiyasi va tartibi",
     hybrid_offline_7: "Boshqa o‘quvchilar bilan qo‘llab-quvvatlash va muloqot",
+hybrid_offline_description:
+  "Tajribali o‘qituvchilar bilan jonli darslar motivatsiyani saqlashga, tezkor fikr-mulohaza olishga va speaking ko‘nikmalarini samaraliroq rivojlantirishga yordam beradi.",
 
+hybrid_online_description:
+  "Onlayn platformamiz istalgan vaqtda o‘qish, darslarni qayta ko‘rish hamda dunyoning istalgan nuqtasidan barcha kurs materiallariga kirish imkoniyatini beradi.",
 
 
 

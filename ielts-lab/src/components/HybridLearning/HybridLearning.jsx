@@ -1,9 +1,13 @@
 import { useTranslation } from "react-i18next";
 import styles from "./HybridLearning.module.css";
 
-import laptop from "../../assets/laptop.png";
-import courthouse from "../../assets/courthouse.png";
-import christmas from "../../assets/christmas.png";
+import teacher1 from "../../assets/about1.jpg";
+import teacher2 from "../../assets/about2.jpg";
+import teacher3 from "../../assets/about3.jpg";
+
+import teacher4 from "../../assets/about4.png";
+import teacher5 from "../../assets/about5.png";
+import teacher6 from "../../assets/about6.png";
 
 export default function HybridLearning() {
   const { t } = useTranslation();
@@ -20,60 +24,25 @@ export default function HybridLearning() {
           {t("hybrid_subtitle")}
         </p>
 
-        <div className={styles.cards}>
-          {/* ONLINE */}
-          <div className={styles.card}>
-            <div className={styles.header}>
-              <div className={styles.icon}>
-                <img src={laptop} alt="Laptop Icon" className={styles.iconImage} />
-              </div>
-              <h3>{t("hybrid_online")}</h3>
-            </div>
+        {/* OFFLINE */}
 
-            <ul>
-              <li>{t("hybrid_online_1")}</li>
-              <li>{t("hybrid_online_2")}</li>
-              <li>{t("hybrid_online_3")}</li>
-              <li>{t("hybrid_online_4")}</li>
-              <li>{t("hybrid_online_5")}</li>
-              <li>{t("hybrid_online_6")}</li>
-              <li>{t("hybrid_online_7")}</li>
-            </ul>
+        <div className={styles.block}>
+          <div className={styles.images}>
+            <img src={teacher1} alt="" />
+            <img src={teacher2} alt="" />
+            <img src={teacher3} alt="" />
           </div>
 
-          {/* CENTER */}
-          <div className={styles.centerWrapper}>
-            <div className={`${styles.plus} ${styles.plusLeft}`}>+</div>
+          <div className={styles.content}>
+            <span className={styles.badge}>
+              OFFLINE FORMAT
+            </span>
 
-            <div className={styles.centerCard}>
-              <div className={styles.centerIcon}>
-                <img src={christmas} alt="Center Icon" className={styles.iconImage} />
-              </div>
+            <h3>{t("hybrid_offline")}</h3>
 
-              <h3>{t("hybrid_best_of_both")}</h3>
-
-              <ul>
-                <li>{t("hybrid_best_1")}</li>
-                <li>{t("hybrid_best_2")}</li>
-                <li>{t("hybrid_best_3")}</li>
-                <li>{t("hybrid_best_4")}</li>
-                <li>{t("hybrid_best_5")}</li>
-                <li>{t("hybrid_best_6")}</li>
-                <li>{t("hybrid_best_7")}</li>
-              </ul>
-            </div>
-
-            <div className={`${styles.plus} ${styles.plusRight}`}>+</div>
-          </div>
-
-          {/* OFFLINE */}
-          <div className={styles.card}>
-            <div className={styles.header}>
-              <div className={styles.icon}>
-                <img src={courthouse} alt="Courthouse Icon" className={styles.iconImage} />
-              </div>
-              <h3>{t("hybrid_offline")}</h3>
-            </div>
+            <p>
+              {t("hybrid_offline_description")}
+            </p>
 
             <ul>
               <li>{t("hybrid_offline_1")}</li>
@@ -81,9 +50,37 @@ export default function HybridLearning() {
               <li>{t("hybrid_offline_3")}</li>
               <li>{t("hybrid_offline_4")}</li>
               <li>{t("hybrid_offline_5")}</li>
-              <li>{t("hybrid_offline_6")}</li>
-              <li>{t("hybrid_offline_7")}</li>
             </ul>
+          </div>
+        </div>
+
+        {/* ONLINE */}
+
+        <div className={`${styles.block} ${styles.reverse}`}>
+          <div className={styles.content}>
+            <span className={styles.badge}>
+              ONLINE FORMAT
+            </span>
+
+            <h3>{t("hybrid_online")}</h3>
+
+            <p>
+              {t("hybrid_online_description")}
+            </p>
+
+            <ul>
+              <li>{t("hybrid_online_1")}</li>
+              <li>{t("hybrid_online_2")}</li>
+              <li>{t("hybrid_online_3")}</li>
+              <li>{t("hybrid_online_4")}</li>
+              <li>{t("hybrid_online_5")}</li>
+            </ul>
+          </div>
+
+          <div className={styles.images}>
+            <img src={teacher4} alt="" />
+            <img src={teacher5} alt="" />
+            <img src={teacher6} alt="" />
           </div>
         </div>
       </div>

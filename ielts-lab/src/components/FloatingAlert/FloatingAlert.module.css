@@ -376,7 +376,7 @@ border-radius:32px 32px 0 0;
 
   border-top: 1px solid var(--color-primary);
 
-  padding: 24px 24px 64px 24px;
+  padding: 24px;
 }
 
 .languageInner {
@@ -395,6 +395,7 @@ border-radius:32px 32px 0 0;
   color: var(--color-text);
   font-size: 24px;
   margin-bottom: 6px;
+  gap: 6px;
 }
 
 .languageInner p {

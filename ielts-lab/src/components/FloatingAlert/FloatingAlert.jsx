@@ -185,14 +185,19 @@ export default function FloatingAlert() {
       <div className={styles.languageAlert}>
         <div className={styles.languageInner}>
           <div>
-            <h3>Выберите язык сайта</h3>
-            <p>Select your preferred language</p>
+            <h3>
+        Выберите язык сайта
+        <br />
+        Sayt tilini tanlang
+        <br />
+        Choose website language
+      </h3>
           </div>
 
           <div className={styles.languageButtons}>
-            <button onClick={() => selectLanguage("ru")}>🇷🇺 RU</button>
-            <button onClick={() => selectLanguage("en")}>🇬🇧 EN</button>
-            <button onClick={() => selectLanguage("uz")}>🇺🇿 UZ</button>
+            <button onClick={() => selectLanguage("ru")}>RU</button>
+            <button onClick={() => selectLanguage("en")}>EN</button>
+            <button onClick={() => selectLanguage("uz")}>UZ</button>
           </div>
         </div>
       </div>
