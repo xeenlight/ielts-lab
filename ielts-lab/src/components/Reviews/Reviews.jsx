@@ -1,6 +1,7 @@
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Reviews.module.css";
-const sliderRef = useRef(null);
+
 const reviews = [
   {
     id: 1,
@@ -146,6 +147,10 @@ const reviews = [
     url: "https://2gis.uz/tashkent/firm/70000001114206612"
   }
 ];
+
+export default function Reviews() {
+  const { t } = useTranslation();
+const sliderRef = useRef(null);
 useEffect(() => {
   const slider = sliderRef.current;
 
@@ -193,9 +198,6 @@ useEffect(() => {
     slider.removeEventListener("mousemove", mouseMove);
   };
 }, []);
-export default function Reviews() {
-  const { t } = useTranslation();
-
   const shouldAnimate = reviews.length > 3;
 
   return (
