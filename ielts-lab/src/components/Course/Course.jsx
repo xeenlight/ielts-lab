@@ -9,6 +9,7 @@ import molecule3 from '../../assets/ielts Lab (3).png';
 import molecule4 from '../../assets/ielts Lab (4).png';
 import molecule5 from '../../assets/ielts Lab (5).png';
 import molecule6 from '../../assets/ielts Lab (6).png';
+import Reviews from '../Reviews/Reviews';
 
 const videoId = "M3FNjV4br7k";
 
@@ -177,75 +178,7 @@ export default function Course() {
   </div>
 </section>
 
-      <section className={styles.testimonials}>
-
-        <div className={styles.container}>
-
-          <h2 className={styles.sectionTitle}>
-            {t('testimonials_title')}
-          </h2>
-
-          <div className={styles.testimonialGrid}>
-
-            <div className={styles.testimonialCard}>
-
-              <p className={styles.quote}>
-                {t('testimonial1')}
-              </p>
-
-              <div className={styles.author}>
-                <strong>
-                  {t('testimonial1_name')}
-                </strong>
-
-                <span>
-                  Band 8.0
-                </span>
-              </div>
-
-            </div>
-
-            <div className={styles.testimonialCard}>
-
-              <p className={styles.quote}>
-                {t('testimonial2')}
-              </p>
-
-              <div className={styles.author}>
-                <strong>
-                  {t('testimonial2_name')}
-                </strong>
-
-                <span>
-                  Band 7.5
-                </span>
-              </div>
-
-            </div>
-
-            <div className={styles.testimonialCard}>
-
-              <p className={styles.quote}>
-                {t('testimonial3')}
-              </p>
-
-              <div className={styles.author}>
-                <strong>
-                  {t('testimonial3_name')}
-                </strong>
-
-                <span>
-                  Band 8.5
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+    <Reviews />
       {/* EXPERIENCE */}
 
 <section className={styles.experienceSection}>

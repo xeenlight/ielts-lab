@@ -61,7 +61,7 @@ export default function Location() {
 
           <div className={styles.buttons}>
             <a
-              href="https://www.google.com/maps?q=41.341270,69.204552"
+              href="https://maps.app.goo.gl/kvhAscw9agTARHSJ6"
               target="_blank"
               rel="noreferrer"
               className={styles.googleBtn}
