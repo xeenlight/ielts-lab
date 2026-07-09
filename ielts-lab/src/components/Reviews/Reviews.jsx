@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Reviews.module.css";
+import  user  from "../../assets/photoUser.jpg";
+
 
 const reviews = [
   {
@@ -9,7 +11,7 @@ const reviews = [
     text: "Спасибо за превосходную подготовку к IELTS",
     rating: 5,
     date: "2 месяца назад",
-    avatar: "https://i.pravatar.cc/150?img=32",
+    avatar: user,
     source: "Yandex",
     color: "#FF0000",
     url: "https://yandex.uz/maps/org/ielts_lab/184670589711/reviews/"
@@ -20,7 +22,7 @@ const reviews = [
     text: "Лучший центр в мире",
     rating: 5,
     date: "1 месяц назад",
-    avatar: "https://i.pravatar.cc/150?img=12",
+    avatar: user,
     source: "Yandex",
     color: "#FF0000",
     url: "https://yandex.uz/maps/org/ielts_lab/184670589711/reviews/"
@@ -31,7 +33,7 @@ const reviews = [
     text: "Отличный ученый центр по подготовке к IELTS",
     rating: 5,
     date: "1 месяц назад",
-    avatar: "https://i.pravatar.cc/150?img=12",
+    avatar: user,
     source: "Yandex",
     color: "#FF0000",
     url: "https://yandex.uz/maps/org/ielts_lab/184670589711/reviews/"
@@ -42,7 +44,7 @@ const reviews = [
     text: "Самый лучший учебный центр советую, здесь делают реальные результаты и учителя очень вежливые и опытные особенно Самандар",
     rating: 5,
     date: "1 month ago",
-    avatar: "https://i.pravatar.cc/150?img=15",
+    avatar: user,
     source: "Google",
     color: "#4285F4",
     url: "https://maps.app.goo.gl/AEBEpwroZUwbDb2q7"
@@ -53,7 +55,7 @@ const reviews = [
     text: "Хорошее место для интенсивной подготовке к предстоящему экзамену",
     rating: 5,
     date: "2 weeks ago",
-    avatar: "https://i.pravatar.cc/150?img=23",
+    avatar: user,
     source: "Google",
     color: "#4285F4",
     url: "https://maps.app.goo.gl/AEBEpwroZUwbDb2q7"
@@ -64,7 +66,7 @@ const reviews = [
     text: "Лучший центр в мире",
     rating: 5,
     date: "2 weeks ago",
-    avatar: "https://i.pravatar.cc/150?img=23",
+    avatar: user,
     source: "Google",
     color: "#4285F4",
     url: "https://maps.app.goo.gl/AEBEpwroZUwbDb2q7"
@@ -75,7 +77,7 @@ const reviews = [
     text: "Отличный учебный центр для подготовки к IELTS! Профессиональные преподаватели, понятные объяснения и дружелюбная атмосфера. Рекомендую IELTS Lab всем, кто хочет получить высокий балл на IELTS.",
     rating: 5,
     date: "2 weeks ago",
-    avatar: "https://i.pravatar.cc/150?img=23",
+    avatar: user,
     source: "Google",
     color: "#4285F4",
     url: "https://maps.app.goo.gl/AEBEpwroZUwbDb2q7"
@@ -86,7 +88,7 @@ const reviews = [
     text: "Highly recomended for inteligent students who want to show real result",
     rating: 5,
     date: "2 weeks ago",
-    avatar: "https://i.pravatar.cc/150?img=23",
+    avatar: user,
     source: "Google",
     color: "#4285F4",
     url: "https://maps.app.goo.gl/AEBEpwroZUwbDb2q7"
@@ -97,7 +99,7 @@ const reviews = [
     text: "The best learning center in the world",
     rating: 5,
     date: "2 weeks ago",
-    avatar: "https://i.pravatar.cc/150?img=23",
+    avatar: user,
     source: "Google",
     color: "#4285F4",
     url: "https://maps.app.goo.gl/AEBEpwroZUwbDb2q7"
@@ -108,7 +110,7 @@ const reviews = [
     text: "The best learning centre",
     rating: 5,
     date: "2 weeks ago",
-    avatar: "https://i.pravatar.cc/150?img=23",
+    avatar: user,
     source: "Google",
     color: "#4285F4",
     url: "https://maps.app.goo.gl/AEBEpwroZUwbDb2q7"
@@ -119,7 +121,7 @@ const reviews = [
     text: "WOW!!!",
     rating: 5,
     date: "2 weeks ago",
-    avatar: "https://i.pravatar.cc/150?img=23",
+    avatar: user,
     source: "Google",
     color: "#4285F4",
     url: "https://maps.app.goo.gl/AEBEpwroZUwbDb2q7"
@@ -130,7 +132,7 @@ const reviews = [
     text: "Good.",
     rating: 5,
     date: "3 недели назад",
-    avatar: "https://i.pravatar.cc/150?img=29",
+    avatar: user,
     source: "2GIS",
     color: "#00A85A",
     url: "https://2gis.uz/tashkent/firm/70000001114206612"
@@ -141,7 +143,7 @@ const reviews = [
     text: "Лучшие на рынке по подготовки к сдаче IELTS",
     rating: 5,
     date: "2 месяца назад",
-    avatar: "https://i.pravatar.cc/150?img=37",
+    avatar: user,
     source: "2GIS",
     color: "#00A85A",
     url: "https://2gis.uz/tashkent/firm/70000001114206612"
