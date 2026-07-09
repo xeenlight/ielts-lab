@@ -139,40 +139,32 @@ function Main() {
       {/* CONTENT */}
       <div className={styles.container}>
         <div className={styles.content}>
-          {/* Desktop Title */}
-<h1
-className={`${styles.title}
-${styles.desktop}
-${i18n.language === "uz" ? styles.uzTitle : ""}
-${i18n.language === "ru" ? styles.ruTitle : ""}`}>
+{/* Desktop Title */}
+<h1 className={`${styles.title} ${styles.desktop} ${i18n.language === "uz" ? styles.uzTitle : ""} ${i18n.language === "ru" ? styles.ruTitle : ""}`}>
   <Trans
     i18nKey="hero_title_1"
     components={{
       primary: <span className={styles.ielts} />,
-      highlight: <span className={styles.highlight} />
+      highlight: (
+        <span className={styles.revealText}>
+          <span className={styles.highlight}>твой highlight</span>
+        </span>
+      ),
     }}
   />
 </h1>
 
-          {/* Mobile Title */}
-<h1
-  className={`
-    ${styles.title}
-    ${styles.mobile}
-    ${i18n.language === "uz" ? styles.uzTitle : ""}
-    ${i18n.language === "en" ? styles.enTitle : ""}
-  `}
->
-  <span>
-  <Trans
-    i18nKey="hero_title_1"
-    components={{
-      primary: <span className={styles.ielts} />,
-      highlight: <span className={styles.highlight} />
-    }}
-  />
+{/* Mobile Title */}
+<h1 className={`${styles.title} ${styles.mobile} ...`}>
+  <span className={styles.titleWrapper}>
+    <Trans
+      i18nKey="hero_title_1"
+      components={{
+        primary: <span className={styles.ielts} />,
+        highlight: <span className={`${styles.highlight} ${styles.revealText}`} />,
+      }}
+    />
   </span>
-
 </h1>
 
           {/* Description */}

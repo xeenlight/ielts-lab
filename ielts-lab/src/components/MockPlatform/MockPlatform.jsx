@@ -3,10 +3,13 @@ import styles from "./MockPlatform.module.css";
 import previewVideo from "../../assets/mock.mp4";
 
 export default function MockPlatform() {
+  const handleVideoClick = () => {
+    window.open("https://mock.ieltslab.uz/", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className={styles.mockSection}>
       <div className={styles.glow}></div>
-
       <div className={styles.background}></div>
 
       <div className={styles.container}>
@@ -17,9 +20,7 @@ export default function MockPlatform() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <span className={styles.badge}>
-            IELTS MOCK PLATFORM
-          </span>
+          <span className={styles.badge}>IELTS MOCK PLATFORM</span>
 
           <h2>
             Real IELTS Experience
@@ -63,16 +64,20 @@ export default function MockPlatform() {
             </div>
 
             <div className={styles.screen}>
-              <div className={styles.fakeChart}>
-  <video
-    className={styles.video}
-    src={previewVideo}
-    autoPlay
-    muted
-    loop
-    playsInline
-  />
-</div>
+              <div className={styles.fakeChart}
+                                onClick={handleVideoClick}
+                  style={{ cursor: "pointer" }}>
+                <video
+                  className={styles.video}
+                  src={previewVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  onClick={handleVideoClick}
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
 
               <div className={styles.stats}>
                 <div>
