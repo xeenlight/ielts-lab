@@ -101,7 +101,6 @@ export default function Teachers() {
               
               <div className={styles.info}>
                 <h3>{t(`${teacher.key}_name`)}</h3>
-                <div className={styles.band}>{teacher.IELTS}</div>
                 
                 <div className={styles.stats}>
                   <div>

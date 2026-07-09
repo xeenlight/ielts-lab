@@ -315,6 +315,31 @@ hybrid_online_description:
     teacher_10_students: "Speaking Teacher",
     teacher_10_desc:
       "Professional IELTS Speaking teacher with a 9.0 Speaking score.",
+
+
+       "hero_final_why": "Why IELTS LAB?",
+  "hero_final_result_title": "Everything You Need to Achieve a High IELTS Score",
+  "hero_final_result_desc": "We combine live lessons with experienced teachers, a modern online learning platform, and continuous support to help you prepare confidently, improve every IELTS skill, and achieve your target score as quickly as possible.",
+
+
+
+    "feature1_title": "Personal Study Plan",
+  "feature1_desc": "Receive a customized learning plan tailored to your current level, goals, and target IELTS score.",
+
+  "feature2_title": "Writing Feedback",
+  "feature2_desc": "Every writing task is reviewed by experienced teachers with detailed feedback and practical suggestions for improvement.",
+
+  "feature3_title": "Speaking Practice",
+  "feature3_desc": "Regular speaking sessions help you build confidence, improve pronunciation, and perform naturally during the IELTS exam.",
+
+  "feature4_title": "24/7 Online Platform",
+  "feature4_desc": "Access all lessons, homework, study materials, and recorded classes anytime and from anywhere in the world.",
+
+  "feature5_title": "Proven Results",
+  "feature5_desc": "Our teaching methodology helps most students achieve the IELTS score they need for university admission, work, or immigration.",
+
+  "feature6_title": "Continuous Support",
+  "feature6_desc": "Our teachers and mentors support you throughout your entire learning journey, answering questions and keeping you on track."
   },
 },
   ru: {
@@ -627,6 +652,31 @@ teacher_10_exp: "Около 3 лет",
 teacher_10_students: "Speaking преподаватель",
 teacher_10_desc:
   "Профессиональный IELTS Speaking преподаватель с результатом 9.0 Speaking.",
+
+
+
+    "hero_final_why": "Почему IELTS LAB?",
+  "hero_final_result_title": "Всё, что нужно для высокого балла IELTS",
+  "hero_final_result_desc": "Мы объединили живые занятия с опытными преподавателями, современную онлайн-платформу и постоянную поддержку, чтобы вы могли уверенно подготовиться к экзамену, улучшить все языковые навыки и достичь желаемого результата в кратчайшие сроки.",
+
+
+    "feature1_title": "Персональный план обучения",
+  "feature1_desc": "Получите индивидуальную программу подготовки, разработанную с учётом вашего текущего уровня, целей и желаемого результата IELTS.",
+
+  "feature2_title": "Проверка Writing",
+  "feature2_desc": "Каждое письменное задание проверяется преподавателем с подробным разбором ошибок и рекомендациями для улучшения.",
+
+  "feature3_title": "Практика Speaking",
+  "feature3_desc": "Регулярные разговорные занятия помогают преодолеть языковой барьер, улучшить произношение и уверенно чувствовать себя на экзамене.",
+
+  "feature4_title": "Онлайн-платформа 24/7",
+  "feature4_desc": "Получайте доступ ко всем урокам, домашним заданиям, материалам и записям занятий из любой точки мира в любое удобное время.",
+
+  "feature5_title": "Гарантия результата",
+  "feature5_desc": "Наша методика позволяет большинству студентов успешно достичь необходимого балла IELTS для учёбы или работы за рубежом.",
+
+  "feature6_title": "Поддержка на каждом этапе",
+  "feature6_desc": "Преподаватели и кураторы сопровождают вас на протяжении всего обучения, отвечая на вопросы и помогая двигаться к цели."
     },
   },
 uz: {
@@ -938,6 +988,29 @@ hybrid_online_description:
     teacher_10_students: "Speaking teacher",
     teacher_10_desc:
       "Speaking bo‘yicha 9.0 natijaga ega professional IELTS ustozi.",
+
+
+        "hero_final_why": "Nima uchun IELTS LAB?",
+  "hero_final_result_title": "Yuqori IELTS balli uchun kerak bo‘ladigan barcha imkoniyatlar",
+  "hero_final_result_desc": "Biz tajribali o‘qituvchilar bilan jonli darslar, zamonaviy onlayn platforma va doimiy qo‘llab-quvvatlashni birlashtirdik. Bu sizga imtihonga ishonch bilan tayyorlanish, barcha IELTS ko‘nikmalarini rivojlantirish va maqsad qilgan natijangizga imkon qadar tezroq erishishga yordam beradi.",
+
+    "feature1_title": "Shaxsiy o‘quv rejasi",
+  "feature1_desc": "Hozirgi darajangiz, maqsadingiz va kerakli IELTS natijasiga moslashtirilgan individual tayyorgarlik dasturiga ega bo‘ling.",
+
+  "feature2_title": "Writing tekshiruvi",
+  "feature2_desc": "Har bir Writing topshirig‘i tajribali o‘qituvchilar tomonidan batafsil tekshiriladi va rivojlanishingiz uchun tavsiyalar beriladi.",
+
+  "feature3_title": "Speaking amaliyoti",
+  "feature3_desc": "Muntazam suhbat darslari erkin gapirish, talaffuzni yaxshilash va IELTS imtihonida o‘zingizni ishonchli his qilishingizga yordam beradi.",
+
+  "feature4_title": "24/7 Onlayn platforma",
+  "feature4_desc": "Barcha darslar, uy vazifalari, o‘quv materiallari va yozib olingan mashg‘ulotlarga dunyoning istalgan nuqtasidan istalgan vaqtda kirishingiz mumkin.",
+
+  "feature5_title": "Natijaga yo‘naltirilgan tizim",
+  "feature5_desc": "Bizning metodikamiz talabalarning aksariyatiga o‘qish, ish yoki xalqaro imkoniyatlar uchun kerakli IELTS ballini qo‘lga kiritishga yordam beradi.",
+
+  "feature6_title": "Doimiy qo‘llab-quvvatlash",
+  "feature6_desc": "O‘qituvchilar va mentorlar butun tayyorgarlik davomida sizga yordam beradi, savollaringizga javob beradi va maqsadingiz sari yo‘naltirib boradi."
   },
 },
 };

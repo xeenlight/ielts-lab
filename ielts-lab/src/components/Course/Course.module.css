@@ -837,3 +837,243 @@
     height: 0;
   }
 }
+.heroInfo{
+    display:flex;
+    justify-content:center;
+    margin-top:70px;
+}
+
+.infoCard{
+    width:100%;
+    max-width:1100px;
+
+    padding:60px;
+
+    border-radius:36px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--color-border);
+
+    backdrop-filter:blur(30px);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.infoCard::before{
+    content:"";
+
+    position:absolute;
+
+    inset:-150px;
+
+    background:
+    radial-gradient(circle,
+    rgba(0,182,185,.14),
+    transparent 70%);
+
+    pointer-events:none;
+}
+
+.infoBadge{
+
+    display:inline-flex;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(0,182,185,.12);
+
+    color:var(--color-primary);
+
+    font-weight:700;
+
+    margin-bottom:24px;
+}
+
+.infoTitle{
+
+    font-size:clamp(36px,5vw,64px);
+
+    color:var(--color-text);
+
+    line-height:1.05;
+
+    margin-bottom:24px;
+
+    max-width:900px;
+}
+
+.infoDescription{
+
+    color:var(--color-text-secondary);
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    max-width:900px;
+
+    margin-bottom:60px;
+}
+
+.featuresGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+    margin-bottom:60px;
+}
+
+.featureCard{
+
+    padding:32px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+}
+
+.featureCard:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--color-primary);
+
+    box-shadow:0 15px 40px rgba(0,182,185,.15);
+}
+
+.featureCard span{
+
+    font-size:34px;
+
+    display:block;
+
+    margin-bottom:20px;
+}
+
+.featureCard h4{
+
+    font-size:22px;
+
+    margin-bottom:14px;
+
+    color:var(--color-text);
+}
+
+.featureCard p{
+
+    color:var(--color-text-secondary);
+
+    line-height:1.7;
+}
+
+.statsRow{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+    margin-bottom:50px;
+}
+
+.stat{
+
+    padding:28px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.stat h3{
+
+    font-size:48px;
+
+    color:var(--color-primary);
+
+    margin-bottom:10px;
+}
+
+.stat p{
+
+    color:var(--color-text-secondary);
+}
+
+@media(max-width:992px){
+
+.featuresGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.statsRow{
+
+grid-template-columns:1fr;
+
+}
+
+.infoCard{
+
+padding:40px 28px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.featuresGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.infoTitle{
+
+font-size:40px;
+
+}
+
+.infoDescription{
+
+font-size:17px;
+
+}
+
+.featureCard{
+
+padding:24px;
+
+}
+
+.stat h3{
+
+font-size:38px;
+
+}
+
+.heroInfo{
+
+margin-top:40px;
+
+}
+
+}

@@ -150,31 +150,108 @@ export default function Course() {
     </div>
 
     {/* VIDEO */}
-    <div className={styles.videoBlock}>
-      <div className={styles.videoWrapper}>
-        <iframe
-          src={`https://www.youtube.com/embed/${videoId}?rel=0`}
-          title="IELTS Lab Course"
-          frameBorder="0"
-          allowFullScreen
-        />
+{/* HERO INFO */}
+
+<div className={styles.heroInfo}>
+
+  <div className={styles.infoCard}>
+
+    <span className={styles.infoBadge}>
+      {t("hero_final_why") || "Почему IELTS LAB?"}
+    </span>
+
+    <h2 className={styles.infoTitle}>
+      {t("hero_final_result_title") ||
+        "Все, что нужно для высокого балла IELTS"}
+    </h2>
+
+    <p className={styles.infoDescription}>
+      {t("hero_final_result_desc") ||
+        "Мы объединили живые занятия, современную онлайн-платформу и постоянную поддержку преподавателей, чтобы вы могли быстрее достичь своей цели."}
+    </p>
+
+    <div className={styles.featuresGrid}>
+
+      <div className={styles.featureCard}>
+        <span>🎯</span>
+
+        <h4>{t("feature1_title") || "Персональный план"}</h4>
+
+        <p>
+          {t("feature1_desc") ||
+            "Индивидуальная программа подготовки под ваш текущий уровень."}
+        </p>
       </div>
 
-      <div className={styles.heroText}>
-<p>
-  <Trans
-    i18nKey="hero_final_daily_text"
-    components={{
-      accent: <span className={styles.accent} />
-    }}
-  />
-</p>
+      <div className={styles.featureCard}>
+        <span>✍️</span>
+
+        <h4>{t("feature2_title") || "Writing Feedback"}</h4>
+
+        <p>
+          {t("feature2_desc") ||
+            "Подробная проверка каждого Writing с рекомендациями."}
+        </p>
       </div>
 
-      <button onClick={scrollToForm} className={styles.ctaBig}>
-        {t("hero_final_button")}
-      </button>
+      <div className={styles.featureCard}>
+        <span>🗣️</span>
+
+        <h4>{t("feature3_title") || "Speaking Practice"}</h4>
+
+        <p>
+          {t("feature3_desc") ||
+            "Регулярная разговорная практика с преподавателями."}
+        </p>
+      </div>
+
+      <div className={styles.featureCard}>
+        <span>💻</span>
+
+        <h4>{t("feature4_title") || "24/7 Platform"}</h4>
+
+        <p>
+          {t("feature4_desc") ||
+            "Все материалы курса доступны в любое время."}
+        </p>
+      </div>
+
+      <div className={styles.featureCard}>
+        <span>📈</span>
+
+        <h4>{t("feature5_title") || "Результат"}</h4>
+
+        <p>
+          {t("feature5_desc") ||
+            "Большинство студентов достигают необходимого балла IELTS."}
+        </p>
+      </div>
+
+      <div className={styles.featureCard}>
+        <span>🤝</span>
+
+        <h4>{t("feature6_title") || "Поддержка"}</h4>
+
+        <p>
+          {t("feature6_desc") ||
+            "Куратор сопровождает вас на протяжении всего обучения."}
+        </p>
+      </div>
+
     </div>
+
+
+
+    <button
+      onClick={scrollToForm}
+      className={styles.ctaBig}
+    >
+      {t("hero_final_button")}
+    </button>
+
+  </div>
+
+</div>
   </div>
 </section>
 
