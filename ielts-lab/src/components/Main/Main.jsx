@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+ import { useEffect, useMemo, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";  // ← Добавь этот импорт
+import { useNavigate } from 'react-router-dom';
 
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
@@ -8,7 +9,7 @@ import styles from "./Main.module.css";
 
 function Main() {
   const { t, i18n } = useTranslation();   // ← Подключаем переводы
-
+const navigate = useNavigate();
   const [mainColor, setMainColor] = useState("#00b6b9");
 
   // INIT PARTICLES
@@ -182,7 +183,8 @@ function Main() {
 
           {/* Button */}
           <div className={styles.buttons}>
-            <button className={styles.primaryBtn}>
+            <button className={styles.primaryBtn}
+              onClick={() => navigate("/course")}>
               {t("hero_btn")}
             </button>
           </div>

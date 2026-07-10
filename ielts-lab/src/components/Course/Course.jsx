@@ -1,7 +1,7 @@
 import styles from './Course.module.css';
 import { useTranslation, Trans } from 'react-i18next';
 import { useRef, useState, useEffect } from 'react';
-
+import { useLocation } from "react-router-dom";
 // BACKGROUND IMAGES
 import molecule1 from '../../assets/ielts Lab (1).png';
 import molecule2 from '../../assets/ielts Lab (2).png';
@@ -11,10 +11,9 @@ import molecule5 from '../../assets/ielts Lab (5).png';
 import molecule6 from '../../assets/ielts Lab (6).png';
 import Reviews from '../Reviews/Reviews';
 
-const videoId = "M3FNjV4br7k";
 
 export default function Course() {
-
+const location = useLocation();
   const { t, i18n } = useTranslation();
 
   const formRef = useRef(null);
@@ -25,6 +24,16 @@ export default function Course() {
   );
 
   useEffect(() => {
+      if (location.hash === "#form") {
+    const element = document.getElementById("form");
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }
     const handleResize = () => {
       setIsMobileTitle(window.innerWidth < 900);
     };
@@ -149,11 +158,20 @@ export default function Course() {
       </p>
     </div>
 
+          <div className={styles.ctaCenter}>
 
+            <button
+              onClick={scrollToForm}
+              className={styles.ctaBig}
+            >
+              {t('open_form')}
+            </button>
+
+          </div>
   </div>
 </section>
 
-    <Reviews />
+
       {/* EXPERIENCE */}
 
 <section className={styles.experienceSection}>
@@ -194,6 +212,7 @@ export default function Course() {
       </div>
     </div>
   </div>
+  
 </section>
 
 
@@ -253,16 +272,7 @@ export default function Course() {
 
           </div>
 
-          <div className={styles.ctaCenter}>
 
-            <button
-              onClick={scrollToForm}
-              className={styles.ctaBig}
-            >
-              {t('open_form')}
-            </button>
-
-          </div>
 
         </div>
 
@@ -293,7 +303,9 @@ export default function Course() {
         </div>
 
       </section>
-
+<Reviews onOpenForm={scrollToForm} />
+    
+    
     </div>
   );
 }

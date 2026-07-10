@@ -150,7 +150,7 @@ const reviews = [
   }
 ];
 
-export default function Reviews() {
+export default function Reviewss({ onOpenForm }) {
   const { t } = useTranslation();
 const sliderRef = useRef(null);
 useEffect(() => {
@@ -162,6 +162,13 @@ useEffect(() => {
   let startX;
   let scrollLeft;
 
+  const scrollToForm = () => {
+
+    formRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
   const mouseDown = (e) => {
     isDown = true;
     startX = e.pageX - slider.offsetLeft;
@@ -264,7 +271,16 @@ useEffect(() => {
             ))}
           </div>
         </div>
+                        <div className={styles.ctaCenter}>
+      <button
+        onClick={onOpenForm}
+        className={styles.ctaBig}
+      >
+        {t('open_form')}
+      </button>
       </div>
+      </div>
+
     </section>
   );
 }

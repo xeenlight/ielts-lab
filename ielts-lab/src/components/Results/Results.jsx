@@ -1,5 +1,6 @@
 import styles from './Results.module.css';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
@@ -26,6 +27,7 @@ import img15 from '../../assets/ielts Lab Result 15.jpg';
 import img16 from '../../assets/ielts Lab Result 16.jpg';
 
 export default function Results() {
+  const navigate = useNavigate();
   const [activeImg, setActiveImg] = useState(null);
   const [zoom, setZoom] = useState(false);
   const { t } = useTranslation();
@@ -81,12 +83,12 @@ export default function Results() {
       </Swiper>
 
       <p className={styles.desc2}>{t('results_desc2')}</p>
-        <button 
-          className={styles.ctaButton}
-          onClick={() => document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          {t('open_form')}
-        </button>
+<button
+  className={styles.ctaButton}
+  onClick={() => navigate("/course#form")}
+>
+  {t("open_form")}
+</button>
       {/* MODAL */}
       <AnimatePresence>
         {activeImg && (

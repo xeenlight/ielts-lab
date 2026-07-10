@@ -202,3 +202,37 @@
     font-size: 12px;
   }
 }
+.ctaBig {
+  border: none;
+
+  padding: 22px 42px;
+
+  border-radius: 999px;
+
+  background: var(--color-primary);
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 0 40px rgba(0,182,185,0.22);
+}
+
+.ctaBig:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 0 60px rgba(0,182,185,0.4);
+}
+.ctaCenter {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 60px;
+}
