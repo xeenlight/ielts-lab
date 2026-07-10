@@ -31,7 +31,7 @@ alert_2_button: "Go to Mock",
 
 hero_title_1: "WANT TO START PREPARING FOR <primary>IELTS</primary> <highlight>RIGHT NOW?</highlight>",
 
-hero_desc_1: "One-on-one lessons for every student 🥊",
+hero_desc_1: "One-on-one lessons for every student",
 hero_desc_full:
   "Sign up <accent>today</accent> and start learning as early as <accent>tomorrow</accent>!",
 
@@ -369,7 +369,7 @@ alert_2_button: "Перейти к Mock",
 
 hero_title_1: "ХОЧЕШЬ НАЧАТЬ ГОТОВИТЬСЯ К <primary>IELTS</primary> <highlight>ПРЯМО СЕЙЧАС?</highlight>",
 
-hero_desc_1: "Уроки один на один с каждым 🥊",
+hero_desc_1: "Уроки один на один с каждым",
 hero_desc_full:
   "Запишитесь <accent>сегодня</accent> и начните обучение уже <accent>завтра</accent>!",
 
@@ -706,7 +706,7 @@ alert_2_button: "Mock ga o‘tish",
 
 hero_title_1: "<primary>IELTS</primary> GA TAYYORLANISHNI <highlight>HOZIROQ</highlight> BOSHLASHNI XOHLAYSIZMI?",
 
-hero_desc_1: "Har bir o'quvchi bilan birga bir darslar 🥊",
+hero_desc_1: "Har bir o'quvchi bilan birga bir darslar",
 hero_desc_full:
   "<accent>Bugun</accent> ro‘yxatdan o‘ting va <accent>ertagayoq</accent> o‘qishni boshlang!",
 
